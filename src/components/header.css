@@ -1,0 +1,86 @@
+#navbar-top{
+    background-color: #D43939;
+}
+
+#header-title{
+    font-weight: 300;
+}
+
+#navbar-bottom{
+    background-color: #D9D9D9;
+}
+
+.login-btn, .signup-btn{
+    text-decoration: none;
+}
+
+.signup-btn{
+    color: white;
+}
+
+.navbar-section{
+    background-color: inherit;
+}
+
+.navbar-section-item{
+    color: #718096;
+    font-size: 15px;
+    font-weight: 300;
+    list-style: none;
+}
+
+.item-aparter{
+    width: 2px;
+    height: 2px;
+    background-color: #718096;
+    border-radius: 50%;
+}
+
+#searchbar::placeholder{
+    color: #D9D9D9;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+#searchbar{
+    border-radius: 50px;
+}
+
+.navbar-brand{
+    user-select: none;
+}
+
+#navbar-bottom.dark{
+    background-color: #718096;
+}
+
+.navbar-section-item{
+    background-color: inherit;
+}
+
+.item-aparter.dark{
+    background-color: #ffffff;
+}
+
+.navbar-section-item.dark{
+    color: #ffffff;
+}
+
+#navbar-top.dark{
+    background-color: #232342;
+}
+
+.fa-moon{
+    color: #718096;
+}
+
+.fa-sun.dark{
+    background-color: inherit;
+    color: #ffffff;
+}
+
+.button-dark{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    color: #ffffff !important;
+}

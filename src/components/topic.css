@@ -1,0 +1,86 @@
+.topic, .section-feed-item{
+    width: 100%;
+    background-color: #E6E6E6;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.topic-title, .recent-topic-title{
+    font-weight: 300;
+}
+
+.item-title{
+    font-weight: 300;
+    margin-bottom: 0 !important;
+}
+
+.topic-info{
+    display: flex;
+    background-color: inherit;
+    color: #718096;
+    font-size: 13px;
+    align-items: center;
+}
+
+.topic-runtime, .topic-author, .recent-topic-runtime, .recent-topic-author{
+    font-weight: 300;
+}
+
+.topic-author-name{
+    font-weight: 400;
+}
+
+.topic-author, .recent-topic-author{
+    margin-right: 3px;
+}
+
+.topic-info-aparter{
+    width: 1px;
+    height: 1px;
+    background-color: #718096;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.flair{
+    color: #ffffff;
+    padding: 2px 18px 2px 18px;
+    border-radius: 10px;
+    margin-right: 6px;
+    font-size: 10px;
+    user-select: none;
+}
+
+.flair-Etec{
+    background-color: #FF5555;
+}
+
+.flair-Staff{
+    background-color: #DD55FF
+}
+
+.flair-Fatec{
+    background-color: #55ADFF
+}
+
+.flair-Professor{
+    background-color: #FFC555
+}
+
+.topic.dark{
+    background-color: #718096;
+    color: #ffffff;
+}
+
+.topic-info-aparter.dark{
+    background-color: #dfdfdf;
+}
+
+.topic-info.dark{
+    display: flex; 
+    color: #dfdfdf !important;
+    font-size: 13px;
+    align-items: center;
+}

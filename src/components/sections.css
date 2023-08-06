@@ -1,0 +1,40 @@
+.sections-map, .sections-title, .section-sub-title, .section-sub-sub-title, .section-item{
+    color: #718096;
+    list-style: none;
+}
+
+.sections-title{
+    font-weight: 800;
+}
+
+.section-sub-title{
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.section-sub-sub-title{
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.section-item{
+    font-weight: 300;
+    margin-bottom: 3px;
+}
+
+.sections-map{
+    padding: 0;
+}
+
+.sections-map-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.retract-btn{
+    font-size: 12px;
+    color: #718096;
+    font-weight: 300;
+    cursor: pointer;
+}

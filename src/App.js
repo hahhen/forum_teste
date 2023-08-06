@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Header from './components/header';
+import Sections from './components/sections'
+import Feed from './components/feed'
+import RecentFeed from './components/recentfeed';
+
+var [isLight, setLight] = "";
+
+function Light(){
+  [isLight, setLight] = useState(true)
+}
 
 function App() {
+  Light()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div className={isLight? "":"dark"} >
+      <main className="container pt-5">
+        <div className='row'>
+          <Sections />
+          <Feed />
+          <RecentFeed />
+        </div>
+      </main>
+      </div>
+    </>
+    
   );
 }
 
 export default App;
+export {Light, isLight, setLight}
