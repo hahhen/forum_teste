@@ -84,3 +84,9 @@
     padding-right: 10px !important;
     color: #ffffff !important;
 }
+
+@media (max-width: 1000px) {
+    #navbar-bottom{
+        display: none;
+    }
+}

@@ -29,7 +29,7 @@
 .sections-map-header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
 }
 
 .retract-btn{
@@ -37,4 +37,10 @@
     color: #718096;
     font-weight: 300;
     cursor: pointer;
+}
+
+@media (max-width: 1000px){
+    #sections-col{
+        display: none;
+    }
 }

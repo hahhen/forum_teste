@@ -15,7 +15,7 @@ function Header() {
                     <a id="login-btn" className="login-btn d-flex align-items-center me-2" to="/">
                         <button type="button" className="btn btn-outline-light">Entre</button>
                     </a>
-                    <span className="signup-btn me-1">ou</span>
+                    <span className="me-1 text-white">ou</span>
                     <a id="signup-btn" className="signup-btn d-flex align-items-center" href="#">
                         Cadastre-se
                     </a>

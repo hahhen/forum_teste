@@ -1,11 +1,22 @@
 import React from 'react'
 import Topic from './topic'
+import { isRetract } from '../App'
+import MediaQuery from 'react-responsive'
 
-function Feed({className}) {
+function Feed() {
   return (
-    <div id='feed' className={"col-6 feed"}>
-        <Topic />
-    </div>
+    <>
+      <MediaQuery minWidth={1000}>
+        <div id='feed' className={`feed ${isRetract ? 'col-6' : 'col-7'}`}>
+          <Topic />
+        </div>
+      </MediaQuery>
+      <MediaQuery maxWidth={999}>
+        <div id='feed' className={`feed col-12`}>
+          <Topic />
+        </div>
+      </MediaQuery>
+    </>
   )
 }
 

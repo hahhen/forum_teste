@@ -1,14 +1,16 @@
 import React from 'react'
 import './sections.css'
+import {isRetract, retract} from '../App'
 
-function sections() {
-  return (
-        <div id="sections-col" className="col-3 sections">
-                <div className="sections-map-header">
-                    <h5 id="sections-tit" className="sections-title">Seções</h5>
-                    <span id="retract-btn" className="retract-btn"><i className="fa-solid fa-caret-left"></i> Recolher</span>
-                </div>
-                <ul id="sections-map" className="sections-map">
+function Sections() {
+    return (
+        <div id="sections-col" className={`sections ${isRetract? 'col-3':'col-1'}`}>
+            <div className="sections-map-header">
+                {isRetract?<h5 id="sections-tit" className="sections-title">Seções</h5>:null}
+                <span id="retract-btn" className="retract-btn" onClick={() => retract(!isRetract)}><i className={`fa-solid ${isRetract?'fa-caret-left':'fa-caret-right'}`}></i>{isRetract?' Recolher':' Expandir'}</span>
+            </div>
+            {isRetract?
+                <ul id="sections-map" className={`sections-map`}>
                     <li className="section-sub-title">
                         Matérias
                         <ul>
@@ -50,8 +52,11 @@ function sections() {
                         </ul>
                     </li>
                 </ul>
-            </div>
-  )
+            :null}
+        </div>
+
+    )
 }
 
-export default sections
+export default Sections
+export {isRetract, retract}
