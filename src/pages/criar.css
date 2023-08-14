@@ -1,0 +1,29 @@
+.create-header{
+    font-weight: 300 !important;
+}
+
+.wrapper-select{
+    display: flex;
+    padding: 5px 11px 5px 11px;
+    align-items: center;
+    border: 1px solid #718096;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.section-select{
+    font-weight: 700;
+    border: none;
+}
+
+.options-wrapper{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.post-button{
+    border-radius: 10px !important;
+    padding: 12px 30px 12px 30px;
+    font-weight: 100;
+}

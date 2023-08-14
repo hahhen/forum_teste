@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import Header from './components/header';
-import Sections from './components/sections';
-import Feed from './components/feed';
-import RecentFeed from './components/recentfeed';
-import MediaQuery from 'react-responsive';
+import { Route, Routes, Link } from 'react-router-dom';
+import Home from './pages/Home';
+import Criar from './pages/Criar';
 
 var [isLight, setLight] = "";
 function Light() {
@@ -21,23 +19,10 @@ function App() {
   Light()
   Retract()
   return (
-    <>
-      <Header />
-      <div className={isLight ? "" : "dark"} >
-        <main className="container pt-5">
-          <div className='row'>
-            <MediaQuery minWidth={1000}>
-              <Sections />
-            </MediaQuery>
-            <Feed />
-            <MediaQuery minWidth={1000}>
-              <RecentFeed />
-            </MediaQuery>
-          </div>
-        </main>
-      </div>
-    </>
-
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path='/criar' element={<Criar />} />
+    </Routes>
   );
 }
 
