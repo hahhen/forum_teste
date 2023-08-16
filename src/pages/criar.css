@@ -40,12 +40,12 @@
     padding: 10px;
 }
 
-.topic-title:focus{
+.topic-title-input:focus{
     outline: 1px solid #0d65ff;
 }
 
 .ck.ck-content:not(.ck-comment__input *) {
-    height: 300px;
+    min-height: 300px;
     overflow-y: auto;
 }
 
