@@ -31,7 +31,7 @@ function Criar() {
                 </div>
                 <div className='title-wrapper mb-4'>
                     <label for='topicTitle' className='mb-2'>Título <small>(obrigatório)</small></label>
-                    <input type='text' className='topic-title' name='topicTitle' id='topicTitle' />
+                    <input type='text' className='topic-title-input' name='inTopicTitle' id='inTopicTitle' />
                 </div>
                 <label className='mb-2'>Corpo:</label>
                 <CKEditor
