@@ -4,26 +4,54 @@
 
 .wrapper-select{
     display: flex;
-    padding: 5px 11px 5px 11px;
+    padding: 2px 11px 2px 11px;
     align-items: center;
-    border: 1px solid #718096;
+    border: 1px solid lightgray;
     border-radius: 10px;
     margin-right: 20px;
 }
 
 .section-select{
-    font-weight: 700;
+    font-weight: 600;
     border: none;
 }
 
 .options-wrapper{
+    flex-wrap: wrap;
     display: flex;
-    margin-bottom: 20px;
     margin-top: 10px;
 }
 
 .post-button{
     border-radius: 10px !important;
-    padding: 12px 30px 12px 30px;
+    padding: 8px 30px 8px 30px;
     font-weight: 100;
+}
+
+.title-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.topic-title{
+    font-weight: 400;
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+
+.topic-title:focus{
+    outline: 1px solid #0d65ff;
+}
+
+.ck.ck-content:not(.ck-comment__input *) {
+    height: 300px;
+    overflow-y: auto;
+}
+
+@media (max-width: 1000px) {
+    .wrapper-select, #post-button{
+        width: 100%;
+        margin-right: 0;
+    }
 }
