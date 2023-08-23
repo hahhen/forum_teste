@@ -13,7 +13,7 @@ function Criar() {
                 <h1 className='create-header mb-3'>Criar tópico</h1>
                 <div className='options-wrapper mb-4'>
                     <div className='wrapper-select mb-2'>
-                        <label for='section-select'>Seção: </label>
+                        <label htmlFor='section-select'>Seção: </label>
                         <select id='section-select' className='section-select form-select ps-1'>
                             <option>Matemática</option>
                             <option>Português</option>
@@ -21,35 +21,25 @@ function Criar() {
                         </select>
                     </div>
                     <div className='wrapper-select mb-2'>
-                        <label for='privacy-select'>Privacidade: </label>
-                        <select id='privacy-select' className='section-select form-select ps-1'>
-                            <option>Privado</option>
-                            <option>Minha instituição</option>
-                            <option selected>Público</option>
+                        <label htmlFor='privacy-select'>Privacidade: </label>
+                        <select defaultValue={'publ'} id='privacy-select' className='section-select form-select ps-1'>
+                            <option value={'priv'}>Privado</option>
+                            <option value={'mi'}>Minha instituição</option>
+                            <option value={'publ'}>Público</option>
                         </select>
                     </div>
                 </div>
                 <div className='title-wrapper mb-4'>
-                    <label for='topicTitle' className='mb-2'>Título <small>(obrigatório)</small></label>
+                    <label htmlFor='inTopicTitle' className='mb-2'>Título <small>(obrigatório)</small></label>
                     <input type='text' className='topic-title-input' name='inTopicTitle' id='inTopicTitle' />
                 </div>
-                <label className='mb-2'>Corpo:</label>
-                <CKEditor
+                <label htmlFor='ckeditor' className='mb-2'>Corpo:</label>
+                <CKEditor id={'ckeditor'}
                     editor={Editor}
-                    data="<p>Escreva aqui seu tópico!</p>"
+                    data={"<p>Escreva aqui seu tópico!</p"}
                     onReady={editor => {
                         // You can store the "editor" and use when it is needed.
                         console.log('Editor is ready to use!', editor);
-                    }}
-                    onChange={(event, editor) => {
-                        const data = editor.getData();
-                        console.log({ event, editor, data });
-                    }}
-                    onBlur={(event, editor) => {
-                        console.log('Blur.', editor);
-                    }}
-                    onFocus={(event, editor) => {
-                        console.log('Focus.', editor);
                     }}
                 />
                 <button id='post-button' className='mt-4 mb-5 post-button m-0 btn btn-primary'>Criar tópico</button>
