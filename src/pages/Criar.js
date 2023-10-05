@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Header from '../components/header';
 import './criar.css'
 import { isLight } from '../App';
-import Editor from 'ckeditor5-custom-build/build/ckeditor';
-import { CKEditor } from '@ckeditor/ckeditor5-react'
+import { Editor } from '@tinymce/tinymce-react';
 
 function Criar() {
+    const editorRef = useRef(null);
+    const log = () => {
+        if (editorRef.current) {
+        console.log(editorRef.current.getContent());
+        }
+    };
     return (
         <>
             <Header />
@@ -34,14 +39,28 @@ function Criar() {
                     <input type='text' className='topic-title-input' name='inTopicTitle' id='inTopicTitle' />
                 </div>
                 <label htmlFor='ckeditor' className='mb-2'>Corpo:</label>
-                <CKEditor id={'ckeditor'}
-                    editor={Editor}
-                    data={"<p>Escreva aqui seu tópico!</p"}
-                    onReady={editor => {
-                        // You can store the "editor" and use when it is needed.
-                        console.log('Editor is ready to use!', editor);
-                    }}
-                />
+                {
+                    <Editor
+                        apiKey='fj80sqetd8mxsjp2pseqiuomat4y6sp4yaq3f5jscu6bkss0'
+                        onInit={(evt, editor) => editorRef.current = editor}
+                        initialValue="<p>Começe a escrever seu tópico.</p>"
+                        init={{
+                        height: 500,
+                        language: 'pt_BR',
+                        menubar: true,
+                        plugins: [
+                            'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+                            'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+                            'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount'
+                        ],
+                        toolbar: 'undo redo | blocks | ' +
+                            'bold italic forecolor | alignleft aligncenter ' +
+                            'alignright alignjustify | bullist numlist outdent indent | ' +
+                            'removeformat | help',
+                        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                        }}
+                    />
+                }
                 <button id='post-button' className='mt-4 mb-5 post-button m-0 btn btn-primary'>Criar tópico</button>
             </main>
         </>
