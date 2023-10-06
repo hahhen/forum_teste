@@ -1,6 +1,6 @@
 import React from 'react'
 import './recenttopic.css'
-import { topicInfo, user } from './topicInfoSon'
+import { topicInfo, user, section } from './topicInfoSon'
 import { isLight } from '../App'
 import { dayjs } from './dayjsa'
 
@@ -13,7 +13,7 @@ function RecentPost() {
         <div key={info.topiccod} className={`recent-topic ${isLight ? "" : "dark"}`}>
           <div className="recent-topic-header">
             <h6 className="recent-topic-title">{info.title}</h6>
-            <span className={`recent-topic-section ${isLight ? "" : "dark"}`}>Em <span className="recent-topic-origin-name">{info.section}</span></span>
+            <span className={`recent-topic-section ${isLight ? "" : "dark"}`}>Em <span className="recent-topic-origin-name">{section[info.section-1].sectionname}</span></span>
           </div>
           <div className={`recent-topic-info ${isLight ? "" : "dark"}`}>
             <span className="recent-topic-runtime">{dayjs(info.time).fromNow()}</span>

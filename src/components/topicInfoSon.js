@@ -4,35 +4,35 @@ const topicInfo = [
         title: "Leia atentamente as regras",
         time: "2023-01-01T19:32:10",
         author: 1,
-        section: "Mensagens do Fórum CPS"
+        section: 1
     },
     {
         topiccod: 2,
         title: "Exemplo de postagem",
         time: "2023-08-05T19:35:30",
         author: 2,
-        section: "Exemplo"
+        section: 2
     },
     {
         topiccod: 3,
         title: "Exemplo de postagem",
         time: "2023-08-05T00:00:01",
         author: 3,
-        section: "Exemplo"
+        section: 3
     },
     {
         topiccod: 4,
         title: "uiofdhgidhgidfg",
         time: "2023-03-05T00:00:02",
         author: 3,
-        section: "Exemplo"
+        section: 4
     },
     {
         topiccod: 5,
         title: "firfiosdiofhsaidfg",
         time: "2023-08-03T00:00:02",
         author: 1,
-        section: "Exemplo"
+        section: 5
     } 
 ]
 
@@ -89,4 +89,102 @@ const flairHolder = [
     }
 ]
 
-export {topicInfo, user, flairHolder, flair}
+const section = [
+    {
+        sectioncod: 1,
+        sectionname: "Mensagens do Fórum CPS",
+        ssection: 1
+    },
+    {
+        sectioncod: 2,
+        sectionname: "Matemática",
+        ssection: 2
+    },
+    {
+        sectioncod: 3,
+        sectionname: "Química",
+        ssection: 2
+    },
+    {
+        sectioncod: 4,
+        sectionname: "Português e Literatura",
+        ssection: 3
+    },
+    {
+        sectioncod: 5,
+        sectionname: "Geografia",
+        ssection: 3
+    },
+    {
+        sectioncod: 6,
+        sectionname: "História",
+        ssection: 3
+    },
+    {
+        sectioncod: 7,
+        sectionname: "Artes",
+        ssection: 3
+    },
+    {
+        sectioncod: 8,
+        sectionname: "Desenvolvimento de Sistemas",
+        ssection: 4
+    },
+    {
+        sectioncod: 9,
+        sectionname: "Contabilidade",
+        ssection: 4
+    },
+    {
+        sectioncod: 10,
+        sectionname: "Química",
+        ssection: 4
+    },
+    {
+        sectioncod: 11,
+        sectionname: "Administração",
+        ssection: 4
+    },
+    {
+        sectioncod: 12,
+        sectionname: "Logística",
+        ssection: 4
+    },
+    {
+        sectioncod: 13,
+        sectionname: "Marketing",
+        ssection: 4
+    },
+    {
+        sectioncod: 14,
+        sectionname: "Física",
+        ssection: 2
+    },
+]
+
+const supersection = [
+    {
+        ssectioncod: 1,
+        ssectionname: "Mensagens do Fórum CPS"
+    },
+    {
+        ssectioncod: 2,
+        ssectionname: "Exatas"
+    },
+    {
+        ssectioncod: 3,
+        ssectionname: "Humanas"
+    },
+    {
+        ssectioncod: 4,
+        ssectionname: "Etec"
+    },
+    {
+        ssectioncod: 5,
+        ssectionname: "Fatec"
+    }
+
+]
+
+
+export {topicInfo, user, flairHolder, flair, section, supersection}

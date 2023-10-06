@@ -1,6 +1,6 @@
 import React from 'react'
 import './header.css'
-import { Routes, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { isLight, setLight } from '../App'
 import Home from '../pages/Home'
 
@@ -10,10 +10,10 @@ function Header() {
             <nav id="navbar-top" className={`navbar pt-3 pb-3 ${isLight ? "" : "dark"}`}>
                 <div className='container justify-content-between'>
                     
-                        <a className="navbar-brand d-flex align-items-center">
+                        <Link to={'/'} className="navbar-brand d-flex align-items-center">
                             <img src='/logo-cps.png' alt="CPS" width="80" className="me-4 d-inline-block align-text-top" />
                             <span id="header-title" className="mt-1 text-white">Fórum</span>
-                        </a>
+                        </Link>
                     
                     <div id='account-area' className='account-area d-flex align-items-center'>
                         <a id="login-btn" className="login-btn d-flex align-items-center me-2" to="/">

@@ -38,9 +38,3 @@
     font-weight: 300;
     cursor: pointer;
 }
-
-@media (max-width: 1000px){
-    #sections-col{
-        display: none;
-    }
-}

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import Criar from './pages/Criar';
+import { section } from './components/topicInfoSon';
+import SectionPage from './pages/SectionPage';
 
 var [isLight, setLight] = "";
 function Light() {
@@ -22,6 +24,10 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path='/criar' element={<Criar />} />
+      {/* <Route path='/Matemática' element={<SectionPage section9={2}/>} /> */}
+      {section.map((info)=>
+        <Route path={`/${info.sectionname}`} element={<SectionPage section9={info.sectioncod} />}/>
+      )}
     </Routes>
   );
 }

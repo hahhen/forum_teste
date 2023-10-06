@@ -3,6 +3,7 @@ import Header from '../components/header';
 import './criar.css'
 import { isLight } from '../App';
 import { Editor } from '@tinymce/tinymce-react';
+import { section } from '../components/topicInfoSon';
 
 function Criar() {
     const editorRef = useRef(null);
@@ -20,9 +21,9 @@ function Criar() {
                     <div className='wrapper-select mb-2'>
                         <label htmlFor='section-select'>Seção: </label>
                         <select id='section-select' className='section-select form-select ps-1'>
-                            <option>Matemática</option>
-                            <option>Português</option>
-                            <option>Desenvolvimento de Sistemas</option>
+                            {section.slice(1).map((info)=>
+                            <option>{info.sectionname}</option>
+                            )}
                         </select>
                     </div>
                     <div className='wrapper-select mb-2'>
@@ -46,12 +47,13 @@ function Criar() {
                         initialValue="<p>Começe a escrever seu tópico.</p>"
                         init={{
                         height: 500,
+                        branding: false,
                         language: 'pt_BR',
                         menubar: true,
                         plugins: [
                             'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
                             'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-                            'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount'
+                            'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount', 'codesample'
                         ],
                         toolbar: 'undo redo | blocks | ' +
                             'bold italic forecolor | alignleft aligncenter ' +

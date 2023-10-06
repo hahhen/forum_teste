@@ -4,10 +4,9 @@ import Sections from '../components/sections';
 import Feed from '../components/feed';
 import RecentFeed from '../components/recentfeed';
 import MediaQuery from 'react-responsive';
-import Section from '../components/section'
 import { isLight, isRetract } from '../App';
 
-function Home() {
+function SectionPage({section9}) {
     return (
         <>
             <Header />
@@ -17,12 +16,11 @@ function Home() {
                         <MediaQuery minWidth={1000}>
                             {isMobile => (
                                 <>
-                                    {isMobile ? <Sections />: ''}
+                                    {isMobile ? <Sections /> : ''}
                                     <div id='feed' className={`${isMobile ? `feed ${isRetract ? 'col-6' : 'col-7'}` : `feed col-12`}`}>
-                                        <Feed section1={1} />
-                                        <Section />
+                                        <Feed section1={section9} s={true} />
                                     </div>
-                                    {isMobile? <RecentFeed /> : ''}
+                                    {isMobile ? <RecentFeed /> : ''}
                                 </>
                             )}
                         </MediaQuery>
@@ -33,4 +31,4 @@ function Home() {
     )
 }
 
-export default Home
+export default SectionPage

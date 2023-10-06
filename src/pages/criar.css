@@ -38,16 +38,13 @@
     font-weight: 400;
     border: 1px solid lightgray;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .topic-title-input:focus{
     outline: 1px solid #0d65ff;
 }
 
-.ck.ck-content:not(.ck-comment__input *) {
-    min-height: 300px;
-    overflow-y: auto;
-}
 
 @media (max-width: 1000px) {
     .wrapper-select, #post-button{

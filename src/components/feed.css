@@ -1,0 +1,7 @@
+.feed-title{
+    font-weight: 300;
+}
+
+.feed-title.dark{
+    color: #fff;
+}
