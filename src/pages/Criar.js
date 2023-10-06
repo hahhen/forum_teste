@@ -48,6 +48,9 @@ function Criar() {
                         init={{
                         height: 500,
                         branding: false,
+                        mobile: {
+                            menubar: true
+                          },
                         language: 'pt_BR',
                         menubar: true,
                         plugins: [
