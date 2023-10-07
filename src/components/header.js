@@ -25,35 +25,35 @@ function Header() {
             <nav id="navbar-bottom" className={`navbar pt-2 pb-2 ${isLight ? "" : "dark"}`}>
                 <div className="container">
                     <ul className="container navbar-section m-0 d-flex align-items-center justify-content-between">
-                        <li className={`navbar-section-item ${isLight ? "" : "dark"}`}>
+                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
                             Matemática
                         </li>
                         <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item ${isLight ? "" : "dark"}`}>
+                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
                             Física
                         </li>
                         <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item ${isLight ? "" : "dark"}`}>
+                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
                             Química
                         </li>
                         <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item ${isLight ? "" : "dark"}`}>
+                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
                             Português e Literatura
                         </li>
                         <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item ${isLight ? "" : "dark"}`}>
+                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
                             Biologia
                         </li>
                         <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item ${isLight ? "" : "dark"}`}>
+                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
                             TCC
                         </li>
                         <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item ${isLight ? "" : "dark"}`}>
+                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
                             Cursos
                         </li>
                         <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item ${isLight ? "" : "dark"}`}>
+                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
                             Todas as Matérias
                         </li>
                         <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>

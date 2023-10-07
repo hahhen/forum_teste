@@ -7,3 +7,16 @@
 .dark{
   background-color: #10101d;
 }
+
+::-webkit-scrollbar{
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #D43939;
+  border-radius: .5em;
+}

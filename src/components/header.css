@@ -15,7 +15,7 @@
 }
 
 .signup-btn{
-    color: white;
+    color: #fff;
 }
 
 .navbar-section{
@@ -28,7 +28,20 @@
     font-weight: 400;
     list-style: none;
 }
-
+.nav-link{
+    cursor: pointer;
+}
+.nav-link::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #232342;
+    transition: width .3s;
+}
+.nav-link:hover::after{
+    width: 100%;
+}
 .item-aparter{
     width: 2px;
     height: 2px;
