@@ -3,7 +3,7 @@
 }
 
 #header-title{
-    font-weight: 300;
+    font-weight: 400;
 }
 
 #navbar-bottom{
@@ -25,7 +25,7 @@
 .navbar-section-item{
     color: #718096;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 400;
     list-style: none;
 }
 
@@ -37,8 +37,8 @@
 }
 
 #searchbar::placeholder{
-    color: #D9D9D9;
-    font-weight: 300;
+    color: #718096;
+    font-weight: 400;
     font-size: 14px;
 }
 
@@ -85,7 +85,7 @@
     color: #ffffff !important;
 }
 
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
     #navbar-bottom{
         display: none;
     }

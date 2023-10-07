@@ -15,6 +15,7 @@
 .section-sub-sub-title{
     font-weight: 500;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .section-item{
@@ -63,7 +64,7 @@
 }
 
 .retract-btn{
-    font-size: 12px;
+    font-size: 0.875rem;
     color: #718096;
     font-weight: 400;
     cursor: pointer;
