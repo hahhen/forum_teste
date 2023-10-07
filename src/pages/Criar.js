@@ -9,7 +9,7 @@ function Criar() {
     const editorRef = useRef(null);
     const log = () => {
         if (editorRef.current) {
-        console.log(editorRef.current.getContent());
+            console.log(editorRef.current.getContent());
         }
     };
     return (
@@ -21,8 +21,8 @@ function Criar() {
                     <div className='wrapper-select mb-2'>
                         <label htmlFor='section-select'>Seção: </label>
                         <select id='section-select' className='section-select form-select ps-1'>
-                            {section.slice(1).map((info)=>
-                            <option>{info.sectionname}</option>
+                            {section.slice(1).map((info) =>
+                                <option>{info.sectionname}</option>
                             )}
                         </select>
                     </div>
@@ -45,26 +45,35 @@ function Criar() {
                         apiKey='fj80sqetd8mxsjp2pseqiuomat4y6sp4yaq3f5jscu6bkss0'
                         onInit={(evt, editor) => editorRef.current = editor}
                         init={{
-                        placeholder: 'Escreva aqui seu tópico!',
-                        height: 500,
-                        branding: false,
-                        mobile: {
-                            menubar: true
-                          },
-                        language: 'pt_BR',
-                        menubar: true,
-                        autosave_restore_when_empty: true,
-                        autosave_interval: '5s',
-                        plugins: [
-                            'advlist', 'autosave', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
-                            'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-                            'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount', 'codesample'
-                        ],
-                        toolbar: 'undo redo | blocks | ' +
-                            'bold italic forecolor | alignleft aligncenter ' +
-                            'alignright alignjustify | bullist numlist outdent indent | ' +
-                            'removeformat | fullscreen | help',
-                        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                            external_plugins: {
+                                'tiny_mce_wiris': `${window.location.href}/node_modules/@wiris/mathtype-tinymce6/plugin.min.js`
+                            },
+                            wirisformulaeditorlang: 'pt_br',
+                            placeholder: 'Escreva aqui seu tópico!',
+                            height: 500,
+                            branding: false,
+                            mobile: {
+                                menubar: true
+                            },
+                            language: 'pt_BR',
+    
+                            promotion: false,
+                            htmlAllowedTags:  ['.*'],
+                            htmlAllowedAttrs: ['.*'],
+                            extended_valid_elements: '*[.*]',
+                            menubar: true,
+                            plugins: [
+                                'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+                                'anchor', 'searchreplace', 'visualblocks', 'fullscreen',
+                                'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount', 'codesample'
+                            ],
+                            toolbar: 'undo redo | blocks | ' +
+                                'bold italic forecolor | alignleft aligncenter ' +
+                                'alignright alignjustify | bullist numlist outdent indent | ' +
+                                'tiny_mce_wiris_formulaEditor tiny_mce_wiris_formulaEditorChemistry | ' +
+                                'removeformat | fullscreen | help',
+                            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                            
                         }}
                     />
                 }
