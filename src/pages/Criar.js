@@ -44,8 +44,8 @@ function Criar() {
                     <Editor
                         apiKey='fj80sqetd8mxsjp2pseqiuomat4y6sp4yaq3f5jscu6bkss0'
                         onInit={(evt, editor) => editorRef.current = editor}
-                        initialValue="<p>Começe a escrever seu tópico.</p>"
                         init={{
+                        placeholder: 'Escreva aqui seu tópico!',
                         height: 500,
                         branding: false,
                         mobile: {
@@ -53,15 +53,17 @@ function Criar() {
                           },
                         language: 'pt_BR',
                         menubar: true,
+                        autosave_restore_when_empty: true,
+                        autosave_interval: '5s',
                         plugins: [
-                            'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+                            'advlist', 'autosave', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
                             'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
                             'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount', 'codesample'
                         ],
                         toolbar: 'undo redo | blocks | ' +
                             'bold italic forecolor | alignleft aligncenter ' +
                             'alignright alignjustify | bullist numlist outdent indent | ' +
-                            'removeformat | help',
+                            'removeformat | fullscreen | help',
                         content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
                         }}
                     />
