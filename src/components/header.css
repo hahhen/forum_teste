@@ -1,5 +1,5 @@
 #navbar-top{
-    background-color: #D43939;
+    background-color: var(--main-red);
 }
 
 #header-title{
