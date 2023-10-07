@@ -4,13 +4,17 @@ import {isRetract, retract} from '../App'
 
 function Sections() {
     return (
-        <div id="sections-col" className={`sections ${isRetract? 'col-3':'col-1'}`}>
+        <div id="sections-col" className={`sections ${isRetract? 'sections-map-open col-3': 'col-1'}`}>
             <div className="sections-map-header">
                 {isRetract?<h5 id="sections-tit" className="sections-title">Seções</h5>:null}
-                <span id="retract-btn" className="retract-btn" onClick={() => retract(!isRetract)}><i className={`fa-solid ${isRetract?'fa-caret-left':'fa-caret-right'}`}></i>{isRetract?' Recolher':' Expandir'}</span>
+                <span id="retract-btn" 
+                className="retract-btn" 
+                onClick={() => retract(!isRetract)}>
+                    <i className={`fa-solid ${isRetract?'fa-caret-left':'fa-caret-right'}`}>
+                    </i>{isRetract?' Recolher':' Expandir'}</span>
             </div>
             {isRetract?
-                <ul id="sections-map" className={`sections-map`}>
+                <ul id="sections-map" className={isRetract?'sections-map-open':'sections-map sections-map-close'}>
                     <li className="section-sub-title">
                         Matérias
                         <ul>
