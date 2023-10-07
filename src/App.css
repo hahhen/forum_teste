@@ -3,6 +3,14 @@
   transition: 0.1s linear;
 }
 
+:root{
+  --white: #eee;
+  --main-red: #d43939;
+}
+
+body{
+  background-color: var(--white);
+}
 
 .dark{
   background-color: #10101d;
@@ -17,6 +25,6 @@
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: #D43939;
+  background-color: var(--main-red);
   border-radius: .5em;
 }

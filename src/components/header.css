@@ -30,6 +30,7 @@
 }
 .nav-link{
     cursor: pointer;
+    margin-top: 2px;
 }
 .nav-link::after{
     content: "";
