@@ -48,7 +48,7 @@
 }
 
 .recent-topic-info.dark{
-    background-color: inherit;
+    background-color: initial;
     display: flex; 
     color: #dfdfdf !important;
     font-size: 10px;
@@ -56,6 +56,6 @@
 }
 
 .recent-topic-section.dark{
-    background-color: inherit;
+    background-color: initial;
     color: #dfdfdf;
 }
