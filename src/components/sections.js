@@ -14,7 +14,7 @@ function Sections() {
                     </i>{isRetract?' Recolher':' Expandir'}</span>
             </div>
             {isRetract?
-                <ul id="sections-map" className={isRetract?'sections-map-open':'sections-map sections-map-close'}>
+                <ul id="sections-map" className={isRetract?'sections-map sections-map-open':'sections-map sections-map-close'}>
                     <li className="section-sub-title">
                         Matérias
                         <ul>

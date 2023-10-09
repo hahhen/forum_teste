@@ -45,6 +45,7 @@ function Criar() {
                         apiKey='fj80sqetd8mxsjp2pseqiuomat4y6sp4yaq3f5jscu6bkss0'
                         onInit={(evt, editor) => editorRef.current = editor}
                         init={{
+
                             external_plugins: {
                                 'tiny_mce_wiris': `${window.location.href}/node_modules/@wiris/mathtype-tinymce6/plugin.min.js`
                             },
@@ -56,9 +57,9 @@ function Criar() {
                                 menubar: true
                             },
                             language: 'pt_BR',
-    
+
                             promotion: false,
-                            htmlAllowedTags:  ['.*'],
+                            htmlAllowedTags: ['.*'],
                             htmlAllowedAttrs: ['.*'],
                             extended_valid_elements: '*[.*]',
                             menubar: true,
@@ -73,7 +74,7 @@ function Criar() {
                                 'tiny_mce_wiris_formulaEditor tiny_mce_wiris_formulaEditorChemistry | ' +
                                 'removeformat | fullscreen | help',
                             content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
-                            
+
                         }}
                     />
                 }

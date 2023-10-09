@@ -20,6 +20,11 @@ function Retract() {
 function App() {
   Light()
   Retract()
+  if(!isLight){
+    document.body.classList = "bdark"
+  } else{
+    document.body.classList = ""
+  }
   return (
     <Routes>
       <Route path="/" element={<Home/>}/>

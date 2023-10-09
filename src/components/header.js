@@ -2,7 +2,6 @@ import React from 'react'
 import './header.css'
 import { Link } from 'react-router-dom'
 import { isLight, setLight } from '../App'
-import Home from '../pages/Home'
 
 function Header() {
     return (
