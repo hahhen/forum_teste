@@ -3,8 +3,9 @@ import './App.css';
 import { Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import Criar from './pages/Criar';
-import { section } from './components/topicInfoSon';
+import { section, topicInfo } from './components/topicInfoSon';
 import SectionPage from './pages/SectionPage';
+import TopicPage from './pages/TopicPage';
 
 var [isLight, setLight] = "";
 function Light() {
@@ -29,9 +30,11 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path='/criar' element={<Criar />} />
-      {/* <Route path='/Matemática' element={<SectionPage section9={2}/>} /> */}
       {section.map((info)=>
         <Route path={`/${info.sectionname}`} element={<SectionPage section9={info.sectioncod} />}/>
+      )}
+      {topicInfo.map((info)=>
+        <Route path={`/topico/${info.title}-${info.topiccod}`} element={<TopicPage topicKey={info} />}/>
       )}
     </Routes>
   );
