@@ -102,7 +102,7 @@ const section = [
     },
     {
         sectioncod: 3,
-        sectionname: "Química",
+        sectionname: "Química - ciência",
         ssection: 2
     },
     {
@@ -137,7 +137,7 @@ const section = [
     },
     {
         sectioncod: 10,
-        sectionname: "Química",
+        sectionname: "Química - curso",
         ssection: 4
     },
     {
