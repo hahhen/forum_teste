@@ -1,6 +1,7 @@
 .sections-map, .sections-title, .section-sub-title, .section-sub-sub-title, .section-item{
     color: #718096;
     list-style: none;
+    text-decoration: none;
 }
 
 .sections-title{

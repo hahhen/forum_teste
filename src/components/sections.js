@@ -1,40 +1,48 @@
 import React from 'react'
 import './sections.css'
-import {isRetract, retract} from '../App'
+import { isRetract, retract } from '../App'
+import { section, supersection } from './topicInfoSon'
+import { Link } from 'react-router-dom'
 
 function Sections() {
     return (
-        <div id="sections-col" className={`sections ${isRetract? 'sections-map-open col-3': 'col-1'}`}>
+        <div id="sections-col" className={`sections ${isRetract ? 'sections-map-open col-3' : 'col-1'}`}>
             <div className="sections-map-header">
-                {isRetract?<h5 id="sections-tit" className="sections-title">Seções</h5>:null}
-                <span id="retract-btn" 
-                className="retract-btn" 
-                onClick={() => retract(!isRetract)}>
-                    <i className={`fa-solid ${isRetract?'fa-caret-left':'fa-caret-right'}`}>
-                    </i>{isRetract?' Recolher':' Expandir'}</span>
+                {isRetract ? <h5 id="sections-tit" className="sections-title">Seções</h5> : null}
+                <span id="retract-btn"
+                    className="retract-btn"
+                    onClick={() => retract(!isRetract)}>
+                    <i className={`fa-solid ${isRetract ? 'fa-caret-left' : 'fa-caret-right'}`}>
+                    </i>{isRetract ? ' Recolher' : ' Expandir'}</span>
             </div>
-            {isRetract?
-                <ul id="sections-map" className={isRetract?'sections-map sections-map-open':'sections-map sections-map-close'}>
+            {isRetract ?
+                <ul id="sections-map" className={isRetract ? 'sections-map sections-map-open' : 'sections-map sections-map-close'}>
                     <li className="section-sub-title">
                         Matérias
                         <ul>
                             <li className="section-sub-sub-title">
                                 Exatas
                                 <ul>
-                                    <li className="section-item">Matemática</li>
-                                    <li className="section-item">Física</li>
-                                    <li className="section-item">Química</li>
-                                    <li className="section-item">Outros</li>
+                                    {section.map((info) =>
+                                        info.ssection === 2 ?
+                                            <li className="section-item">
+                                                    <Link to={info.sectionname} className='section-item'>{info.sectionname}</Link>
+                                                </li>
+                                            : null
+                                    )}
+
                                 </ul>
                             </li>
                             <li className="section-sub-sub-title">
                                 Humanas
                                 <ul>
-                                    <li className="section-item">Português e Literatura</li>
-                                    <li className="section-item">Geografia</li>
-                                    <li className="section-item">História</li>
-                                    <li className="section-item">Artes</li>
-                                    <li className="section-item">Outros</li>
+                                    {section.map((info) =>
+                                        info.ssection === 3 ?
+                                            <li className="section-item">
+                                                    <Link to={info.sectionname} className='section-item'>{info.sectionname}</Link>
+                                                </li>
+                                            : null
+                                    )}
                                 </ul>
                             </li>
                         </ul>
@@ -45,22 +53,56 @@ function Sections() {
                             <li className="section-sub-sub-title">
                                 Etec
                                 <ul>
-                                    <li className="section-item">Desenvolvimento de Sistemas</li>
-                                    <li className="section-item">Contabilidade</li>
-                                    <li className="section-item">Química</li>
-                                    <li className="section-item">Administração</li>
-                                    <li className="section-item">Logística</li>
-                                    <li className="section-item">Marketing</li>
+                                    {section.map((info) =>
+                                        info.ssection === 4 ?
+                                            <li className="section-item">
+                                                    <Link to={info.sectionname} className='section-item'>{info.sectionname}</Link>
+                                                </li>
+                                            : null
+                                    )}
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li className="section-sub-sub-title">
+                                Fatec
+                                <ul>
+                                    {section.map((info) =>
+                                        info.ssection === 5 ?
+                                            <li className="section-item">
+                                                    <Link to={info.sectionname} className='section-item'>{info.sectionname}</Link>
+                                                </li>
+                                            : null
+                                    )}
                                 </ul>
                             </li>
                         </ul>
                     </li>
+                    <li className="section-sub-title">
+                        Diversos
+                        {supersection.slice(5, supersection.length).map((sinfo) =>
+                            <ul>
+                                <li className="section-sub-sub-title">
+                                    {sinfo.ssectionname}
+                                    <ul>
+                                        {section.map((info) =>
+                                            info.ssection === sinfo.ssectioncod ?
+                                                <li className="section-item">
+                                                    <Link to={info.sectionname} className='section-item'>{info.sectionname}</Link>
+                                                </li>
+                                                : null
+                                        )}
+                                    </ul>
+                                </li>
+                            </ul>
+                        )}
+                    </li>
                 </ul>
-            :null}
+                : null}
         </div>
 
     )
 }
 
 export default Sections
-export {isRetract, retract}
+export { isRetract, retract }
