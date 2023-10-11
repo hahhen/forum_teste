@@ -22,7 +22,7 @@ function Feed({ section1, s }) {
         {topicInfo.map((info) =>
           <>
             {info.section === section1 ?
-              <Topic key={info.topiccod} info={info} />
+              <Topic info={info} />
               : ''}
           </>
         )}

@@ -1,0 +1,30 @@
+.topicview-title{
+    font-weight: 400;
+}
+
+.topicview-author{
+    margin-right: 3px;
+}
+
+.topicview-section{
+    margin-left: 5px;
+    font-weight: 300;
+    color: #718096;
+}
+
+.topicview-info{
+    color: #718096;
+}
+
+.topicview-origin-name{
+    font-weight: 500;
+}
+
+.topicview-info-aparter{
+    width: 1px;
+    height: 1px;
+    background-color: #718096;
+    border-radius: 50%;
+    margin-left: 4px;
+    margin-right: 6px;
+}
