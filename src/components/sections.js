@@ -26,7 +26,7 @@ function Sections() {
                                     {section.map((info) =>
                                         info.ssection === 2 ?
                                             <li className="section-item">
-                                                    <Link to={info.sectionname} className='section-item'>{info.sectionname}</Link>
+                                                    <Link to={`/${info.sectionname}`} className='section-item'>{info.sectionname}</Link>
                                                 </li>
                                             : null
                                     )}
@@ -39,7 +39,7 @@ function Sections() {
                                     {section.map((info) =>
                                         info.ssection === 3 ?
                                             <li className="section-item">
-                                                    <Link to={info.sectionname} className='section-item'>{info.sectionname}</Link>
+                                                    <Link to={`/${info.sectionname}`} className='section-item'>{info.sectionname}</Link>
                                                 </li>
                                             : null
                                     )}
@@ -56,7 +56,7 @@ function Sections() {
                                     {section.map((info) =>
                                         info.ssection === 4 ?
                                             <li className="section-item">
-                                                    <Link to={info.sectionname} className='section-item'>{info.sectionname}</Link>
+                                                    <Link to={`/${info.sectionname}`} className='section-item'>{info.sectionname}</Link>
                                                 </li>
                                             : null
                                     )}
@@ -70,7 +70,7 @@ function Sections() {
                                     {section.map((info) =>
                                         info.ssection === 5 ?
                                             <li className="section-item">
-                                                    <Link to={info.sectionname} className='section-item'>{info.sectionname}</Link>
+                                                    <Link to={`/${info.sectionname}`} className='section-item'>{info.sectionname}</Link>
                                                 </li>
                                             : null
                                     )}
@@ -88,7 +88,7 @@ function Sections() {
                                         {section.map((info) =>
                                             info.ssection === sinfo.ssectioncod ?
                                                 <li className="section-item">
-                                                    <Link to={info.sectionname} className='section-item'>{info.sectionname}</Link>
+                                                    <Link to={`/${info.sectionname}`} className='section-item'>{info.sectionname}</Link>
                                                 </li>
                                                 : null
                                         )}
