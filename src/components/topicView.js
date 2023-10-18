@@ -10,7 +10,7 @@ function TopicView({ topicKey }) {
       <div>
         <div className='d-flex align-items-baseline'>
           <h4 className={`topicview-title ${isLight ? "" : "dark"}`}>{topicKey.title}</h4>
-          <span className={`topicview-section ${isLight ? "" : "dark"}`}>Em <span className="topicview-origin-name">{section[topicKey.section - 1].sectionname}</span></span>
+          <span className={`topicview-section`}>Em <span className="topicview-origin-name">{section[topicKey.section - 1].sectionname}</span></span>
         </div>
         <div className='d-flex'>
           <div className='d-flex align-items-center'>
@@ -20,8 +20,8 @@ function TopicView({ topicKey }) {
             )}
           </div>
           <div className='topicview-info d-flex align-items-center'>
-            <span className={`topicview-info-aparter ${isLight ? "" : "dark"}`}></span>
-            <span title={topicKey.time} className={`topicview-runtime ${isLight ? "" : "dark"}`}>{dayjs(topicKey.time).fromNow()}</span>
+            <span className={`topicview-info-aparter `}></span>
+            <span title={topicKey.time} className={`topicview-runtime`}>{dayjs(topicKey.time).fromNow()}</span>
           </div>
         </div>
       </div>
