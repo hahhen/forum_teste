@@ -1,8 +1,9 @@
 .topicview-title{
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .topicview-author{
+    font-weight: 300;
     margin-right: 3px;
 }
 
@@ -20,6 +21,10 @@
     font-weight: 500;
 }
 
+.topicview-runtime{
+    font-weight: 300;
+}
+
 .topicview-info-aparter{
     width: 1px;
     height: 1px;
@@ -27,4 +32,12 @@
     border-radius: 50%;
     margin-left: 4px;
     margin-right: 6px;
+}
+
+.topicviewbody.dark, .topicview-title.dark, .topicview-author.dark{
+    color: #fff;
+}
+
+.topicview-section.dark, .topicview-runtime.dark, .topicview-info-aparter{
+    color: #dfdfdf;
 }
