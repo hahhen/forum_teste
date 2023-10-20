@@ -6,6 +6,7 @@ import Criar from './pages/Criar';
 import { section, topicInfo } from './components/topicInfoSon';
 import SectionPage from './pages/SectionPage';
 import TopicPage from './pages/TopicPage';
+import { Analytics } from '@vercel/analytics/react';
 
 var [isLight, setLight] = "";
 function Light() {
@@ -27,6 +28,8 @@ function App() {
     document.body.classList = ""
   }
   return (
+    <>
+    <Analytics/>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path='/criar' element={<Criar />} />
@@ -37,6 +40,7 @@ function App() {
         <Route path={`/topico/${info.title}-${info.topiccod}`} element={<TopicPage topicKey={info} />}/>
       )}
     </Routes>
+    </>
   );
 }
 
