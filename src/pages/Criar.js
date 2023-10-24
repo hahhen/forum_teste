@@ -4,8 +4,17 @@ import './criar.css'
 import { isLight } from '../App';
 import { Editor } from '@tinymce/tinymce-react';
 import { section } from '../components/topicInfoSon';
+import { useLocation } from 'react-router-dom';
 
 function Criar() {
+    const location = useLocation()
+    var locationstate;
+    if(location.state === null){
+        locationstate = 2
+    }else{
+        locationstate = location.state
+    }
+    const {from} = locationstate;
     const editorRef = useRef(null);
     const log = () => {
         if (editorRef.current) {
@@ -16,22 +25,22 @@ function Criar() {
         <>
             <Header />
             <main className='container pt-5'>
-                <h1 className='create-header mb-3'>Criar tópico</h1>
+                <h1 className={`create-header mb-3 ${isLight? '':'dark'}`}>Criar tópico</h1>
                 <div className='options-wrapper mb-4'>
                     <div className='wrapper-select mb-2'>
-                        <label htmlFor='section-select'>Seção: </label>
-                        <select id='section-select' className='section-select form-select ps-1'>
+                        <label className={`section-select-label ${isLight? '':'dark'}`} htmlFor={`section-select`}>Seção: </label>
+                        <select defaultValue={from} id='section-select' className={`ps-1 form-select section-select ${isLight? '':'dark'}`}>
                             {section.slice(1).map((info) =>
-                                <option>{info.sectionname}</option>
+                                <option value={info.sectioncod}>{info.sectionname}</option>
                             )}
                         </select>
                     </div>
                     <div className='wrapper-select mb-2'>
-                        <label htmlFor='privacy-select'>Privacidade: </label>
-                        <select defaultValue={'publ'} id='privacy-select' className='section-select form-select ps-1'>
-                            <option value={'priv'}>Privado</option>
-                            <option value={'mi'}>Minha instituição</option>
-                            <option value={'publ'}>Público</option>
+                        <label htmlFor={`privacy-select ${isLight? '':'dark'}`}>Privacidade: </label>
+                        <select defaultValue={1} id='privacy-select' className={`section-select form-select ps-1 ${isLight? '':'dark'}`}>
+                            <option value={1}>Público</option>
+                            <option value={2}>Minha instituição</option>
+                            <option value={3}>Privado</option>                            
                         </select>
                     </div>
                 </div>

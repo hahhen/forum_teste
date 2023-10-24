@@ -14,7 +14,7 @@ function Feed({ section1, s }) {
         <div className='d-flex align-items-center mb-2'>
           <h4 className={`m-0 feed-title${isLight ? '' : ' dark'}`}>{section[section1 - 1].sectionname}</h4>
           {s ?
-            <Link to={"/Criar"} id='post-button' className='post-button ms-3 btn btn-primary'>Criar tópico</Link>
+            <Link to="/Criar" state={{from: section1}} id='post-button' className='post-button ms-3 btn btn-primary'>Criar tópico</Link>
             : ''}
         </div>
 

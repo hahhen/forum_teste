@@ -207,36 +207,31 @@ const section = [
     },
     {
         sectioncod: 23,
-        sectionname: "Biologia",
-        ssection: 3
-    },
-    {
-        sectioncod: 24,
         sectionname: "Filosofia",
         ssection: 3
     },
     {
-        sectioncod: 25,
+        sectioncod: 24,
         sectionname: "Sociologia",
         ssection: 3
     },
     {
-        sectioncod: 26,
+        sectioncod: 25,
         sectionname: "Redação",
         ssection: 3
     },
     {
-        sectioncod: 27,
+        sectioncod: 26,
         sectionname: "Inglês",
         ssection: 3
     },
     {
-        sectioncod: 28,
+        sectioncod: 27,
         sectionname: "Olimpíadas",
         ssection: 7
     },
     {
-        sectioncod: 29,
+        sectioncod: 28,
         sectionname: "Tecnologia",
         ssection: 7
     } 
