@@ -31,6 +31,7 @@ function App() {
     <>
     <Analytics/>
     <Routes>
+      <Route path='/.well-known/microsoft-identity-association.json' element={"../public/.well-known/microsoft-identity-association.json"}/>
       <Route path="/" element={<Home/>}/>
       <Route path='/criar' element={<Criar />} />
       {section.map((info)=>
