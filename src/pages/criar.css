@@ -58,6 +58,13 @@
     color: #fff;
 }
 
+option{
+    color: #000;
+}
+
+.label-top.dark{
+    color: #fff;
+}
 
 @media (max-width: 1000px) {
     .wrapper-select, #post-button{

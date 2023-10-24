@@ -36,8 +36,8 @@ function Criar() {
                         </select>
                     </div>
                     <div className='wrapper-select mb-2'>
-                        <label htmlFor={`privacy-select ${isLight? '':'dark'}`}>Privacidade: </label>
-                        <select defaultValue={1} id='privacy-select' className={`section-select form-select ps-1 ${isLight? '':'dark'}`}>
+                        <label className={`section-select-label ${isLight? '':'dark'}`} htmlFor={`privacy-select`}>Privacidade: </label>
+                        <select defaultValue={1} id='privacy-select' className={`form-select ps-1 section-select ${isLight? '':'dark'}`}>
                             <option value={1}>Público</option>
                             <option value={2}>Minha instituição</option>
                             <option value={3}>Privado</option>                            
@@ -45,10 +45,10 @@ function Criar() {
                     </div>
                 </div>
                 <div className='title-wrapper mb-4'>
-                    <label htmlFor='inTopicTitle' className='mb-2'>Título <small>(obrigatório)</small></label>
+                    <label htmlFor='inTopicTitle' className={`mb-2 label-top ${isLight? '':'dark'}`}>Título <small>(obrigatório)</small></label>
                     <input type='text' className='topic-title-input' name='inTopicTitle' id='inTopicTitle' />
                 </div>
-                <label htmlFor='ckeditor' className='mb-2'>Corpo:</label>
+                <label className={`mb-2 label-top ${isLight? '':'dark'}`}>Corpo:</label>
                 {
                     <Editor
                         apiKey='fj80sqetd8mxsjp2pseqiuomat4y6sp4yaq3f5jscu6bkss0'
