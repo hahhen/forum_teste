@@ -57,19 +57,19 @@
 }
 
 .flair-Etec{
-    background-color: var(--main-red);
+    background-color: #f55;
 }
 
 .flair-Staff{
-    background-color: #DD55FF
+    background-color: #DD55FF;
 }
 
 .flair-Fatec{
-    background-color: #55ADFF
+    background-color: #55ADFF;
 }
 
 .flair-Professor{
-    background-color: #FFC555
+    background-color: #FFC555;
 }
 
 .topic.dark{
