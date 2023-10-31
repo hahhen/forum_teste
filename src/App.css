@@ -6,14 +6,21 @@
 }
 
 :root{
-  --white: #fff;
+  --background: #eee;
+  --secondary-bg: #d9d9d9;
+  --font: #000;
+  --secondary-font: #718096;
   --main-red: #d43939;
 }
 
-body{
-  background-color: var(--white);
+[data-theme = "dark"]{
+  --background: #10101d;
+  --secondary-bg: #718096;
+  --font: #eee;
+  --secondary-font: #eee;
+  --main-red: #10101d;
 }
 
-.bdark{
-  background-color: #10101d;
+body{
+  background-color: var(--background);
 }

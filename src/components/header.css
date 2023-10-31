@@ -7,7 +7,7 @@
 }
 
 #navbar-bottom{
-    background-color: #D9D9D9;
+    background-color: var(--secondary-bg);
 }
 
 .login-btn, .signup-btn{
@@ -15,7 +15,7 @@
 }
 
 .signup-btn{
-    color: #fff;
+    color: var(--font)
 }
 
 .navbar-section{
@@ -23,11 +23,12 @@
 }
 
 .navbar-section-item{
-    color: #718096;
+    color: var(--secondary-font) !important;
     font-size: 15px;
     font-weight: 400;
     list-style: none;
 }
+
 .nav-link{
     cursor: pointer;
     margin-top: 4px;
@@ -43,10 +44,11 @@
 .nav-link:hover::after{
     width: 100%;
 }
+
 .item-aparter{
     width: 2px;
     height: 2px;
-    background-color: #718096;
+    background-color: var(--secondary-font);
     border-radius: 50%;
 }
 
@@ -64,20 +66,17 @@
     user-select: none;
 }
 
-#navbar-bottom.dark{
-    background-color: #718096;
+#navbar-bottom{
+    background-color: var(secondary-bg);
 }
 
 .navbar-section-item{
     background-color: inherit;
+    color: var(--font);
 }
 
 .item-aparter.dark{
-    background-color: #ffffff;
-}
-
-.navbar-section-item.dark{
-    color: #ffffff;
+    background-color: var(--font);
 }
 
 #navbar-top.dark{
@@ -93,10 +92,9 @@
     color: #ffffff;
 }
 
-.button-dark{
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    color: #ffffff !important;
+.button{
+    width: 50px;
+    height: 100%;
 }
 
 @media only screen and (max-width: 1000px) {

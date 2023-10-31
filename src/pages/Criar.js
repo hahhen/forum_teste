@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import Header from '../components/header';
 import './criar.css'
-import { isLight } from '../App';
 import { Editor } from '@tinymce/tinymce-react';
 import { section } from '../components/topicInfoSon';
 import { useLocation } from 'react-router-dom';
@@ -25,19 +24,19 @@ function Criar() {
         <>
             <Header />
             <main className='container pt-5'>
-                <h1 className={`create-header mb-3 ${isLight? '':'dark'}`}>Criar tópico</h1>
+                <h1 className={`create-header mb-3`}>Criar tópico</h1>
                 <div className='options-wrapper mb-4'>
                     <div className='wrapper-select mb-2'>
-                        <label className={`section-select-label ${isLight? '':'dark'}`} htmlFor={`section-select`}>Seção: </label>
-                        <select defaultValue={from} id='section-select' className={`ps-1 form-select section-select ${isLight? '':'dark'}`}>
+                        <label className={`section-select-label`} htmlFor={`section-select`}>Seção: </label>
+                        <select defaultValue={from} id='section-select' className={`ps-1 form-select section-select`}>
                             {section.slice(1).map((info) =>
                                 <option value={info.sectioncod}>{info.sectionname}</option>
                             )}
                         </select>
                     </div>
                     <div className='wrapper-select mb-2'>
-                        <label className={`section-select-label ${isLight? '':'dark'}`} htmlFor={`privacy-select`}>Privacidade: </label>
-                        <select defaultValue={1} id='privacy-select' className={`form-select ps-1 section-select ${isLight? '':'dark'}`}>
+                        <label className={`section-select-label`} htmlFor={`privacy-select`}>Privacidade: </label>
+                        <select defaultValue={1} id='privacy-select' className={`form-select ps-1 section-select`}>
                             <option value={1}>Público</option>
                             <option value={2}>Minha instituição</option>
                             <option value={3}>Privado</option>                            
@@ -45,10 +44,10 @@ function Criar() {
                     </div>
                 </div>
                 <div className='title-wrapper mb-4'>
-                    <label htmlFor='inTopicTitle' className={`mb-2 label-top ${isLight? '':'dark'}`}>Título <small>(obrigatório)</small></label>
+                    <label htmlFor='inTopicTitle' className={`mb-2 label-top`}>Título <small>(obrigatório)</small></label>
                     <input type='text' className='topic-title-input' name='inTopicTitle' id='inTopicTitle' />
                 </div>
-                <label className={`mb-2 label-top ${isLight? '':'dark'}`}>Corpo:</label>
+                <label className={`mb-2 label-top`}>Corpo:</label>
                 {
                     <Editor
                         apiKey='fj80sqetd8mxsjp2pseqiuomat4y6sp4yaq3f5jscu6bkss0'

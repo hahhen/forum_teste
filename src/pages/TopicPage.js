@@ -3,7 +3,7 @@ import Header from '../components/header';
 import Sections from '../components/sections';
 import RecentFeed from '../components/recentfeed';
 import MediaQuery from 'react-responsive';
-import { isLight, isRetract } from '../App';
+import { isRetract } from '../App';
 import PageView from '../components/topicView.js'
 
 function TopicPage({topicKey}){

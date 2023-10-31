@@ -1,12 +1,13 @@
 .create-header{
     font-weight: 300 !important;
+    color: var(--font)
 }
 
 .wrapper-select{
     display: flex;
     padding: 2px 11px 2px 11px;
     align-items: center;
-    border: 1px solid lightgray;
+    border: 1px solid #d3d3d3;
     border-radius: 10px;
     margin-right: 20px;
 }
@@ -15,6 +16,7 @@
     background-color: transparent;
     font-weight: 600;
     border: none;
+    color: var(--font)
 }
 
 .options-wrapper{
@@ -37,7 +39,7 @@
 
 .topic-title-input{
     font-weight: 400;
-    border: 1px solid lightgray;
+    border: 1px solid #d3d3d3;
     padding: 10px;
     border-radius: 10px;
 }
@@ -46,27 +48,19 @@
     outline: 1px solid #0d65ff;
 }
 
-.create-header.dark{
-    color: #fff;
-}
-
-.section-select-label.dark{
-    color: #fff;
-}
-
-.section-select.dark{
-    color: #fff;
+.section-select-label{
+    color: var(--font)
 }
 
 option{
     color: #000;
 }
 
-.label-top.dark{
-    color: #fff;
+.label-top{
+    color: var(--font)
 }
 
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
     .wrapper-select, #post-button{
         width: 100%;
         margin-right: 0;

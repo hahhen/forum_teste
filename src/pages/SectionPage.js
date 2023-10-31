@@ -4,7 +4,7 @@ import Sections from '../components/sections';
 import Feed from '../components/feed';
 import RecentFeed from '../components/recentfeed';
 import MediaQuery from 'react-responsive';
-import { isLight, isRetract } from '../App';
+import { isRetract } from '../App';
 
 function SectionPage({ section9 }) {
     return (

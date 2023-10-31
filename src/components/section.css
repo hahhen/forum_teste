@@ -1,25 +1,23 @@
 .section{
     width: 100%;
-    background-color: #e6e6e6;
+    background-color: var(--background);
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 10px;
     user-select: none;
+    color: var(--font);
 }
 
-details.dark{
-    color: #fff;
+.section-top-title{
+    color: var(--font)
 }
 details{
-    color: #000;
+    color: var(--font);
+    background-color: var(--secondary-bg) !important;
 }
 
 summary{
-    color: inherit;
-}
-
-.section.dark{
-    background-color: #718096;
+    color: var(--font);
 }
 
 .section-list{
@@ -33,29 +31,28 @@ summary::marker, li::marker{
 
 .section-top-title.dark{
     background-color: transparent;
-    color: #fff;
 }
 
 .subsection-title{
     font-weight: 300;
     margin: 0;
-    color: #000;
+    color: var(--font);
     text-decoration: none;
     font-size: 18px;
     background-color: transparent;
 }
 
 .subsection-title.dark{
-    color: #fff;
+    color: var(--font);
 }
 
 .section-title.dark{
-    color: #fff;
+    color: var(--font);
     background-color: transparent;
 }
 
 .section-1{
- background-color: transparent;
+    background-color: transparent;
 }
 
 .section-title{
@@ -77,5 +74,5 @@ summary::marker, li::marker{
     color: #000;
 }
 .section-wrapper.dark{
-    color: #fff;
+    color: var(--font)
 }

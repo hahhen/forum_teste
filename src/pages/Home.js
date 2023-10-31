@@ -5,7 +5,7 @@ import Feed from '../components/feed';
 import RecentFeed from '../components/recentfeed';
 import MediaQuery from 'react-responsive';
 import Section from '../components/section'
-import { isLight, isRetract } from '../App';
+import { isRetract } from '../App';
 
 function Home() {
     return (
