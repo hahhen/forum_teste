@@ -23,10 +23,13 @@ function App() {
   Light()
   Retract()
   if(!isLight){
-    document.body.classList = "bdark"
+    document.documentElement.setAttribute('data-theme', 'dark')
+    localStorage.setItem('theme', 'dark')
   } else{
-    document.body.classList = ""
+    document.documentElement.setAttribute('data-theme', 'light')
+    localStorage.setItem('theme', 'light')
   }
+
   return (
     <>
     <Analytics/>

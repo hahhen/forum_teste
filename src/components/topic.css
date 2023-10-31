@@ -1,7 +1,7 @@
 .topic, .section-feed-item{
     width: 100%;
-    color: #000;
-    background-color: #e6e6e6;
+    color: var(--font);
+    background-color: var(--secondary-bg);
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 15px;
@@ -19,7 +19,7 @@
 .topic-info{
     display: flex;
     background-color: initial;
-    color: #718096;
+    color: var(--secondary-font);
     font-size: 13px;
     align-items: center;
 }
@@ -40,22 +40,22 @@
 .topic-info-aparter{
     width: 2px;
     height: 2px;
-    background-color: #718096;
+    background-color: var(--secondary-font);
     border-radius: 50%;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0px 10px 0px 10px;
 }
 
 .flair{
-    color: #ffffff;
+    color: #eee;
     padding: 2px 18px 2px 18px;
     border-radius: 10px;
-    margin-right: 3px;
-    margin-left: 3px;
+    margin: 0px 3px 0px 3px;
     font-size: 10px;
     user-select: none;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
 }
 
+/* >> Flairs <<*/
 .flair-Etec{
     background-color: #f55;
 }
@@ -69,21 +69,5 @@
 }
 
 .flair-Professor{
-    background-color: #FFC555;
-}
-
-.topic.dark{
-    background-color: #718096;
-    color: #ffffff;
-}
-
-.topic-info-aparter.dark{
-    background-color: #dfdfdf;
-}
-
-.topic-info.dark{
-    display: flex; 
-    color: #dfdfdf !important;
-    font-size: 13px;
-    align-items: center;
+    background-color: #FFC555
 }

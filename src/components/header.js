@@ -6,7 +6,7 @@ import { isLight, setLight } from '../App'
 function Header() {
     return (
         <header>
-            <nav id="navbar-top" className={`navbar pt-3 pb-3 ${isLight ? "" : "dark"}`}>
+            <nav id="navbar-top" className={`navbar pt-3 pb-3 `}>
                 <div className='container justify-content-between'>
                     
                         <Link to={'/'} className="navbar-brand d-flex align-items-center">
@@ -21,48 +21,48 @@ function Header() {
                     </div>
                 </div>
             </nav>
-            <nav id="navbar-bottom" className={`navbar pt-2 pb-2 ${isLight ? "" : "dark"}`}>
+            <nav id="navbar-bottom" className={`navbar pt-2 pb-2`}>
                 <div className="container">
                     <ul className="container navbar-section m-0 d-flex align-items-center justify-content-between">
-                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
+                        <li className={`navbar-section-item nav-link `}>
                             Matemática
                         </li>
-                        <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
+                        <span className={`item-aparter `}></span>
+                        <li className={`navbar-section-item nav-link `}>
                             Física
                         </li>
-                        <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
+                        <span className={`item-aparter `}></span>
+                        <li className={`navbar-section-item nav-link `}>
                             Química
                         </li>
-                        <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
+                        <span className={`item-aparter `}></span>
+                        <li className={`navbar-section-item nav-link `}>
                             Português e Literatura
                         </li>
-                        <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
+                        <span className={`item-aparter `}></span>
+                        <li className={`navbar-section-item nav-link `}>
                             Biologia
                         </li>
-                        <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
+                        <span className={`item-aparter `}></span>
+                        <li className={`navbar-section-item nav-link `}>
                             TCC
                         </li>
-                        <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
+                        <span className={`item-aparter `}></span>
+                        <li className={`navbar-section-item nav-link `}>
                             Cursos
                         </li>
-                        <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
-                        <li className={`navbar-section-item nav-link ${isLight ? "" : "dark"}`}>
+                        <span className={`item-aparter `}></span>
+                        <li className={`navbar-section-item nav-link `}>
                             Todas as Matérias
                         </li>
-                        <span className={`item-aparter ${isLight ? "" : "dark"}`}></span>
+                        <span className={`item-aparter `}></span>
                         <li className="navbar-section-item d-flex">
                             <div className="input-group">
                                 <input id="searchbar" type="text" className="form-control" placeholder="Pesquisar" aria-label="Username" aria-describedby="basic-addon1" />
                             </div>
                         </li>
                         <li className='navbar-section-item d-flex'>
-                            <button className={`btn button-${isLight ? "" : "dark"}`} onClick={() => setLight(!isLight)}>
+                            <button className={`btn button`} onClick={() => setLight(!isLight)}>
                                 <i className={isLight ? "fa-solid fa-moon light" : "fa-solid fa-sun dark"}></i>
                             </button>
                         </li>

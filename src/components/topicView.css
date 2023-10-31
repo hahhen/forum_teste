@@ -35,7 +35,7 @@
 }
 
 .topicviewbody.dark, .topicview-title.dark, .topicview-author.dark{
-    color: #fff;
+    color: var(--font)
 }
 
 .topicview-section.dark, .topicview-runtime.dark, .topicview-info-aparter{

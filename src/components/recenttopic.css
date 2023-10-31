@@ -1,7 +1,7 @@
 .recent-topic{
     width: 100%;
-    color: #000;
-    background-color: #e6e6e6;
+    color: var(--font);
+    background-color: var(--secondary-bg);
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 15px;
@@ -9,7 +9,7 @@
 
 .recent-topic-info{
     display: flex;
-    color: #718096;
+    color: var(--secondary-font);
     font-size: 10px;
     align-items: center;
 }
@@ -23,7 +23,7 @@
     margin-left: 3px;
     font-weight: 300;
     font-size: 10px;
-    color: #718096
+    color: var(--secondary-font);
 }
 
 .recent-topic-origin-name{
@@ -31,9 +31,9 @@
 }
 
 .recent-topic-info-aparter{
-    width: 1px;
-    height: 1px;
-    background-color: #718096;
+    width: 2px;
+    height: 2px;
+    background-color: var(--secondary-font);
     border-radius: 50%;
     margin-left: 5px;
     margin-right: 5px;
@@ -41,25 +41,4 @@
 
 .recent-topic-title.dark{
     color: #ffffff;
-}
-
-.recent-topic.dark{
-    background-color: #718096;
-    color: #ffffff;
-}
-
-.recent-topic-info-aparter.dark{
-    background-color: #dfdfdf;
-}
-
-.recent-topic-info.dark{
-    display: flex; 
-    color: #dfdfdf !important;
-    font-size: 10px;
-    align-items: center;
-}
-
-.recent-topic-section.dark{
-    background-color: initial;
-    color: #dfdfdf;
 }
