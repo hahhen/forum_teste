@@ -7,6 +7,17 @@
     user-select: none;
 }
 
+details.dark{
+    color: #fff;
+}
+details{
+    color: #000;
+}
+
+summary{
+    color: inherit;
+}
+
 .section.dark{
     background-color: #718096;
 }
@@ -60,4 +71,11 @@ summary::marker, li::marker{
 
 .section-top-title{
     font-weight: 300;
+}
+
+.section-wrapper{
+    color: #000;
+}
+.section-wrapper.dark{
+    color: #fff;
 }

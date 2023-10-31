@@ -60,6 +60,6 @@
 }
 
 .recent-topic-section.dark{
-    background-color: inherit;
+    background-color: initial;
     color: #dfdfdf;
 }
