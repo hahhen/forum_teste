@@ -1,6 +1,7 @@
 .recent-topic{
     width: 100%;
-    background-color: #d1d1d1;
+    color: #000;
+    background-color: #e6e6e6;
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 15px;
@@ -38,6 +39,10 @@
     margin-right: 5px;
 }
 
+.recent-topic-title.dark{
+    color: #ffffff;
+}
+
 .recent-topic.dark{
     background-color: #718096;
     color: #ffffff;
@@ -48,7 +53,6 @@
 }
 
 .recent-topic-info.dark{
-    background-color: initial;
     display: flex; 
     color: #dfdfdf !important;
     font-size: 10px;

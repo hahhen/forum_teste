@@ -1,6 +1,7 @@
 .topic, .section-feed-item{
     width: 100%;
-    background-color: #d1d1d1;
+    color: #000;
+    background-color: #e6e6e6;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 15px;
@@ -32,7 +33,7 @@
     margin-right: 6px;
 }
 
-.topic-author, .recent-topic-author{
+.topic-author{
     margin-right: 3px;
 }
 
@@ -49,7 +50,8 @@
     color: #ffffff;
     padding: 2px 18px 2px 18px;
     border-radius: 10px;
-    margin-right: 6px;
+    margin-right: 3px;
+    margin-left: 3px;
     font-size: 10px;
     user-select: none;
 }

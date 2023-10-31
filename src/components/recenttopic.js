@@ -2,14 +2,13 @@ import React from 'react'
 import './recenttopic.css'
 import { topicInfo, user, section } from './topicInfoSon'
 import { isLight } from '../App'
+import { Link } from 'react-router-dom'
 import { dayjs } from './dayjsa'
 
-function RecentPost() {
-  const infoS = [...topicInfo]
-  infoS.sort((a, b) => (dayjs(a.time).isAfter(dayjs(b.time)) ? -1 : 1))
+
+function RecentPost({info}) {
   return (
-    <>
-      {infoS.map((info) =>
+    <Link to={`/topico/${info.title}-${info.topiccod}`} className='text-decoration-none'>
         <div key={info.topiccod} className={`recent-topic ${isLight ? "" : "dark"}`}>
           <div className="recent-topic-header">
             <h6 className="recent-topic-title">{info.title}</h6>
@@ -23,8 +22,7 @@ function RecentPost() {
             </div>
           </div>
         </div>
-      )}
-    </>
+    </Link>
   )
 }
 

@@ -11,24 +11,22 @@ function Home() {
     return (
         <>
             <Header />
-            <div className={isLight ? "" : "dark"} >
-                <main className="container pt-5">
-                    <div className='row'>
-                        <MediaQuery minWidth={1000}>
-                            {isMobile => (
-                                <>
-                                    {isMobile ? <Sections />: ''}
-                                    <div id='feed' className={`${isMobile ? `feed ${isRetract ? 'col-6' : 'col-7'}` : `feed col-12`}`}>
-                                        <Feed section1={1} />
-                                        <Section />
-                                    </div>
-                                    {isMobile? <RecentFeed /> : ''}
-                                </>
-                            )}
-                        </MediaQuery>
-                    </div>
-                </main>
-            </div>
+            <main className="container pt-5">
+                <div className='row'>
+                    <MediaQuery minWidth={1000}>
+                        {isMobile => (
+                            <>
+                                {isMobile ? <Sections /> : ''}
+                                <div id='feed' className={`${isMobile ? `feed ${isRetract ? 'col-6' : 'col-7'}` : `feed col-12`}`}>
+                                    <Feed section1={1} />
+                                    <Section />
+                                </div>
+                                {isMobile ? <RecentFeed /> : ''}
+                            </>
+                        )}
+                    </MediaQuery>
+                </div>
+            </main>
         </>
     )
 }

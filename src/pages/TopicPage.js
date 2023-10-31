@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from '../components/header';
 import Sections from '../components/sections';
-import Feed from '../components/feed';
 import RecentFeed from '../components/recentfeed';
 import MediaQuery from 'react-responsive';
 import { isLight, isRetract } from '../App';
+import PageView from '../components/topicView.js'
 
-function SectionPage({ section9 }) {
+function TopicPage({topicKey}){
     return (
         <>
             <Header />
@@ -17,7 +17,7 @@ function SectionPage({ section9 }) {
                             <>
                                 {isMobile ? <Sections /> : ''}
                                 <div id='feed' className={`${isMobile ? `feed ${isRetract ? 'col-6' : 'col-7'}` : `feed col-12`}`}>
-                                    <Feed section1={section9} s={true} />
+                                <PageView topicKey={topicKey}/>
                                 </div>
                                 {isMobile ? <RecentFeed /> : ''}
                             </>
@@ -29,4 +29,4 @@ function SectionPage({ section9 }) {
     )
 }
 
-export default SectionPage
+export default TopicPage

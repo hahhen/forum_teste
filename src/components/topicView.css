@@ -1,0 +1,43 @@
+.topicview-title{
+    font-weight: 300;
+}
+
+.topicview-author{
+    font-weight: 300;
+    margin-right: 3px;
+}
+
+.topicview-section{
+    margin-left: 5px;
+    font-weight: 300;
+    color: #718096;
+}
+
+.topicview-info{
+    color: #718096;
+}
+
+.topicview-origin-name{
+    font-weight: 500;
+}
+
+.topicview-runtime{
+    font-weight: 300;
+}
+
+.topicview-info-aparter{
+    width: 1px;
+    height: 1px;
+    background-color: #718096;
+    border-radius: 50%;
+    margin-left: 4px;
+    margin-right: 6px;
+}
+
+.topicviewbody.dark, .topicview-title.dark, .topicview-author.dark{
+    color: #fff;
+}
+
+.topicview-section.dark, .topicview-runtime.dark, .topicview-info-aparter{
+    color: #dfdfdf;
+}

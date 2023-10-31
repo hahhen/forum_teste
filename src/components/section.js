@@ -1,5 +1,5 @@
 import React from 'react'
-import { section, supersection} from './topicInfoSon'
+import { section, supersection } from './topicInfoSon'
 import { isLight } from '../App'
 import { Link } from 'react-router-dom'
 import './section.css'
@@ -29,13 +29,14 @@ function Section() {
                     </ul>
                 </details>
                 <details className={`pb-1 section ${getModeClass('', 'dark')}`}>
-                    <summary className={`section-title mb-3`}>Ciências Humanas</summary>
+                    <summary className={`section-title mb-3`}>Ciências Humanas e Biológicas</summary>
+
                     <ul className='m-0 section-list'>
                         {section.map((info) =>
                             info.ssection === 3 ?
                                 <li>
                                     <div className={`mb-2 section-1`}>
-                                    <Link to={`/${info.sectionname}`} className={`subsection-title ${getModeClass('', 'dark')}`}>{info.sectionname}</Link>
+                                        <Link to={`/${info.sectionname}`} className={`subsection-title ${getModeClass('', 'dark')}`}>{info.sectionname}</Link>
                                     </div>
                                 </li>
                                 : null
@@ -58,7 +59,7 @@ function Section() {
                                         <Link to={`/${info.sectionname}`} className={`subsection-title ${getModeClass('', 'dark')}`}>{info.sectionname}</Link>
                                     </div>
                                 </li>
-                                : null
+                                : ''
                         )}
                     </ul>
                 </details>
@@ -99,6 +100,7 @@ function Section() {
                 </details>
             )}
         </div>
+
         </>
     )
 }

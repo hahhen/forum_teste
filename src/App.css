@@ -6,7 +6,7 @@
 }
 
 :root{
-  --white: #eee;
+  --white: #fff;
   --main-red: #d43939;
 }
 
@@ -14,19 +14,6 @@ body{
   background-color: var(--white);
 }
 
-.dark{
+.bdark{
   background-color: #10101d;
-}
-
-::-webkit-scrollbar{
-  width: 0.5em;
-}
-
-::-webkit-scrollbar-track{
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb{
-  background-color: var(--main-red);
-  border-radius: .5em;
 }

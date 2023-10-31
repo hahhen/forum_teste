@@ -12,6 +12,7 @@
 }
 
 .section-select{
+    background-color: transparent;
     font-weight: 600;
     border: none;
 }
@@ -45,6 +46,25 @@
     outline: 1px solid #0d65ff;
 }
 
+.create-header.dark{
+    color: #fff;
+}
+
+.section-select-label.dark{
+    color: #fff;
+}
+
+.section-select.dark{
+    color: #fff;
+}
+
+option{
+    color: #000;
+}
+
+.label-top.dark{
+    color: #fff;
+}
 
 @media (max-width: 1000px) {
     .wrapper-select, #post-button{
