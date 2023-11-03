@@ -15,9 +15,9 @@ function Header() {
                         </Link>
                     
                     <div id='account-area' className='account-area d-flex align-items-center'>
-                        <a id="login-btn" className="login-btn d-flex align-items-center me-2" to="/">
+                        <Link id="login-btn" className="login-btn d-flex align-items-center me-2" to="/">
                             <button type="button" className="btn btn-outline-light">Entre</button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </nav>

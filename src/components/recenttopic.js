@@ -1,11 +1,11 @@
 import React from 'react'
 import './recenttopic.css'
-import { topicInfo, user, section } from './topicInfoSon'
+import { user, section } from './topicInfoSon'
 import { Link } from 'react-router-dom'
 import { dayjs } from './dayjsa'
 
 
-function RecentPost({info}) {
+function RecentTopic({info}) {
   return (
     <Link to={`/topico/${info.title}-${info.topiccod}`} className='text-decoration-none'>
         <div key={info.topiccod} className={`recent-topic`}>
@@ -25,4 +25,4 @@ function RecentPost({info}) {
   )
 }
 
-export default RecentPost
+export default RecentTopic

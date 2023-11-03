@@ -16,7 +16,7 @@ function TopicPage({topicKey}){
                         {isMobile => (
                             <>
                                 {isMobile ? <Sections /> : ''}
-                                <div id='feed' className={`${isMobile ? `feed ${isRetract ? 'col-6' : 'col-7'}` : `feed col-12`}`}>
+                                <div id='feed' className={`${isMobile ? `feed ${isRetract ? 'col-6' : 'col-8'}` : `feed col-12`}`}>
                                 <PageView topicKey={topicKey}/>
                                 </div>
                                 {isMobile ? <RecentFeed /> : ''}

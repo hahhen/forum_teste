@@ -1,9 +1,8 @@
 import React from 'react'
 import './topic.css'
-import { topicInfo, user, flairHolder, flair } from './topicInfoSon'
+import { user, flairHolder, flair } from './topicInfoSon'
 import { dayjs } from './dayjsa'
 import { Link } from 'react-router-dom'
-import TopicPage from '../pages/TopicPage'
 
 
 function Topic({ info }) {

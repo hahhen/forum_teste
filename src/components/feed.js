@@ -1,6 +1,6 @@
 import React from 'react'
 import Topic from './topic'
-import { section, topicInfo, user, flairHolder, flair } from './topicInfoSon'
+import { section, topicInfo } from './topicInfoSon'
 import { Link } from 'react-router-dom';
 
 import './feed.css'
