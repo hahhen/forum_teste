@@ -38,7 +38,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background-color: #232342;
+    background-color: var(--secondary-font);
     transition: width .3s;
 }
 .nav-link:hover::after{
