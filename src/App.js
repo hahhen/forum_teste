@@ -8,20 +8,29 @@ import SectionPage from './pages/SectionPage';
 import TopicPage from './pages/TopicPage';
 import { Analytics } from '@vercel/analytics/react';
 
-var [isLight, setLight] = "";
-function Light() {
+// Light/Dark mode
+var [isLight, setLight] = ""
+function LightTrue() {
   [isLight, setLight] = useState(true)
+}
+function LightFalse() {
+  [isLight, setLight] = useState(false)
 }
 
 var [isRetract, retract] = ""
-
 function Retract() {
   [isRetract, retract] = useState(true)
 }
 
 function App() {
-  Light()
   Retract()
+  if(localStorage.getItem('theme') === 'dark'){
+    document.documentElement.setAttribute('data-theme', 'dark')
+    LightFalse()
+  } else if (localStorage.getItem('theme') === 'light'){
+    document.documentElement.setAttribute('data-theme', 'light')
+    LightTrue()
+  }
   if(!isLight){
     document.documentElement.setAttribute('data-theme', 'dark')
     localStorage.setItem('theme', 'dark')
@@ -49,4 +58,4 @@ function App() {
 }
 
 export default App;
-export { Light, isLight, setLight, isRetract, retract }
+export { isLight, setLight, isRetract, retract }
