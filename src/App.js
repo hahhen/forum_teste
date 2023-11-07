@@ -30,6 +30,8 @@ function App() {
   } else if (localStorage.getItem('theme') === 'light'){
     document.documentElement.setAttribute('data-theme', 'light')
     LightTrue()
+  }else{
+    LightTrue()
   }
   if(!isLight){
     document.documentElement.setAttribute('data-theme', 'dark')
