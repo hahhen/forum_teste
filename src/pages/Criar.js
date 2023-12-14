@@ -1,6 +1,7 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import Header from '../components/header';
 import './criar.css'
+import { isLight } from '../App';
 import { Editor } from '@tinymce/tinymce-react';
 import { section } from '../components/topicInfoSon';
 import { useLocation } from 'react-router-dom';
@@ -8,18 +9,22 @@ import { useLocation } from 'react-router-dom';
 function Criar() {
     const location = useLocation()
     var locationstate;
-    if(location.state === null){
+    if (location.state === null) {
         locationstate = 2
-    }else{
+    } else {
         locationstate = location.state
     }
-    const {from} = locationstate;
+    const { from } = locationstate;
     const editorRef = useRef(null);
     const log = () => {
         if (editorRef.current) {
             console.log(editorRef.current.getContent());
         }
     };
+    const [editorKey, setEditorKey] = useState(0);
+    useEffect(() => {
+        setEditorKey(prevKey => prevKey + 1);
+    }, [isLight]);
     return (
         <>
             <Header />
@@ -39,7 +44,7 @@ function Criar() {
                         <select defaultValue={1} id='privacy-select' className={`form-select ps-1 section-select`}>
                             <option value={1}>Público</option>
                             <option value={2}>Minha instituição</option>
-                            <option value={3}>Privado</option>                            
+                            <option value={3}>Privado</option>
                         </select>
                     </div>
                 </div>
@@ -50,11 +55,18 @@ function Criar() {
                 <label className={`mb-2 label-top`}>Corpo:</label>
                 {
                     <Editor
-                    apiKey='fj80sqetd8mxsjp2pseqiuomat4y6sp4yaq3f5jscu6bkss0'
+                        key={editorKey}
+                        apiKey='fj80sqetd8mxsjp2pseqiuomat4y6sp4yaq3f5jscu6bkss0'
                         onInit={(evt, editor) => editorRef.current = editor}
                         init={{
-                            
-                            
+                            //Verifica se o tema é light ou dark e aplica a skin de acordo
+                            ...(isLight ?
+                            {}
+                            :
+                            {
+                                skin: 'oxide-dark',
+                                content_css: 'dark'
+                            }),
                             placeholder: 'Escreva aqui seu tópico!',
                             height: 500,
                             branding: false,
@@ -62,7 +74,6 @@ function Criar() {
                                 menubar: true
                             },
                             language: 'pt_BR',
-
                             promotion: false,
                             htmlAllowedTags: ['.*'],
                             htmlAllowedAttrs: ['.*'],
@@ -76,9 +87,8 @@ function Criar() {
                             toolbar: 'undo redo | blocks | ' +
                                 'bold italic forecolor | alignleft aligncenter ' +
                                 'alignright alignjustify | bullist numlist outdent indent | ' +
-
                                 'removeformat | fullscreen | help',
-                            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+                            content_style: 'body { font-family: sans-serif; font-size:14px }'
 
                         }}
                     />

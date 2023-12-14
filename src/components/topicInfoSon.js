@@ -1,6 +1,7 @@
 const topicInfo = [
     {
         topiccod: 1,
+        slug: "leia-atentamente-as-regras",
         title: "Leia atentamente as regras",
         time: "2023-01-01T19:32:10",
         author: 1,
@@ -9,6 +10,7 @@ const topicInfo = [
     },
     {
         topiccod: 2,
+        slug: "exemplo-de-postagem",
         title: "Exemplo de postagem",
         time: "2023-08-05T19:35:30",
         author: 2,
@@ -18,6 +20,7 @@ const topicInfo = [
     {
         topiccod: 3,
         title: "Exemplo de postagem",
+        slug: "exemplo-de-postagem",
         time: "2023-08-05T00:00:01",
         author: 3,
         section: 3,
@@ -26,6 +29,7 @@ const topicInfo = [
     {
         topiccod: 4,
         title: "uiofdhgidhgidfg",
+        slug: "uiofdhgidhgidfg",
         time: "2023-03-05T00:00:02",
         author: 3,
         section: 4,
@@ -34,6 +38,7 @@ const topicInfo = [
     {
         topiccod: 5,
         title: "firfiosdiofhsaidfg",
+        slug: "firfiosdiofhsaidfg",
         time: "2023-08-03T00:00:02",
         author: 1,
         section: 5,
@@ -96,146 +101,141 @@ const flairHolder = [
 
 const section = [
     {
-        sectioncod: 1,
-        sectionname: "Mensagens do Fórum CPS",
-        ssection: 1
+      sectioncod: 1,
+      sectionname: 'Mensagens do Forum CPS',
+      ssection: 1,
+      slug: 'mensagens-do-forum-cps'
     },
     {
-        sectioncod: 2,
-        sectionname: "Matemática",
-        ssection: 2
+      sectioncod: 2,
+      sectionname: 'Matemática',
+      ssection: 2,
+      slug: 'matematica'
     },
     {
-        sectioncod: 3,
-        sectionname: "Química - Ciência",
-        ssection: 2
+      sectioncod: 3,
+      sectionname: 'Química - Ciência',
+      ssection: 2,
+      slug: 'quimica-ciencia'
     },
     {
-        sectioncod: 4,
-        sectionname: "Português e Literatura",
-        ssection: 3
+      sectioncod: 4,
+      sectionname: 'Português e Literatura',
+      ssection: 3,
+      slug: 'portugues-e-literatura'
     },
     {
-        sectioncod: 5,
-        sectionname: "Geografia",
-        ssection: 3
+      sectioncod: 5,
+      sectionname: 'Redação',
+      ssection: 3,
+      slug: 'sociologia'
+    },
+    { sectioncod: 6, sectionname: 'Inglês', ssection: 3, slug: 'ingles' }, 
+    {
+      sectioncod: 7,
+      sectionname: 'Geografia',
+      ssection: 3,
+      slug: 'geografia'
     },
     {
-        sectioncod: 6,
-        sectionname: "História",
-        ssection: 3
+      sectioncod: 8,
+      sectionname: 'História',
+      ssection: 3,
+      slug: 'historia'
     },
     {
-        sectioncod: 7,
-        sectionname: "Artes",
-        ssection: 3
+      sectioncod: 9,
+      sectionname: 'Filosofia',
+      ssection: 3,
+      slug: 'filosofia'
     },
     {
-        sectioncod: 8,
-        sectionname: "Desenvolvimento de Sistemas",
-        ssection: 4
+      sectioncod: 10,
+      sectionname: 'Sociologia',
+      ssection: 3,
+      slug: 'sociologia'
     },
     {
-        sectioncod: 9,
-        sectionname: "Contabilidade",
-        ssection: 4
+      sectioncod: 11,
+      sectionname: 'Desenvolvimento de Sistemas',
+      ssection: 4,
+      slug: 'desenvolvimento-de-sistemas'
     },
     {
-        sectioncod: 10,
-        sectionname: "Química - Curso",
-        ssection: 4
+      sectioncod: 12,
+      sectionname: 'Contabilidade',
+      ssection: 4,
+      slug: 'contabilidade'
     },
     {
-        sectioncod: 11,
-        sectionname: "Administração",
-        ssection: 4
+      sectioncod: 13,
+      sectionname: 'Química - Cursos',
+      ssection: 4,
+      slug: 'quimica-cursos'
     },
     {
-        sectioncod: 12,
-        sectionname: "Logística",
-        ssection: 4
+      sectioncod: 14,
+      sectionname: 'Administração',
+      ssection: 4,
+      slug: 'administracao'
     },
     {
-        sectioncod: 13,
-        sectionname: "Marketing",
-        ssection: 4
+      sectioncod: 15,
+      sectionname: 'Logística',
+      ssection: 4,
+      slug: 'logistica'
     },
     {
-        sectioncod: 14,
-        sectionname: "Física",
-        ssection: 2
+      sectioncod: 16,
+      sectionname: 'Marketing',
+      ssection: 4,
+      slug: 'marketing'
+    },
+    { sectioncod: 17, sectionname: 'TCC', ssection: 4, slug: 'tcc-etec' }, 
+    {
+      sectioncod: 18,
+      sectionname: 'TCC',
+      ssection: 5,
+      slug: 'tcc-fatec'
+    },
+    { sectioncod: 19, sectionname: 'ENEM', ssection: 6, slug: 'enem' },    
+    {
+      sectioncod: 20,
+      sectionname: 'FUVEST',
+      ssection: 6,
+      slug: 'fuvest'
     },
     {
-        sectioncod: 15,
-        sectionname: "ENEM",
-        ssection: 6
+      sectioncod: 21,
+      sectionname: 'ITA-IME',
+      ssection: 6,
+      slug: 'ita-ime'
     },
     {
-        sectioncod: 16,
-        sectionname: "FUVEST",
-        ssection: 6
+      sectioncod: 22,
+      sectionname: 'Fatec',
+      ssection: 6,
+      slug: 'vestibular-etec'
     },
     {
-        sectioncod: 17,
-        sectionname: "ITA-IME",
-        ssection: 6
+      sectioncod: 23,
+      sectionname: 'Vestibulares diversos',
+      ssection: 6,
+      slug: 'vestibular-diversos'
     },
     {
-        sectioncod: 18,
-        sectionname: "Vestibular Fatec",
-        ssection: 6
+      sectioncod: 24,
+      sectionname: 'Olimpíadas',
+      ssection: 7,
+      slug: 'olimpiadas'
     },
     {
-        sectioncod: 19,
-        sectionname: "Vestibulares diversos",
-        ssection: 6
-    },
-    {
-        sectioncod: 20,
-        sectionname: "TCC - Etec",
-        ssection: 4
-    },
-    {
-        sectioncod: 21,
-        sectionname: "TCC - Fatec",
-        ssection: 5
-    },
-    {
-        sectioncod: 22,
-        sectionname: "Biologia",
-        ssection: 3
-    },
-    {
-        sectioncod: 23,
-        sectionname: "Filosofia",
-        ssection: 3
-    },
-    {
-        sectioncod: 24,
-        sectionname: "Sociologia",
-        ssection: 3
-    },
-    {
-        sectioncod: 25,
-        sectionname: "Redação",
-        ssection: 3
-    },
-    {
-        sectioncod: 26,
-        sectionname: "Inglês",
-        ssection: 3
-    },
-    {
-        sectioncod: 27,
-        sectionname: "Olimpíadas",
-        ssection: 7
-    },
-    {
-        sectioncod: 28,
-        sectionname: "Tecnologia",
-        ssection: 7
-    } 
-]
+      sectioncod: 25,
+      sectionname: 'Tecnologia',
+      ssection: 7,
+      slug: 'tecnologia'
+    }
+  ]
 
 const supersection = [
     {

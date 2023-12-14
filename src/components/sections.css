@@ -8,7 +8,7 @@
     font-weight: 700;
 }
 
-.sections-title, .section-sub-title{
+.sections-title, .section-sub-title, .section-sub-sub-title, .section-item{
     color: var(--secondary-font);
 }
 

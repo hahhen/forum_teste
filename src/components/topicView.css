@@ -7,14 +7,18 @@
     margin-right: 3px;
 }
 
+p{
+    font-weight: 300;
+}
+
 .topicview-section{
     margin-left: 5px;
     font-weight: 300;
-    color: #718096;
+    color: var(--secondary-font);
 }
 
 .topicview-info{
-    color: #718096;
+    color: var(--secondary-font);
 }
 
 .topicview-origin-name{
@@ -28,7 +32,7 @@
 .topicview-info-aparter{
     width: 1px;
     height: 1px;
-    background-color: #718096;
+    background-color: var(--secondary-font);
     border-radius: 50%;
     margin-left: 4px;
     margin-right: 6px;

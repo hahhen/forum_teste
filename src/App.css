@@ -17,14 +17,16 @@ h1,h2,h3,h4,h5,h6{
   --font: #000;
   --secondary-font: #718096;
   --main-red: #d43939;
+  --highlight-bg: #fff;
 }
 
 [data-theme = "dark"]{
-  --background: #10101d;
-  --secondary-bg: #1a1a31;
+  --highlight-bg: #191919;
+  --background: #191919;
+  --secondary-bg: #2b2b2b;
   --font: #eee;
-  --secondary-font: #eee;
-  --main-red: #10101d;
+  --secondary-font: #ccc;
+  --main-red: #131313;
 }
 
 body{

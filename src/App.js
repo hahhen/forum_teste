@@ -54,10 +54,10 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path='/criar' element={<Criar />} />
       {section.map((info)=>
-        <Route path={`/${info.sectionname}`} element={<SectionPage section9={info.sectioncod} />}/>
+        <Route path={`/${info.slug}`} element={<SectionPage section9={info.sectioncod} />}/>
       )}
       {topicInfo.map((info)=>
-        <Route path={`/topico/${info.title}-${info.topiccod}`} element={<TopicPage topicKey={info} />}/>
+        <Route path={`/topico/${info.slug}-${info.topiccod}`} element={<TopicPage topicKey={info} />}/>
       )}
     </Routes>
     </>

@@ -1,5 +1,5 @@
 .create-header{
-    font-weight: 300 !important;
+    font-weight: 500;
     color: var(--font)
 }
 
@@ -38,6 +38,8 @@
 }
 
 .topic-title-input{
+    color: var(--font);
+    background-color: var(--highlight-bg);
     font-weight: 400;
     border: 1px solid #d3d3d3;
     padding: 10px;
