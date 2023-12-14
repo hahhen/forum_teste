@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from '../components/header';
 import Sections from '../components/sections';
 import Feed from '../components/feed';
@@ -8,6 +8,16 @@ import Section from '../components/section'
 import { isRetract } from '../App';
 
 function Home() {
+    // const [pageData, setPageData] = useState([]);
+    // useEffect(() => {
+    //     async function getUserdata() {
+    //         const req = await fetch("http://localhost:8000/pagedata");
+    //         const res = await req.json();
+    //         setPageData(res);
+    //         console.log(res)
+    //     }
+    //     getUserdata()
+    // },[]);
     return (
         <>
             <Header />

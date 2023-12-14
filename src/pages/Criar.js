@@ -50,14 +50,11 @@ function Criar() {
                 <label className={`mb-2 label-top`}>Corpo:</label>
                 {
                     <Editor
-                        apiKey='fj80sqetd8mxsjp2pseqiuomat4y6sp4yaq3f5jscu6bkss0'
+                    apiKey='fj80sqetd8mxsjp2pseqiuomat4y6sp4yaq3f5jscu6bkss0'
                         onInit={(evt, editor) => editorRef.current = editor}
                         init={{
-
-                            external_plugins: {
-                                'tiny_mce_wiris': `${window.location.href}/node_modules/@wiris/mathtype-tinymce6/plugin.min.js`
-                            },
-                            wirisformulaeditorlang: 'pt_br',
+                            
+                            
                             placeholder: 'Escreva aqui seu tópico!',
                             height: 500,
                             branding: false,
@@ -79,7 +76,7 @@ function Criar() {
                             toolbar: 'undo redo | blocks | ' +
                                 'bold italic forecolor | alignleft aligncenter ' +
                                 'alignright alignjustify | bullist numlist outdent indent | ' +
-                                'tiny_mce_wiris_formulaEditor tiny_mce_wiris_formulaEditorChemistry | ' +
+
                                 'removeformat | fullscreen | help',
                             content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
 

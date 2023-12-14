@@ -23,7 +23,10 @@ function Retract() {
 }
 
 function App() {
+  //Ativa a função que habilita retrair as seções
   Retract()
+
+  //Verifica se há um tema salvo no localStorage
   if(localStorage.getItem('theme') === 'dark'){
     document.documentElement.setAttribute('data-theme', 'dark')
     LightFalse()
@@ -33,6 +36,8 @@ function App() {
   }else{
     LightTrue()
   }
+
+  //Muda o tema no localStorage e no site
   if(!isLight){
     document.documentElement.setAttribute('data-theme', 'dark')
     localStorage.setItem('theme', 'dark')
