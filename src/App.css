@@ -12,6 +12,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 :root{
+  --highlight-bg: #fff;
   --background: #eee;
   --secondary-bg: #d9d9d9;
   --font: #000;

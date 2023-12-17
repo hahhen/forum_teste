@@ -34,7 +34,7 @@ function Sections() {
                                 </ul>
                             </li>
                             <li className="section-sub-sub-title">
-                                Humanas
+                                Humanas e Biológicas
                                 <ul>
                                     {section.map((info) =>
                                         info.ssection === 3 ?
@@ -105,4 +105,3 @@ function Sections() {
 }
 
 export default Sections
-export { isRetract, retract }

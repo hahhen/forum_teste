@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Route, Routes} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Criar from './pages/Criar';
 import { section, topicInfo } from './components/topicInfoSon';
@@ -17,6 +17,7 @@ function LightFalse() {
   [isLight, setLight] = useState(false)
 }
 
+//Retract sections map
 var [isRetract, retract] = ""
 function Retract() {
   [isRetract, retract] = useState(true)
@@ -25,41 +26,40 @@ function Retract() {
 function App() {
   //Ativa a função que habilita retrair as seções
   Retract()
-
   //Verifica se há um tema salvo no localStorage
-  if(localStorage.getItem('theme') === 'dark'){
+  if (localStorage.getItem('theme') === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark')
     LightFalse()
-  } else if (localStorage.getItem('theme') === 'light'){
+  } else if (localStorage.getItem('theme') === 'light') {
     document.documentElement.setAttribute('data-theme', 'light')
     LightTrue()
-  }else{
+  } else {
     LightTrue()
   }
 
   //Muda o tema no localStorage e no site
-  if(!isLight){
+  if (!isLight) {
     document.documentElement.setAttribute('data-theme', 'dark')
     localStorage.setItem('theme', 'dark')
-  } else{
+  } else {
     document.documentElement.setAttribute('data-theme', 'light')
     localStorage.setItem('theme', 'light')
   }
 
   return (
     <>
-    <Analytics/>
-    <Routes>
-      <Route path='/.well-known/microsoft-identity-association.json' element={"../public/.well-known/microsoft-identity-association.json"}/>
-      <Route path="/" element={<Home/>}/>
-      <Route path='/criar' element={<Criar />} />
-      {section.map((info)=>
-        <Route path={`/${info.slug}`} element={<SectionPage section9={info.sectioncod} />}/>
-      )}
-      {topicInfo.map((info)=>
-        <Route path={`/topico/${info.slug}-${info.topiccod}`} element={<TopicPage topicKey={info} />}/>
-      )}
-    </Routes>
+      <Analytics />
+      <Routes>
+        <Route path='/.well-known/microsoft-identity-association.json' element={"../public/.well-known/microsoft-identity-association.json"} />
+        <Route path="/" element={<Home />} />
+        <Route path='/criar' element={<Criar />} />
+        {section.map((info) =>
+          <Route path={`/${info.slug}`} element={<SectionPage section9={info.sectioncod} />} />
+        )}
+        {topicInfo.map((info) =>
+          <Route path={`/topico/${info.slug}-${info.topiccod}`} element={<TopicPage topicKey={info} />} />
+        )}
+      </Routes>
     </>
   );
 }

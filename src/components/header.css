@@ -11,14 +11,6 @@
     background-color: var(--secondary-bg);
 }
 
-.login-btn, .signup-btn{
-    text-decoration: none;
-}
-
-.signup-btn{
-    color: var(--font)
-}
-
 .navbar-section{
     background-color: initial;
 }

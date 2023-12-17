@@ -47,7 +47,7 @@ function Section() {
                 </h4>
                 <details className={`pb-1 section `}>
                     <summary className={`section-title mb-3`}>Etec</summary>
-                    <ul className='pt-2 m-0 section-list'>
+                    <ul className='m-0 section-list'>
                         {section.map((info) =>
                             info.ssection === 4 ?
                                 <li>
@@ -61,7 +61,7 @@ function Section() {
                 </details>
                 <details className={`pb-1 section `}>
                     <summary className={`section-title mb-3`}>Fatec</summary>
-                    <ul className='pt-2 m-0 section-list'>
+                    <ul className='m-0 section-list'>
                         {section.map((info) =>
                             info.ssection === 5 ?
                                 <li>
@@ -82,7 +82,7 @@ function Section() {
             {supersection.slice(5, supersection.length).map((sinfo) =>
                 <details className={`pb-1 section `}>
                     <summary className={`section-title mb-3`}>{sinfo.ssectionname}</summary>
-                    <ul className='pt-2 m-0 section-list'>
+                    <ul className='m-0 section-list'>
                         {section.map((info) =>
                             info.ssection === sinfo.ssectioncod ?
                                 <li>

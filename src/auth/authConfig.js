@@ -14,7 +14,7 @@ export const msalConfig = {
     auth: {
         clientId: "e271fae5-bf1c-4b06-8b1f-eb37ccf8b223",
         authority: "https://login.microsoftonline.com/d848c1d6-0ea1-49bb-b29e-4482027ca5e1",
-        redirectUri: "https://cpsforum.com.br/auth"
+        redirectUri: "http://cpsforum.com.br/auth"
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
@@ -52,7 +52,7 @@ export const msalConfig = {
  * https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#openid-connect-scopes
  */
 export const loginRequest = {
-    scopes: ["User.Read"]
+    scopes: ["openid", "profile", "User.Read", "User.Read.All"],
 };
 
 /**
@@ -60,5 +60,6 @@ export const loginRequest = {
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/resources-and-scopes.md
  */
 export const graphConfig = {
-    graphMeEndpoint: "https://graph.microsoft.com/v1.0/me"
+    graphMeEndpoint: `https://graph.microsoft.com/v1.0/me`,
+    graphProfilePicEndpoint: "https://graph.microsoft.com/beta/me/photo/$value"
 };

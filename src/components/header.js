@@ -1,19 +1,10 @@
-import React from 'react';
-import { useMsal } from "@azure/msal-react";
+import React from 'react'
 import './header.css';
 import { Link } from 'react-router-dom';
-import { isLight, setLight } from '../App';
-import { loginRequest } from '../auth/authConfig';	
-
+import { isLight, setLight } from '../App'
+import AccountBtn from './accountBtn';
 
 function Header() {
-    const { instance } = useMsal();
-
-    const handleLogin = () => {
-        instance.loginRedirect(loginRequest).catch(e => {
-            console.log(e);
-        });
-    }
 
     return (
         <header>
@@ -24,11 +15,8 @@ function Header() {
                         <img src='/logo-cps.png' alt="CPS" width="80" className="me-4 d-inline-block align-text-top" />
                         <span id="header-title" className="mt-1 text-white">Fórum</span>
                     </Link>
-
                     <div id='account-area' className='account-area d-flex align-items-center'>
-                        <Link id="login-btn" className="login-btn d-flex align-items-center me-2" to={"/"}>
-                            <button onClick={() => handleLogin()} type="button" className="btn btn-outline-light">Entre</button>
-                        </Link>
+                        <AccountBtn />
                     </div>
                 </div>
             </nav>

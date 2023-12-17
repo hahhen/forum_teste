@@ -234,6 +234,12 @@ const section = [
       sectionname: 'Tecnologia',
       ssection: 7,
       slug: 'tecnologia'
+    },
+    {
+      sectioncod: 26,
+      sectionname: 'Física',
+      ssection: 2,
+      slug: 'fisica'
     }
   ]
 
@@ -248,7 +254,7 @@ const supersection = [
     },
     {
         ssectioncod: 3,
-        ssectionname: "Humanas"
+        ssectionname: "Humanas e Biológicas"
     },
     {
         ssectioncod: 4,

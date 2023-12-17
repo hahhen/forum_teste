@@ -1,0 +1,16 @@
+.login-btn{
+    text-decoration: none !important;
+}
+
+#btn-login
+{
+    text-decoration: none;
+}
+
+.dropdown-item{
+    color: var(--font);
+}
+
+.dropdown-menu{
+    border-color: var(--secondary-font);
+}
