@@ -17,7 +17,7 @@ function Section() {
                             info.ssection === 2 ?
                                 <li>
                                     <div className={`mb-2 section-1`}>
-                                        <Link to={`/${info.slug}`} className={`subsection-title`}>{info.sectionname}</Link>
+                                        <Link to={`/secao/${info.slug}`} className={`subsection-title`}>{info.sectionname}</Link>
                                     </div>
                                 </li>
                                 : null
@@ -32,7 +32,7 @@ function Section() {
                             info.ssection === 3 ?
                                 <li>
                                     <div className={`mb-2 section-1`}>
-                                        <Link to={`/${info.sectionname}`} className={`subsection-title `}>{info.sectionname}</Link>
+                                        <Link to={`/secao/${info.sectionname}`} className={`subsection-title `}>{info.sectionname}</Link>
                                     </div>
                                 </li>
                                 : null
@@ -52,7 +52,7 @@ function Section() {
                             info.ssection === 4 ?
                                 <li>
                                     <div className={`mb-2 section-1`}>
-                                        <Link to={`/${info.slug}`} className={`subsection-title `}>{info.sectionname}</Link>
+                                        <Link to={`/secao/${info.slug}`} className={`subsection-title `}>{info.sectionname}</Link>
                                     </div>
                                 </li>
                                 : ''
@@ -66,7 +66,7 @@ function Section() {
                             info.ssection === 5 ?
                                 <li>
                                     <div className={`mb-2 section-1`}>
-                                        <Link to={`/${info.slug}`} className={`subsection-title `}>{info.sectionname}</Link>
+                                        <Link to={`/secao/${info.slug}`} className={`subsection-title `}>{info.sectionname}</Link>
                                     </div>
                                 </li>
                                 : null
@@ -87,7 +87,7 @@ function Section() {
                             info.ssection === sinfo.ssectioncod ?
                                 <li>
                                     <div className={`mb-2 section-1`}>
-                                        <Link to={`/${info.slug}`} className={`subsection-title `}>{info.sectionname}</Link>
+                                        <Link to={`/secao/${info.slug}`} className={`subsection-title `}>{info.sectionname}</Link>
                                     </div>
                                 </li>
                             : null

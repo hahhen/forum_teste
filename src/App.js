@@ -54,9 +54,8 @@ function App() {
         <Route path='/.well-known/microsoft-identity-association.json' element={"../public/.well-known/microsoft-identity-association.json"} />
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path='/criar' element={<Criar />} />
-        <Route path={`/:slug`} element={<Layout><SectionPage /></Layout>} />
+        <Route path={`/secao/:slug`} element={<Layout><SectionPage /></Layout>} />
         <Route path={`/topico/:slug/:topiccod`} element={<Layout><TopicPage /></Layout>} />
-
       </Routes>
     </>
   );
