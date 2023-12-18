@@ -7,7 +7,7 @@ import { dayjs } from './dayjsa'
 
 function RecentTopic({info}) {
   return (
-    <Link key={info.topiccod} to={`/topico/${info.slug}-${info.topiccod}`} className='text-decoration-none'>
+    <Link key={info.topiccod} to={`/topico/${info.slug}/${info.topiccod}`} className='text-decoration-none'>
         <div  className={`recent-topic`}>
           <div className="recent-topic-header">
             <h6 className="recent-topic-title">{info.title}</h6>

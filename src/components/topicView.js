@@ -1,10 +1,13 @@
 import React from 'react'
 import { isLight } from '../App'
-import { topicInfo, author, section, flair, user, flairHolder } from './topicInfoSon'
+import { topicInfo, section, flair, user, flairHolder } from './topicInfoSon'
 import { dayjs } from './dayjsa'
 import './topicView.css'
 
-function TopicView({ topicKey }) {
+function TopicView({ topiccod }) {
+  console.log(topiccod)
+  const topicKey = topicInfo[topiccod - 1]; 
+  console.log(topicKey)
   return (
     <div>
       <div>

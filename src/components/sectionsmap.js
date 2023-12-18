@@ -1,5 +1,5 @@
 import React from 'react'
-import './sections.css'
+import './sectionsmap.css'
 import { isRetract, retract } from '../App'
 import { section, supersection } from './topicInfoSon'
 import { Link } from 'react-router-dom'
@@ -13,7 +13,8 @@ function Sections() {
                     className="retract-btn"
                     onClick={() => retract(!isRetract)}>
                     <i className={`fa-solid ${isRetract ? 'fa-caret-left' : 'fa-caret-right'}`}>
-                    </i>{isRetract ? ' Recolher' : ' Expandir'}</span>
+                    </i>{isRetract ? ' Recolher' : ' Expandir'}
+                </span>
             </div>
             {isRetract ?
                 <ul id="sections-map" className={isRetract ? 'sections-map sections-map-open' : 'sections-map sections-map-close'}>
@@ -26,8 +27,8 @@ function Sections() {
                                     {section.map((info) =>
                                         info.ssection === 2 ?
                                             <li className="section-item">
-                                                    <Link to={`/${info.slug}`} className='section-item'>{info.sectionname}</Link>
-                                                </li>
+                                                <Link to={`/${info.slug}`} className='section-item'>{info.sectionname}</Link>
+                                            </li>
                                             : null
                                     )}
 
@@ -39,8 +40,8 @@ function Sections() {
                                     {section.map((info) =>
                                         info.ssection === 3 ?
                                             <li className="section-item">
-                                                    <Link to={`/${info.slug}`} className='section-item'>{info.sectionname}</Link>
-                                                </li>
+                                                <Link to={`/${info.slug}`} className='section-item'>{info.sectionname}</Link>
+                                            </li>
                                             : null
                                     )}
                                 </ul>
@@ -56,8 +57,8 @@ function Sections() {
                                     {section.map((info) =>
                                         info.ssection === 4 ?
                                             <li className="section-item">
-                                                    <Link to={`/${info.slug}`} className='section-item'>{info.sectionname}</Link>
-                                                </li>
+                                                <Link to={`/${info.slug}`} className='section-item'>{info.sectionname}</Link>
+                                            </li>
                                             : null
                                     )}
                                 </ul>
@@ -70,8 +71,8 @@ function Sections() {
                                     {section.map((info) =>
                                         info.ssection === 5 ?
                                             <li className="section-item">
-                                                    <Link to={`/${info.slug}`} className='section-item'>{info.sectionname}</Link>
-                                                </li>
+                                                <Link to={`/${info.slug}`} className='section-item'>{info.sectionname}</Link>
+                                            </li>
                                             : null
                                     )}
                                 </ul>

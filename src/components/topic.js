@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 function Topic({ info }) {
   return (
-    <Link to={`/topico/${info.slug}-${info.topiccod}`} className='text-decoration-none'>
+    <Link to={`/topico/${info.slug}/${info.topiccod}`} className='text-decoration-none'>
       <div key={info.topiccod} className={`topic`}>
         <h5 className="topic-title">{info.title}</h5>
         <div className={`topic-info`}>

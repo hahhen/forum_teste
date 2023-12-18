@@ -7,6 +7,7 @@ import { section, topicInfo } from './components/topicInfoSon';
 import SectionPage from './pages/SectionPage';
 import TopicPage from './pages/TopicPage';
 import { Analytics } from '@vercel/analytics/react';
+import Layout from './components/layout';
 
 // Light/Dark mode
 var [isLight, setLight] = ""
@@ -51,14 +52,11 @@ function App() {
       <Analytics />
       <Routes>
         <Route path='/.well-known/microsoft-identity-association.json' element={"../public/.well-known/microsoft-identity-association.json"} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path='/criar' element={<Criar />} />
-        {section.map((info) =>
-          <Route path={`/${info.slug}`} element={<SectionPage section9={info.sectioncod} />} />
-        )}
-        {topicInfo.map((info) =>
-          <Route path={`/topico/${info.slug}-${info.topiccod}`} element={<TopicPage topicKey={info} />} />
-        )}
+        <Route path={`/:slug`} element={<Layout><SectionPage /></Layout>} />
+        <Route path={`/topico/:slug/:topiccod`} element={<Layout><TopicPage /></Layout>} />
+
       </Routes>
     </>
   );

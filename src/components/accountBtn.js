@@ -52,7 +52,7 @@ function AccountBtn() {
                     <>
                         <div className="dropdown">
                             <button className="bg-transparent border-0 d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img alt="Foto de perfil" src={`${picurl}`} width={40} height={40} className="pfp me-2 rounded-circle"
+                                <img alt="Foto de perfil" src={`${picurl}`} width={50} height={50} className="pfp me-2 rounded-circle"
                                     style={{
                                         backgroundSize: 'cover',
                                     }}

@@ -1,7 +1,7 @@
 import React from 'react'
 import { section, supersection } from './topicInfoSon'
 import { Link } from 'react-router-dom'
-import './section.css'
+import './sectionshomedropdown.css'
 
 function Section() {
     return (
