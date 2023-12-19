@@ -32,7 +32,7 @@ function Section() {
                             info.ssection === 3 ?
                                 <li>
                                     <div className={`mb-2 section-1`}>
-                                        <Link to={`/secao/${info.sectionname}`} className={`subsection-title `}>{info.sectionname}</Link>
+                                        <Link to={`/secao/${info.slug}`} className={`subsection-title `}>{info.sectionname}</Link>
                                     </div>
                                 </li>
                                 : null

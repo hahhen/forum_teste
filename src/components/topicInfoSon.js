@@ -128,9 +128,12 @@ const section = [
       sectioncod: 5,
       sectionname: 'Redação',
       ssection: 3,
-      slug: 'sociologia'
+      slug: 'redacao'
     },
-    { sectioncod: 6, sectionname: 'Inglês', ssection: 3, slug: 'ingles' }, 
+    { sectioncod: 6, 
+      sectionname: 'Inglês', 
+      ssection: 3, 
+      slug: 'ingles' }, 
     {
       sectioncod: 7,
       sectionname: 'Geografia',
