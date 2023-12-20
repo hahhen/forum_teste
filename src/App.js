@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
@@ -17,6 +17,8 @@ function LightTrue() {
 function LightFalse() {
   [isLight, setLight] = useState(false)
 }
+
+
 
 //Retract sections map
 var [isRetract, retract] = ""

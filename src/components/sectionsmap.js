@@ -3,9 +3,22 @@ import './sectionsmap.css'
 import { isRetract, retract } from '../App'
 import { section, supersection } from './topicInfoSon'
 import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react';
+
 
 function Sections() {
+    const [sections, setSections] = useState([]);
+    useEffect(() => {
+        async function getSections() {
+            const req = await fetch(`https://neon-nodejs-example-hahhen.vercel.app/sections`);
+            const res = await req.json();
+            setSections(res);
+            console.log(res)
+        }
+        getSections()
+    },[]);
     return (
+        
         <div id="sections-col" className={`sections ${isRetract ? 'sections-map-open col-3' : 'col-1'}`}>
             <div className="sections-map-header">
                 {isRetract ? <h5 id="sections-tit" className="sections-title">Seções</h5> : null}
@@ -22,9 +35,9 @@ function Sections() {
                         Matérias
                         <ul>
                             <li className="section-sub-sub-title">
-                                Exatas
+                                Matemática e Ciências da Natureza
                                 <ul>
-                                    {section.map((info) =>
+                                    {sections.map((info) =>
                                         info.ssection === 2 ?
                                             <li className="section-item">
                                                 <Link to={`/secao/${info.slug}`} className='section-item'>{info.sectionname}</Link>
@@ -35,9 +48,9 @@ function Sections() {
                                 </ul>
                             </li>
                             <li className="section-sub-sub-title">
-                                Humanas e Biológicas
+                                Linguagens e Ciências Sociais
                                 <ul>
-                                    {section.map((info) =>
+                                    {sections.map((info) =>
                                         info.ssection === 3 ?
                                             <li className="section-item">
                                                 <Link to={`/secao/${info.slug}`} className='section-item'>{info.sectionname}</Link>
@@ -54,7 +67,7 @@ function Sections() {
                             <li className="section-sub-sub-title">
                                 Etec
                                 <ul>
-                                    {section.map((info) =>
+                                    {sections.map((info) =>
                                         info.ssection === 4 ?
                                             <li className="section-item">
                                                 <Link to={`/secao/${info.slug}`} className='section-item'>{info.sectionname}</Link>
@@ -68,7 +81,7 @@ function Sections() {
                             <li className="section-sub-sub-title">
                                 Fatec
                                 <ul>
-                                    {section.map((info) =>
+                                    {sections.map((info) =>
                                         info.ssection === 5 ?
                                             <li className="section-item">
                                                 <Link to={`/secao/${info.slug}`} className='section-item'>{info.sectionname}</Link>
@@ -86,7 +99,7 @@ function Sections() {
                                 <li className="section-sub-sub-title">
                                     {sinfo.ssectionname}
                                     <ul>
-                                        {section.map((info) =>
+                                        {sections.map((info) =>
                                             info.ssection === sinfo.ssectioncod ?
                                                 <li className="section-item">
                                                     <Link to={`/secao/${info.slug}`} className='section-item'>{info.sectionname}</Link>
