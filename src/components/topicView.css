@@ -1,35 +1,35 @@
-.topicview-title{
+.topicview-title {
     font-weight: 500;
 }
 
-.topicview-author{
+.topicview-author {
     font-weight: 300;
     margin-right: 3px;
 }
 
-p{
+p {
     font-weight: 300;
 }
 
-.topicview-section{
+.topicview-section {
     margin-left: 5px;
     font-weight: 300;
     color: var(--secondary-font);
 }
 
-.topicview-info{
+.topicview-info {
     color: var(--secondary-font);
 }
 
-.topicview-origin-name{
+.topicview-origin-name {
     font-weight: 500;
 }
 
-.topicview-runtime{
+.topicview-runtime {
     font-weight: 300;
 }
 
-.topicview-info-aparter{
+.topicview-info-aparter {
     width: 1px;
     height: 1px;
     background-color: var(--secondary-font);
@@ -38,10 +38,22 @@ p{
     margin-right: 6px;
 }
 
-.topicviewbody.dark, .topicview-title.dark, .topicview-author.dark{
+.topicviewbody.dark,
+.topicview-title.dark,
+.topicview-author.dark,
+hr {
     color: var(--font)
 }
 
-.topicview-section.dark, .topicview-runtime.dark, .topicview-info-aparter{
+.topicview-section.dark,
+.topicview-runtime.dark,
+.topicview-info-aparter {
     color: #dfdfdf;
+}
+
+
+@media (pointer: fine) {
+    .interactionbutton:hover {
+        opacity: 60%;
+    }
 }

@@ -3,10 +3,13 @@ import { isLight } from '../App'
 import { topicInfo, section, flair, user, flairHolder } from './topicInfoSon'
 import { dayjs } from './dayjsa'
 import './topicView.css'
+import LikeButton from './likebutton'
+import CommentButton from './commentbutton'
+import ShareButton from './sharebutton'
 
 function TopicView({ topiccod }) {
   console.log(topiccod)
-  const topicKey = topicInfo[topiccod - 1]; 
+  const topicKey = topicInfo[topiccod - 1];
   console.log(topicKey)
   return (
     <div>
@@ -30,6 +33,16 @@ function TopicView({ topiccod }) {
       </div>
       <hr />
       <div dangerouslySetInnerHTML={{ __html: topicKey.body }} id='topicviewbody' className={`topicviewbody ${isLight ? '' : 'dark'}`}></div>
+      <hr />
+      <div className='row'>
+        <div className='col-4 d-flex justify-content-between'>
+          <LikeButton info={topicKey} />
+          <CommentButton info={topicKey} />
+        </div>
+        <div className='col-8 d-flex justify-content-end'>
+          <ShareButton info={topicKey} />
+        </div>
+      </div>
     </div>
 
   )

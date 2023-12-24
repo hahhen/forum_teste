@@ -20,12 +20,12 @@ function AccountBtn() {
         })
             .then((response) => {
                 callMsGraph(response.accessToken).then(response => setGraphData(response));
+                console.log(graphData)
                 callMsGraphPhoto(response.accessToken).then(response => response.blob())
                     .then(blob => {
                         const url = URL.createObjectURL(blob);
                         setPicurl(url);
-                    });
-                console.log(graphData)
+                    });                
             });
     }
     const isAuthenticated = useIsAuthenticated()

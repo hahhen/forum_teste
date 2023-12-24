@@ -1,6 +1,7 @@
 import React from 'react'
 import Feed from '../components/feed';
 import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { section } from '../components/topicInfoSon';
 
 function SectionPage() {
