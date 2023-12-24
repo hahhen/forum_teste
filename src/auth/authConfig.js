@@ -14,7 +14,7 @@ export const msalConfig = {
     auth: {
         clientId: "e271fae5-bf1c-4b06-8b1f-eb37ccf8b223",
         authority: "https://login.microsoftonline.com/d848c1d6-0ea1-49bb-b29e-4482027ca5e1",
-        redirectUri: "https://www.cpsforum.com.br/auth"
+        redirectUri: "https://cpsforum.com.br/auth"
     },
     cache: {
         cacheLocation: "sessionStorage", // This configures where your cache will be stored
