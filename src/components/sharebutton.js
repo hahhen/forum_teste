@@ -1,18 +1,13 @@
-import React from 'react'
-import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import React, { useRef, useEffect } from 'react'
 
 function ShareButton(info) {
   const url = window.location.href
   function CopyToClipboard() {
     navigator.clipboard.writeText(url)
   }
-  function generateTooltip(){
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-  }
   return (
     <>
-      <button onClick={() => generateTooltip()} data-bs-toggle="modal" data-bs-target="#exampleModal" title='Compartilhar' className='interactionbutton bg-transparent border-0'>
+      <button type='button' data-bs-toggle="modal" data-bs-target="#exampleModal" title='Compartilhar' className='interactionbutton bg-transparent border-0'>
         <i className="me-1 fa-regular fa-share-from-square fa-lg" style={{ color: `var(--font)` }}></i>
       </button>
 
@@ -44,11 +39,7 @@ function ShareButton(info) {
               <div className='lower pt-4 ps-3 pe-3'>
                 <div className="input-group mb-3">
                   <div className='form-control' aria-describedby="addon">{url}</div>
-                  <button className="input-group-text btn btn-secondary" id="addon"
-                    data-bs-toggle='tooltip' data-bs-placement='top'
-                    data-bs-trigger='focus'
-                    onClick={() => CopyToClipboard()}
-                    data-bs-title='Copiado para a área de transferência'>
+                  <button className="input-group-text btn btn-secondary" id="addon" onClick={() => CopyToClipboard()}>
                     <i className="fa-solid fa-link fa-lg" style={{ color: "#fff" }}></i>
                   </button>
                 </div>

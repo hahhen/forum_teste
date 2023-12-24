@@ -4,7 +4,7 @@ import { loginRequest } from '../auth/authConfig';
 import { Link } from 'react-router-dom';
 import { useIsAuthenticated } from "@azure/msal-react";
 import { callMsGraph, callMsGraphPhoto } from "../auth/graph";
-import './accountBtn.css'
+import './accountBtn.css';
 
 function AccountBtn() {
 
@@ -18,14 +18,14 @@ function AccountBtn() {
             ...loginRequest,
             account: accounts[0],
         })
-            .then((response) => {
-                callMsGraph(response.accessToken).then(response => setGraphData(response));
-                console.log(graphData)
+            .then((response) => {                
+                callMsGraph(response.accessToken).then(response => setGraphData(response));                
                 callMsGraphPhoto(response.accessToken).then(response => response.blob())
                     .then(blob => {
                         const url = URL.createObjectURL(blob);
                         setPicurl(url);
-                    });                
+                    });
+                     
             });
     }
     const isAuthenticated = useIsAuthenticated()
