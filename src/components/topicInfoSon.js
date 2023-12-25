@@ -245,6 +245,12 @@ const section = [
       sectionname: 'Física',
       ssection: 2,
       slug: 'fisica'
+    },
+    {
+      sectioncod: 27,
+      sectionname: 'Biologia',
+      ssection: 2,
+      slug: 'biologia'
     }
   ]
 

@@ -8,6 +8,7 @@ import SectionPage from './pages/SectionPage';
 import TopicPage from './pages/TopicPage';
 import { Analytics } from '@vercel/analytics/react';
 import Layout from './components/layout';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Light/Dark mode
 var [isLight, setLight] = ""
@@ -17,14 +18,13 @@ function LightTrue() {
 function LightFalse() {
   [isLight, setLight] = useState(false)
 }
-
-
-
 //Retract sections map
 var [isRetract, retract] = ""
 function Retract() {
   [isRetract, retract] = useState(true)
 }
+
+
 
 function App() {
   //Ativa a função que habilita retrair as seções
@@ -48,9 +48,11 @@ function App() {
     document.documentElement.setAttribute('data-theme', 'light')
     localStorage.setItem('theme', 'light')
   }
-
+  
+  //Helmet (muda o head da página)
+  const helmetContext = {};
   return (
-    <>
+    <HelmetProvider context={helmetContext}>
       <Analytics />
       <Routes>
         <Route path='/.well-known/microsoft-identity-association.json' element={"../public/.well-known/microsoft-identity-association.json"} />
@@ -59,7 +61,7 @@ function App() {
         <Route path={`/secao/:slug`} element={<Layout><SectionPage /></Layout>} />
         <Route path={`/topico/:slug/:topiccod`} element={<Layout><TopicPage /></Layout>} />
       </Routes>
-    </>
+    </HelmetProvider>
   );
 }
 

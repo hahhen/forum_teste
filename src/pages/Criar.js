@@ -5,6 +5,7 @@ import { isLight } from '../App';
 import { Editor } from '@tinymce/tinymce-react';
 import { section } from '../components/topicInfoSon';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 function Criar() {
     const location = useLocation()
@@ -27,6 +28,16 @@ function Criar() {
     }, [isLight]);
     return (
         <>
+            <Helmet>
+                {/* Tags de título e descrição normais */}
+                <title>Crie um tópico</title>
+
+                {/* Tags de título e descrição do Twitter */}
+                <meta property="twitter:title" content='Crie um tópico' />
+
+                {/* Tags de título e descrição OpenGraph (Facebook, LinkedIn, etc) */}
+                <meta property="og:title" content='Crie um tópico' />
+            </Helmet>
             <Header />
             <main className='container pt-5'>
                 <h1 className={`create-header mb-3`}>Criar tópico</h1>
