@@ -7,7 +7,7 @@ import LikeButton from './likebutton'
 import CommentButton from './commentbutton'
 import ShareButton from './sharebutton'
 
-function TopicView({ topiccod }) {
+function TopicView({ description, gtitle, creator, topiccod }) {
   console.log(topiccod)
   const topicKey = topicInfo[topiccod - 1];
   console.log(topicKey)
@@ -40,7 +40,7 @@ function TopicView({ topiccod }) {
           <CommentButton info={topicKey} />
         </div>
         <div className='col-8 d-flex justify-content-end'>
-          <ShareButton info={topicKey} />
+          <ShareButton description={description} gtitle={gtitle} creator={creator} info={topicKey} />
         </div>
       </div>
     </div>

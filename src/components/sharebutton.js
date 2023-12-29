@@ -1,6 +1,7 @@
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
+import './sharebutton.css'
 
-function ShareButton(info) {
+function ShareButton({ description, gtitle, creator}) {
   const url = window.location.href
   function CopyToClipboard() {
     navigator.clipboard.writeText(url)
@@ -20,27 +21,27 @@ function ShareButton(info) {
             </div>
             <div className="modal-body d-flex flex-column">
               <div className='upper pt-2 d-flex justify-content-evenly'>
-                <button className='interactionbutton border-0 bg-transparent'>
+                <a href={`https://www.facebook.com/sharer.php?u=${url}`} className='interactionbutton border-0 bg-transparent'>
                   <i className="fa-brands fa-facebook fa-2xl"></i>
-                </button>
-                <button className='interactionbutton border-0 bg-transparent'>
+                </a>
+                <a href={`https://api.whatsapp.com/send?text=${gtitle} por ${creator} - Centro Paula Souza | Fórum%20${url}`} className='interactionbutton border-0 bg-transparent'>
                   <i className="fa-brands fa-whatsapp fa-2xl"></i>
-                </button>
-                <button className='interactionbutton border-0 bg-transparent'>
+                </a>
+                <a href={`https://twitter.com/intent/tweet?url=${url}&text=${gtitle} por ${creator} - Centro Paula Souza - Fórum`} className='interactionbutton border-0 bg-transparent'>
                   <i className="fa-brands fa-x-twitter fa-2xl"></i>
-                </button>
-                <button className='interactionbutton border-0 bg-transparent'>
+                </a>
+                <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${url}`} className='interactionbutton border-0 bg-transparent'>
                   <i className="fa-brands fa-linkedin fa-2xl"></i>
-                </button>
-                <button className='interactionbutton border-0 bg-transparent'>
+                </a>
+                <a href={`mailto:?subject=${gtitle}&body=${description}\nLeia mais em: ${url}`} className='interactionbutton border-0 bg-transparent'>
                   <i className="fa-solid fa-envelope fa-2xl"></i>
-                </button>
+                </a>
               </div>
               <div className='lower pt-4 ps-3 pe-3'>
                 <div className="input-group mb-3">
                   <div className='form-control' aria-describedby="addon">{url}</div>
                   <button className="input-group-text btn btn-secondary" id="addon" onClick={() => CopyToClipboard()}>
-                    <i className="fa-solid fa-link fa-lg" style={{ color: "#fff" }}></i>
+                    <i className="fa-solid fa-clone fa-lg" style={{ color: "#fff" }}></i>
                   </button>
                 </div>
               </div>
