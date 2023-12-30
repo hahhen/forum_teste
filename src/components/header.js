@@ -2,7 +2,7 @@ import React from 'react'
 import './header.css';
 import { Link } from 'react-router-dom';
 import { isLight, setLight } from '../App'
-import AccountBtn from './accountBtn';
+import AccountArea from './accountarea';
 
 function Header() {
 
@@ -16,7 +16,7 @@ function Header() {
                         <span id="header-title" className="mt-1 text-white">Fórum</span>
                     </Link>
                     <div id='account-area' className='account-area d-flex align-items-center'>
-                        <AccountBtn />
+                        <AccountArea />
                     </div>
                 </div>
             </nav>

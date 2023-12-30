@@ -22,7 +22,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 [data-theme = "dark"]{
-  --highlight-bg: #191919;
+  --highlight-bg: #131313;
   --background: #191919;
   --secondary-bg: #2b2b2b;
   --font: #eee;

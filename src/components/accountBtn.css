@@ -14,3 +14,11 @@
 .dropdown-menu{
     border-color: var(--secondary-font);
 }
+
+.accountbutton{
+    background-color: transparent;
+}
+
+.accountbutton:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}

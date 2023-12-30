@@ -3,7 +3,7 @@ import Header from '../components/header';
 import './criar.css'
 import { isLight } from '../App';
 import { Editor } from '@tinymce/tinymce-react';
-import { section } from '../components/topicInfoSon';
+import { supersection, section } from '../components/topicInfoSon';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
@@ -45,8 +45,12 @@ function Criar() {
                     <div className='wrapper-select mb-2'>
                         <label className={`section-select-label`} htmlFor={`section-select`}>Seção: </label>
                         <select defaultValue={from} id='section-select' className={`ps-1 form-select section-select`}>
-                            {section.slice(1).map((info) =>
-                                <option value={info.sectioncod}>{info.sectionname}</option>
+                            {supersection.slice(1).map((info) =>
+                                <optgroup key={info.ssectioncod} label={info.ssectionname}>
+                                    {section.filter((info2) => info2.ssection === info.ssectioncod).map((info2) =>
+                                        <option value={info2.sectioncod}>{info2.sectionname}</option>
+                                    )}
+                                </optgroup>
                             )}
                         </select>
                     </div>
@@ -72,12 +76,12 @@ function Criar() {
                         init={{
                             //Verifica se o tema é light ou dark e aplica a skin de acordo
                             ...(isLight ?
-                            {}
-                            :
-                            {
-                                skin: 'oxide-dark',
-                                content_css: 'dark'
-                            }),
+                                {}
+                                :
+                                {
+                                    skin: 'oxide-dark',
+                                    content_css: 'dark'
+                                }),
                             placeholder: 'Escreva aqui seu tópico!',
                             height: 500,
                             branding: false,

@@ -196,14 +196,10 @@ const section = [
       ssection: 4,
       slug: 'marketing'
     },
-    { sectioncod: 17, sectionname: 'TCC', ssection: 4, slug: 'tcc-etec' }, 
-    {
-      sectioncod: 18,
-      sectionname: 'TCC',
-      ssection: 5,
-      slug: 'tcc-fatec'
-    },
-    { sectioncod: 19, sectionname: 'ENEM', ssection: 6, slug: 'enem' },    
+    { sectioncod: 19, 
+      sectionname: 'ENEM', 
+      ssection: 6, 
+      slug: 'enem' },    
     {
       sectioncod: 20,
       sectionname: 'FUVEST',
@@ -251,7 +247,13 @@ const section = [
       sectionname: 'Biologia',
       ssection: 2,
       slug: 'biologia'
-    }
+    },
+    {
+      sectioncod: 28,
+      sectionname: 'TCC',
+      ssection: 7,
+      slug: 'tcc'
+    },
   ]
 
 const supersection = [
@@ -261,11 +263,11 @@ const supersection = [
     },
     {
         ssectioncod: 2,
-        ssectionname: "Exatas"
+        ssectionname: "Matemática e Ciências da Natureza"
     },
     {
         ssectioncod: 3,
-        ssectionname: "Humanas e Biológicas"
+        ssectionname: "Linguagens e Ciências Sociais"
     },
     {
         ssectioncod: 4,
