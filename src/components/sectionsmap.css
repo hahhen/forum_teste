@@ -1,74 +1,111 @@
-.sections-map, .section-sub-title, .section-sub-sub-title, .section-item{
+#sections-col {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+#sections-col::-webkit-scrollbar {
+    width: 3px; 
+}
+
+/* Track */
+#sections-col::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+#sections-col::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 3px; 
+}
+
+/* Handle on hover */
+#sections-col::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+
+.sections-map,
+.section-sub-title,
+.section-sub-sub-title,
+.section-item {
     color: #718096;
     list-style: none;
     text-decoration: none;
 }
 
-.sections-title{
+.sections-title {
     font-weight: 700;
 }
 
-.sections-title, .section-sub-title, .section-sub-sub-title, .section-item{
+.sections-title,
+.section-sub-title,
+.section-sub-sub-title,
+.section-item {
     color: var(--secondary-font);
 }
 
-.section-sub-title{
+.section-sub-title {
     font-weight: 700;
     margin-top: 15px;
 }
 
-.section-sub-sub-title{
+.section-sub-sub-title {
     font-weight: 500;
     margin-top: 5px;
     cursor: pointer;
 }
 
-.section-item{
+.section-item {
     font-weight: 300;
     margin-bottom: 3px;
 }
 
-.sections-map{
+.sections-map {
     padding: 0;
 }
 
 @keyframes appear {
-    from{
+    from {
         opacity: 0;
         transform: translateX(-30px);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateX(0px);
     }
 }
 
-@keyframes disappear{
-    from{
+@keyframes disappear {
+    from {
         opacity: 1;
-        transform: translateX(0px);    
+        transform: translateX(0px);
     }
-    to{
+
+    to {
         opacity: 0;
         transform: translateX(-30px);
     }
 }
 
-.sections-map-open{
+.sections-map-open {
     animation: appear 0.3s linear;
 }
 
-.sections-map-close{
+.sections-map-close {
     animation: disappear 0.3s linear;
 }
 
-.sections-map-header{
+.sections-map-header {
     display: flex;
     justify-content: space-between;
     align-items: top;
 }
 
-.retract-btn{
+.retract-btn {
     font-size: 0.875rem;
     color: var(--secondary-font);
     font-weight: 400;

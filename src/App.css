@@ -18,7 +18,6 @@ h1,h2,h3,h4,h5,h6{
   --font: #000;
   --secondary-font: #718096;
   --main-red: #d43939;
-  --highlight-bg: #fff;
 }
 
 [data-theme = "dark"]{
