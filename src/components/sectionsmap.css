@@ -3,22 +3,13 @@
     position: sticky;
     top: 0;
     max-height: 100vh;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 #sections-col::-webkit-scrollbar {
-    width: 1px; 
+    display: none;
 }
 
-/* Track */
-#sections-col::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-/* Handle */
-#sections-col::-webkit-scrollbar-thumb {
-    background: #aaa;
-}
 
 /* Handle on hover */
 #sections-col::-webkit-scrollbar-thumb:hover {

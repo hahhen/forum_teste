@@ -18,7 +18,6 @@ function Sections() {
         getSections()
     },[]);
     return (
-        
         <div id="sections-col" className={`sections pt-3 ${isRetract ? 'sections-map-open col-3' : 'col-1'}`}>
             <div className="sections-map-header">
                 {isRetract ? <h5 id="sections-tit" className="sections-title">Seções</h5> : null}
