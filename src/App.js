@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Criar from './pages/Criar';
-import { section, topicInfo } from './components/topicInfoSon';
 import SectionPage from './pages/SectionPage';
 import TopicPage from './pages/TopicPage';
 import { Analytics } from '@vercel/analytics/react';
 import Layout from './components/layout';
 import { HelmetProvider } from 'react-helmet-async';
+import Footer from './components/footer';
 
 // Light/Dark mode
 var [isLight, setLight] = ""
@@ -55,6 +55,7 @@ function App() {
     <HelmetProvider context={helmetContext}>
       <Analytics />
       <Routes>
+        <Route path='/teste' element={<Footer />}/>
         <Route path='/.well-known/microsoft-identity-association.json' element={"../public/.well-known/microsoft-identity-association.json"} />
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path='/criar' element={<Criar />} />

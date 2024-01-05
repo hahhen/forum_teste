@@ -1,0 +1,27 @@
+
+span{
+    font-weight: 300;
+}
+
+#footer-title{
+    font-size: 1.25rem;
+    font-family: 'SFProDisplay', sans-serif;
+    font-weight: 200;
+}
+
+#footer-cps{
+    background: url("../../public/bg-footer-ed-azul-base.png") right center no-repeat fixed #004854;
+}
+
+footer a{
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+}
+footer{
+    color: #fff;
+}
+
+.bottom-footer{
+    background: #005c6d;
+}
