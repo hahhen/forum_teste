@@ -5,7 +5,7 @@ function NotificationButton() {
     return (
         <div className="notificationbutton-wrapper">
             <div className="dropdown">
-                <button className='notifbutton me-2 border-0 rounded-circle' type="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
+                <button className='notifbutton p-0 border-0 rounded-circle' type="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
                     <i style={{ color: `#fff` }} className="fa-lg fa-regular fa-bell"></i>
                 </button>
                 <ul style={{ whiteSpace: 'nowrap', backgroundColor: `var(--highlight-bg)`, color: `var(--font)`, marginTop: '11px' }} className="p-2 dropdown-menu dropdown-menu-end">

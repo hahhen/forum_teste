@@ -1,3 +1,8 @@
+#navbarNavDropdown #sections-col{
+    width: 90%;
+    z-index: 1;
+}
+
 #sections-col {
     position: -webkit-sticky;
     position: sticky;

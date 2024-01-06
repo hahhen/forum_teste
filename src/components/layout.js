@@ -9,7 +9,7 @@ function Layout({children}) {
     return (
         <>
             <Header />
-            <main className="container pt-4 mt-2">
+            <main id='main' className="container pt-4 mt-2">
                 <div className='row'>
                     <MediaQuery minWidth={1000}>
                         {isMobile => (
