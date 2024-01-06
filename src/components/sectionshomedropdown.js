@@ -11,7 +11,7 @@ function Section() {
                     Matérias
                 </h4>
                 <details className={`pb-1 section`}>
-                    <summary className={`section-title mb-3`}>Ciências Exatas</summary>
+                    <summary className={`section-title mb-3`}>Matemática e Ciências da Natureza</summary>
                     <ul className='m-0 section-list'>
                         {section.map((info) =>
                             info.ssection === 2 ?
@@ -25,7 +25,7 @@ function Section() {
                     </ul>
                 </details>
                 <details className={`pb-1 section `}>
-                    <summary className={`section-title mb-3`}>Ciências Humanas e Biológicas</summary>
+                    <summary className={`section-title mb-3`}>Linguagens e Ciências Sociais</summary>
 
                     <ul className='m-0 section-list'>
                         {section.map((info) =>
