@@ -196,60 +196,60 @@ const section = [
       ssection: 4,
       slug: 'marketing'
     },
-    { sectioncod: 19, 
+    { sectioncod: 17, 
       sectionname: 'ENEM', 
       ssection: 6, 
       slug: 'enem' },    
     {
-      sectioncod: 20,
+      sectioncod: 18,
       sectionname: 'FUVEST',
       ssection: 6,
       slug: 'fuvest'
     },
     {
-      sectioncod: 21,
+      sectioncod: 19,
       sectionname: 'ITA-IME',
       ssection: 6,
       slug: 'ita-ime'
     },
     {
-      sectioncod: 22,
+      sectioncod: 20,
       sectionname: 'Fatec',
       ssection: 6,
       slug: 'vestibular-etec'
     },
     {
-      sectioncod: 23,
+      sectioncod: 21,
       sectionname: 'Vestibulares diversos',
       ssection: 6,
       slug: 'vestibular-diversos'
     },
     {
-      sectioncod: 24,
+      sectioncod: 22,
       sectionname: 'Olimpíadas',
       ssection: 7,
       slug: 'olimpiadas'
     },
     {
-      sectioncod: 25,
+      sectioncod: 23,
       sectionname: 'Tecnologia',
       ssection: 7,
       slug: 'tecnologia'
     },
     {
-      sectioncod: 26,
+      sectioncod: 24,
       sectionname: 'Física',
       ssection: 2,
       slug: 'fisica'
     },
     {
-      sectioncod: 27,
+      sectioncod: 25,
       sectionname: 'Biologia',
       ssection: 2,
       slug: 'biologia'
     },
     {
-      sectioncod: 28,
+      sectioncod: 26,
       sectionname: 'TCC',
       ssection: 7,
       slug: 'tcc'

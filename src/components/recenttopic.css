@@ -7,6 +7,11 @@
     margin-bottom: 15px;
 }
 
+.section-1 .recent-topic{
+    background-color: var(--background);
+    margin-bottom: 0;
+}
+
 .recent-topic-info{
     display: flex;
     color: var(--secondary-font);
@@ -39,6 +44,3 @@
     margin-right: 5px;
 }
 
-.recent-topic-title.dark{
-    color: #ffffff;
-}

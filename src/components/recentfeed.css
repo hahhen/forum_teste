@@ -1,4 +1,4 @@
-#recent-feed{
+.recent-feed{
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -6,7 +6,7 @@
     overflow-y: scroll;
 }
 
-#recent-feed::-webkit-scrollbar {
+.recent-feed::-webkit-scrollbar {
     display: none;
   }
 

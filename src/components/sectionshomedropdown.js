@@ -2,6 +2,7 @@ import React from 'react'
 import { section, supersection } from './topicInfoSon'
 import { Link } from 'react-router-dom'
 import './sectionshomedropdown.css'
+import RecentFeed from './recentfeed'
 
 function Section() {
     return (
@@ -18,6 +19,7 @@ function Section() {
                                 <li>
                                     <div className={`mb-2 section-1`}>
                                         <Link to={`/secao/${info.slug}`} className={`subsection-title`}>{info.sectionname}</Link>
+                                        <RecentFeed section={info.sectioncod} />
                                     </div>
                                 </li>
                                 : null
@@ -33,6 +35,7 @@ function Section() {
                                 <li>
                                     <div className={`mb-2 section-1`}>
                                         <Link to={`/secao/${info.slug}`} className={`subsection-title `}>{info.sectionname}</Link>
+                                        <RecentFeed section={info.sectioncod} />
                                     </div>
                                 </li>
                                 : null
@@ -53,6 +56,7 @@ function Section() {
                                 <li>
                                     <div className={`mb-2 section-1`}>
                                         <Link to={`/secao/${info.slug}`} className={`subsection-title `}>{info.sectionname}</Link>
+                                        <RecentFeed section={info.sectioncod} />
                                     </div>
                                 </li>
                                 : ''
@@ -67,6 +71,7 @@ function Section() {
                                 <li>
                                     <div className={`mb-2 section-1`}>
                                         <Link to={`/secao/${info.slug}`} className={`subsection-title `}>{info.sectionname}</Link>
+                                        <RecentFeed section={info.sectioncod} />
                                     </div>
                                 </li>
                                 : null
@@ -88,6 +93,7 @@ function Section() {
                                 <li>
                                     <div className={`mb-2 section-1`}>
                                         <Link to={`/secao/${info.slug}`} className={`subsection-title `}>{info.sectionname}</Link>
+                                        <RecentFeed section={info.sectioncod} />
                                     </div>
                                 </li>
                             : null
