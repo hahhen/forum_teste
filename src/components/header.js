@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './header.css';
 import { Link } from 'react-router-dom';
 import { isLight, setLight } from '../App'
@@ -6,7 +6,6 @@ import AccountArea from './accountarea';
 import Sections from './sectionsmap';
 
 function Header() {
-
     return (
         <header>
             <nav id="navbar-top" className={`navbar navbar-expand-lg pt-3 pb-3 `}>
@@ -24,8 +23,8 @@ function Header() {
                 </div>
             </nav>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <div className='d-flex flex-column align-items-center'>
-                    <div className='mt-1 d-flex justify-content-between' style={{width: '90%'}}>
+                <div className='mt-5 d-flex flex-column align-items-center'>
+                    <div id='sidebar-top' className='mt-5 pt-2 d-flex justify-content-between' style={{width: '90%'}}>
                         <div className="navbar-section-item d-flex">
                             <div className="input-group">
                                 <input size={100} id="searchbar" type="text" className="form-control" placeholder="Pesquisar" aria-label="Username" aria-describedby="basic-addon1" />

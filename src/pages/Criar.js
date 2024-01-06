@@ -39,7 +39,7 @@ function Criar() {
                 <meta property="og:title" content='Crie um tópico' />
             </Helmet>
             <Header />
-            <main className='container pt-5'>
+            <main id='main' className='container pt-5'>
                 <h1 className={`create-header mb-3`}>Criar tópico</h1>
                 <div className='options-wrapper mb-4'>
                     <div className='wrapper-select mb-2'>

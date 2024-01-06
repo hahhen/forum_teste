@@ -7,3 +7,11 @@
 .notifbutton:hover{
     background-color: rgba(255, 255, 255, 0.5);
 }
+
+.notifdropdown{
+    background-color: var(--highlight-bg);
+    color: var(--font);
+    margin-top: 11px !important;
+    width: 70vw;
+    max-width: 450px;
+}   

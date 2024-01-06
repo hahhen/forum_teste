@@ -1,6 +1,6 @@
 #navbarNavDropdown #sections-col{
     width: 90%;
-    z-index: 1;
+    max-height: none;
 }
 
 #sections-col {

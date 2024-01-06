@@ -1,12 +1,16 @@
+header{
+    z-index: 9999;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
 #navbar-top {
     background-color: var(--main-red);
 }
 
 #navbarNavDropdown{
     width: 100%;
-    position: fixed;
     background-color: var(--background);
-    max-height: auto;
 }
 
 @media(max-width: 400px){
@@ -33,6 +37,12 @@
 }
 
 @media (max-width: 1000px) {
+    #navbar-top{
+        z-index: 2;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
     header{
         top: 0;
         width: 100% ;
