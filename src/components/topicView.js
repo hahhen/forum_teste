@@ -8,7 +8,7 @@ import CommentButton from './commentbutton'
 import ShareButton from './sharebutton'
 
 function TopicView({ description, gtitle, creator, topiccod }) {
-  console.log(topiccod)
+  console.log(topiccod-1)
   const topicKey = topicInfo[topiccod - 1];
   console.log(topicKey)
   return (
