@@ -28,6 +28,8 @@ function TopicView({ description, gtitle, creator, topiccod }) {
           <div className='topicview-info d-flex align-items-center'>
             <span className={`topicview-info-aparter `}></span>
             <span title={topicKey.time} className={`topicview-runtime`}>{dayjs(topicKey.time).fromNow()}</span>
+            <span className={`topic-info-aparter`}></span>
+            <span className={`privacy-${topicKey.privacy}`}></span>
           </div>
         </div>
       </div>

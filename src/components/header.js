@@ -27,7 +27,7 @@ function Header() {
                     <div id='sidebar-top' className='mt-5 pt-2 d-flex justify-content-between' style={{width: '90%'}}>
                         <div className="navbar-section-item d-flex">
                             <div className="input-group">
-                                <input size={100} id="searchbar" type="text" className="form-control" placeholder="Pesquisar" aria-label="Username" aria-describedby="basic-addon1" />
+                                <input size={100} type="text" className="form-control" placeholder="Pesquisar" aria-label="Username" aria-describedby="basic-addon1" />
                             </div>
                         </div>
                         <div className='navbar-section-item d-flex'>
@@ -74,10 +74,8 @@ function Header() {
                             Todas as Matérias
                         </li>
                         <span className={`item-aparter `}></span>
-                        <li className="navbar-section-item d-flex">
-                            <div className="input-group">
-                                <input id="searchbar" type="text" className="form-control" placeholder="Pesquisar" aria-label="Username" aria-describedby="basic-addon1" />
-                            </div>
+                        <li className="navbar-section-item d-flex justify-content-end">
+                            <input id="searchbar" type="text" className="form-control" placeholder="Pesquisar" aria-label="Username" aria-describedby="basic-addon1" />
                         </li>
                         <li className='navbar-section-item d-flex'>
                             <button className={`btn button`} onClick={() => setLight(!isLight)}>

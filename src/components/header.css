@@ -15,20 +15,6 @@ header::-webkit-scrollbar {
     background-color: var(--background);
 }
 
-@media(max-width: 400px){
-    #navbar-top{
-        padding: 0 !important;
-    }
-
-    #logo-area{
-        justify-content: center;
-        flex-direction: column;
-    }
-    #logo-img{
-        margin: 0 !important;
-    }
-}
-
 .navbar-toggler{
     border: 1px solid rgba(255, 255, 255, 0.6);
 }
@@ -38,36 +24,14 @@ header::-webkit-scrollbar {
     color: #fff !important;
 }
 
-@media (max-width: 1000px) {
-    #navbar-top{
-        z-index: 2;
-        position: fixed;
-        width: 100%;
-        top: 0;
-    }
-    header{
-        max-height: 100vh;
-        overflow-y: scroll;
-        top: 0;
-        width: 100% ;
-        position: fixed;
-    }
-    #main{
-        margin-top: 100px !important;
-    }
-}
-
 #header-title {
     font-family: 'SFProDisplay', sans-serif;
     font-weight: 200;
 }
 
-#navbar-bottom {
-    background-color: var(--secondary-bg);
-}
-
 .navbar-section {
     background-color: initial;
+    position: relative;
 }
 
 .navbar-section-item {
@@ -110,6 +74,14 @@ header::-webkit-scrollbar {
 
 #searchbar {
     border-radius: 50px;
+    width: 240px;
+}
+
+#searchbar:focus{   
+    width: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
 }
 
 .navbar-brand {
@@ -117,12 +89,7 @@ header::-webkit-scrollbar {
 }
 
 #navbar-bottom {
-    background-color: var(secondary-bg);
-}
-
-.navbar-section-item {
-    background-color: inherit;
-    color: var(--font);
+    background-color: var(--secondary-bg);
 }
 
 .item-aparter.dark {
@@ -147,8 +114,38 @@ header::-webkit-scrollbar {
     height: 100%;
 }
 
-@media only screen and (max-width: 1000px) {
+@media(max-width: 1000px) {
+    #navbar-top{
+        z-index: 2;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    header{
+        max-height: 100vh;
+        overflow-y: scroll;
+        top: 0;
+        width: 100% ;
+        position: fixed;
+    }
+    #main{
+        margin-top: 100px !important;
+    }
     #navbar-bottom {
         display: none;
+    }
+}
+
+@media(max-width: 400px){
+    #navbar-top{
+        padding: 0 !important;
+    }
+
+    #logo-area{
+        justify-content: center;
+        flex-direction: column;
+    }
+    #logo-img{
+        margin: 0 !important;
     }
 }

@@ -45,6 +45,10 @@
     margin: 0px 10px 0px 10px;
 }
 
+.topic-runtime {
+    max-width: max-content;
+}
+
 .flair{
     color: #fff;
     padding: 2px 18px 2px 18px;
@@ -70,6 +74,10 @@
 
 .flair-Professor{
     background-color: #FFC555
+}
+
+.privacy-1{
+    content: "Público";
 }
 
 .privacy-1::before{
