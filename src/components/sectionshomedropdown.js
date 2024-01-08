@@ -17,7 +17,7 @@ function Section() {
                         {section.map((info) =>
                             info.ssection === 2 ?
                                 <li>
-                                    <div className={`mb-2 section-1`}>
+                                    <div className={`mb-3 section-1`}>
                                         <Link to={`/secao/${info.slug}`} className={`subsection-title`} >{info.sectionname}</Link>
                                         <RecentFeed section={info.sectioncod} />
                                     </div>

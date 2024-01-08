@@ -10,7 +10,7 @@ function RecentFeed({section}) {
   infoS.sort((a, b) => (dayjs(a.time).isAfter(dayjs(b.time)) ? -1 : 1))
   return (
     <div className={`recent-feed ${ section? null: 'pt-3 col-3'}`}>
-      { section ? null : <h5 className={`recent-feed-title`}>Tópicos mais recentes</h5> }
+      { section ? <h6 className='recent-feed-title-small'>Tópico mais recente:</h6> : <h5 className={`recent-feed-title`}>Tópicos mais recentes</h5> }
       {infoS.map((info) =>
         <>
           <RecentTopic key={info.topiccod} info={info} />

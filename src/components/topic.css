@@ -71,3 +71,21 @@
 .flair-Professor{
     background-color: #FFC555
 }
+
+.privacy-1::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f57d";
+    font-weight: 900;
+}
+
+.privacy-2::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\e56f";
+    font-weight: 900;
+}
+
+.privacy-3::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f023";
+    font-weight: 900;
+}

@@ -19,6 +19,8 @@ function Topic({ info }) {
               flairH.usercod === info.author ? <span className={`flair flair-${flair[flairH.flaircod - 1].name}`}>{flair[flairH.flaircod - 1].name}</span> : null
             )}
           </div>
+          <span className={`topic-info-aparter`}></span>
+          <span className={`privacy-${info.privacy}`}></span>
         </div>
       </div>
     </Link>

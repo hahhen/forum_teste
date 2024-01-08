@@ -14,3 +14,12 @@
     color: var(--font);
     font-weight: 500;
 }
+
+.recent-feed-title-small{
+    margin-top: 3px;
+    margin-bottom: -1px;
+    color: var(--secondary-font);
+    font-weight: 400;
+    font-family: 'SFProDisplay';
+    font-size: 12px;
+}
