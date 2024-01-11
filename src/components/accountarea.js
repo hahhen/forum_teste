@@ -50,7 +50,7 @@ function AccountArea() {
                         <AccountBtn instance={instance} graphData={graphData} picurl={picurl} />
                     </>
                     :
-                    <Link id="login-btn" className="login-btn d-flex align-items-center me-2" to={"/"}>
+                    <Link id="login-btn" className="login-btn d-flex align-items-center" to={"/"}>
                         <button onClick={() => handleLogin()} type="button" className="btn btn-outline-light">Entre</button>
                     </Link>
 

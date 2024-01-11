@@ -56,15 +56,18 @@ const topicInfo = [
 const user = [
     {
         usercod: 1,
-        name: "Arthur Martins Pereira"
+        name: "Arthur Martins Pereira",
+        photo: "/avatars/eric.png"
     },
     {
         usercod: 2,
-        name: "Oton Nascimento"
+        name: "Oton Nascimento",
+        photo: '/avatars/dog.png'
     },
     {
         usercod: 3,
-        name: "Exemplo de professor"
+        name: "Exemplo de professor",
+        photo: '/avatars/bob.png'
     }
 ]
 

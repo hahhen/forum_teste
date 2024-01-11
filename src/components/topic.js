@@ -14,7 +14,7 @@ function Topic({ info }) {
           <span title={info.time} className="topic-runtime">{dayjs(info.time).fromNow()}</span>
           <span className={`topic-info-aparter`}></span>
           <div>
-            <span className="topic-author">Postado por <span className="topic-author-name">{user[info.author - 1].name}</span></span>
+            <span className="topic-author">Postado por</span><span className="topic-author-name">{user[info.author - 1].name}</span>
             {flairHolder.map((flairH) =>
               flairH.usercod === info.author ? <span className={`flair flair-${flair[flairH.flaircod - 1].name}`}>{flair[flairH.flaircod - 1].name}</span> : null
             )}
