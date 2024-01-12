@@ -48,11 +48,6 @@ summary::marker, li::marker{
     color: var(--font);
 }
 
-.section-title.dark{
-    color: var(--font);
-    background-color: transparent;
-}
-
 .section-1{
     background-color: transparent;
 }

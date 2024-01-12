@@ -1,0 +1,20 @@
+.active .tab-title{
+    opacity: 100%;
+    border-bottom: 1px solid var(--font);
+}
+
+.tab-title{
+    color: var(--font) !important;
+    font-family: 'SFProDisplay', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    opacity: 40%;
+}
+
+@media (min-width: 1000px){
+    #nav-tab{
+        max-width: 220px;
+    }
+
+   
+}

@@ -46,7 +46,7 @@ header::-webkit-scrollbar {
     margin-top: 4px;
 }
 
-.nav-link::after {
+.navbar-section-item.nav-link::after {
     content: "";
     display: block;
     width: 0;

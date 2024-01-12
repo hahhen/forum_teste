@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import Header from '../components/header';
 import Sections from './sectionsmap';
 import RecentFeed from '../components/recentfeed';
