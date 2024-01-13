@@ -9,6 +9,7 @@ import { Analytics } from '@vercel/analytics/react';
 import Layout from './components/layout';
 import { HelmetProvider } from 'react-helmet-async';
 import Footer from './components/footer';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 // Light/Dark mode
 var [isLight, setLight] = ""
@@ -53,6 +54,7 @@ function App() {
   const helmetContext = {};
   return (
     <HelmetProvider context={helmetContext}>
+      <SpeedInsights/>
       <Analytics />
       <Routes>
         <Route path='/teste' element={<Footer />}/>

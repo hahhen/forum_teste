@@ -19,7 +19,7 @@ function RecentTopic({ info }) {
           <span className="recent-topic-runtime">{dayjs(info.time).fromNow()}</span>
           <span className={`recent-topic-info-aparter`}></span>
           <div className='d-flex flex-wrap'>
-            <span className={"recent-topic-author"}>Postado por </span>
+            <span className={"recent-topic-author me-1"}>Postado por </span>
             <span className="recent-topic-author-name">{user[info.author - 1].name}</span>
           </div>
           <span className={`topic-info-aparter`}></span>
