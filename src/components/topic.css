@@ -17,10 +17,9 @@
 }
 
 .topic-info{
-    display: flex;
-    background-color: initial;
     color: var(--secondary-font);
     font-size: 13px;
+    display: flex;
     align-items: center;
 }
 

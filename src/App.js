@@ -8,8 +8,8 @@ import TopicPage from './pages/TopicPage';
 import { Analytics } from '@vercel/analytics/react';
 import Layout from './components/layout';
 import { HelmetProvider } from 'react-helmet-async';
-import Footer from './components/footer';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import CriarStack from './pages/CriarStack'
 
 // Light/Dark mode
 var [isLight, setLight] = ""
@@ -57,7 +57,7 @@ function App() {
       <SpeedInsights/>
       <Analytics />
       <Routes>
-        <Route path='/teste' element={<Footer />}/>
+        <Route path='/teste' element={<CriarStack />} />
         <Route path='/.well-known/microsoft-identity-association.json' element={"../public/.well-known/microsoft-identity-association.json"} />
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path='/criar' element={<Criar />} />
