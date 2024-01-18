@@ -6,7 +6,7 @@ import { dayjs } from './dayjsa'
 
 function RecentFeed({section}) {
   var infoS
-  { section ? infoS = topicInfo.filter((info) => info.section === section) :  infoS = [...topicInfo] }
+  section ? infoS = topicInfo.filter((info) => info.section === section) :  infoS = [...topicInfo]
   infoS.sort((a, b) => (dayjs(a.time).isAfter(dayjs(b.time)) ? -1 : 1))
   return (
     <div className={`recent-feed ${ section? null: 'pt-3 col-3'}`}>

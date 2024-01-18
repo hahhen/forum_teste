@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './header.css';
 import { Link } from 'react-router-dom';
 import { isLight, setLight } from '../App'

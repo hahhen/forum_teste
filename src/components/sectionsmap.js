@@ -1,7 +1,7 @@
 import React from 'react'
 import './sectionsmap.css'
 import { isRetract, retract } from '../App'
-import { section, supersection } from './topicInfoSon'
+import { supersection } from './topicInfoSon'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import ContentLoader from 'react-content-loader'
@@ -11,16 +11,15 @@ function Sections() {
     const [loading, setLoading] = useState(true);
     const [sections, setSections] = useState([]);
     useEffect(() => {
-    async function getSections() {
-        const req = await fetch(`https://neon-nodejs-example-hahhen.vercel.app/sections`);
-        const res = await req.json();
-        setSections(res);
-        console.log(res)
-        setLoading(false);
-    }
+        async function getSections() {
+            const req = await fetch(`https://neon-nodejs-example-hahhen.vercel.app/sections`);
+            const res = await req.json();
+            setSections(res);
+            setLoading(false);
+        }
         getSections()
     }, [])
-    
+
 
     return (
         <div id="sections-col" className={`sections pt-3 ${isRetract ? 'sections-map-open col-3' : 'col-1'}`}>
