@@ -10,6 +10,7 @@ import ContentLoader from 'react-content-loader'
 function Sections() {
     const [loading, setLoading] = useState(true);
     const [sections, setSections] = useState([]);
+    useEffect(() => {
     async function getSections() {
         const req = await fetch(`https://neon-nodejs-example-hahhen.vercel.app/sections`);
         const res = await req.json();
@@ -17,7 +18,9 @@ function Sections() {
         console.log(res)
         setLoading(false);
     }
-    getSections()
+        getSections()
+    }, [])
+    
 
     return (
         <div id="sections-col" className={`sections pt-3 ${isRetract ? 'sections-map-open col-3' : 'col-1'}`}>
