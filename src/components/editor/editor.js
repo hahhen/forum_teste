@@ -33,8 +33,19 @@ import { renderMathInElement } from 'mathlive';
 
 export var ref
 
-var timeoutID
 var [autoSaveState, setAutoSaveState] = ['cloud', 'Alterações salvas']
+
+function AutoSaveState() {
+    [autoSaveState, setAutoSaveState] = useState(['cloud', 'Alterações salvas'])
+    return (
+        <div className='mt-1 d-flex align-items-center' style={{color: 'var(--secondary-font)'}}>
+                <i class={`fa-solid fa-xs fa-${autoSaveState[0]} me-1`}></i>
+                <span style={{fontSize: '12px'}}>{autoSaveState[1]}</span>
+        </div>
+    )
+}
+
+var timeoutID
 const autoSave = () => {
     if (autoSaveState[0] === 'cloud') setAutoSaveState(['cloud-upload', 'Armezenando suas alterações...'])    
     clearTimeout(timeoutID)
@@ -46,8 +57,8 @@ const autoSave = () => {
 }
 
 function Editor() {
-    [autoSaveState, setAutoSaveState] = useState(['cloud', 'Alterações salvas'])
-    ref = useRef(null);      
+    ref = useRef(null);    
+    console.log('rendered')  
     return (
         <div id='editor'>
             <MDXEditor
@@ -93,10 +104,7 @@ function Editor() {
                     })
                 ]}
             />
-            <div className='mt-1 d-flex align-items-center' style={{color: 'var(--secondary-font)'}}>
-                <i class={`fa-solid fa-xs fa-${autoSaveState[0]} me-1`}></i>
-                <span style={{fontSize: '12px'}}>{autoSaveState[1]}</span>
-            </div>
+            <AutoSaveState />
         </div>
         
     )
