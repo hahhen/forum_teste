@@ -16,12 +16,6 @@ function Criar() {
         locationstate = location.state
     }
     const { from } = locationstate;
-    const editorRef = useRef(null);
-    const log = () => {
-        if (editorRef.current) {
-            console.log(editorRef.current.getContent());
-        }
-    };
     return (
         <>
             <Helmet>
@@ -37,35 +31,37 @@ function Criar() {
             <Header />
             <main id='main' className='container pt-5'>
                 <h1 className={`create-header mb-3`}>Criar tópico</h1>
-                <div className='options-wrapper mb-4'>
-                    <div className='wrapper-select mb-2'>
-                        <label className={`section-select-label`} htmlFor={`section-select`}>Seção: </label>
-                        <select defaultValue={from} id='section-select' className={`ps-1 form-select section-select`}>
-                            {supersection.slice(1).map((info) =>
-                                <optgroup key={info.ssectioncod} label={info.ssectionname}>
-                                    {section.filter((info2) => info2.ssection === info.ssectioncod).map((info2) =>
-                                        <option value={info2.sectioncod}>{info2.sectionname}</option>
-                                    )}
-                                </optgroup>
-                            )}
-                        </select>
+                <form>
+                    <div className='options-wrapper mb-4'>
+                        <div className='wrapper-select mb-2'>
+                            <label className={`section-select-label`} htmlFor={`section-select`}>Seção: </label>
+                            <select defaultValue={from} id='section-select' className={`ps-1 form-select section-select`}>
+                                {supersection.slice(1).map((info) =>
+                                    <optgroup key={info.ssectioncod} label={info.ssectionname}>
+                                        {section.filter((info2) => info2.ssection === info.ssectioncod).map((info2) =>
+                                            <option value={info2.sectioncod}>{info2.sectionname}</option>
+                                        )}
+                                    </optgroup>
+                                )}
+                            </select>
+                        </div>
+                        <div className='wrapper-select mb-2'>
+                            <label className={`section-select-label`} htmlFor={`privacy-select`}>Privacidade: </label>
+                            <select defaultValue={1} id='privacy-select' className={`form-select ps-1 section-select`}>
+                                <option value={1}>Público</option>
+                                <option value={2}>Minha instituição</option>
+                                <option value={3}>Privado</option>
+                            </select>
+                        </div>
                     </div>
-                    <div className='wrapper-select mb-2'>
-                        <label className={`section-select-label`} htmlFor={`privacy-select`}>Privacidade: </label>
-                        <select defaultValue={1} id='privacy-select' className={`form-select ps-1 section-select`}>
-                            <option value={1}>Público</option>
-                            <option value={2}>Minha instituição</option>
-                            <option value={3}>Privado</option>
-                        </select>
+                    <div className='title-wrapper mb-4'>
+                        <label htmlFor='inTopicTitle' className={`mb-2 label-top`}>Título <small>(obrigatório)</small></label>
+                        <input type='text' className='topic-title-input' name='inTopicTitle' id='inTopicTitle' />
                     </div>
-                </div>
-                <div className='title-wrapper mb-4'>
-                    <label htmlFor='inTopicTitle' className={`mb-2 label-top`}>Título <small>(obrigatório)</small></label>
-                    <input type='text' className='topic-title-input' name='inTopicTitle' id='inTopicTitle' />
-                </div>
-                <label className={`mb-2 label-top`}>Corpo:</label>
-                <Editor />
-                <button id='post-button' className='mt-4 mb-5 post-button m-0 btn btn-primary'>Criar tópico</button>
+                    <label className={`mb-2 label-top`}>Corpo:</label>
+                    <Editor />
+                    <button id='post-button' className='mt-4 mb-5 post-button m-0 btn btn-primary'>Criar tópico</button>
+                </form>
             </main>
         </>
     )

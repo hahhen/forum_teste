@@ -1,6 +1,6 @@
 .mdxeditor{
-    min-height: 200px;
-    border: 1px solid var(--secondary-bg);
+    min-height: 400px;
+    border: 1px solid #d3d3d3;
     border-radius: 3px;
     background-color: var(--highlight-bg);
 }
@@ -22,7 +22,7 @@
 ._toolbarRoot_11eqz_145{
     background-color: var(--highlight-bg) !important; 
     border-radius: 3px 3px 0px 0px !important;
-    border-bottom: 1px solid var(--secondary-bg);
+    border-bottom: 1px solid #d3d3d3;
     
 }
 
