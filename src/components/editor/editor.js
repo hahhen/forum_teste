@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import {
     MDXEditor,
     linkPlugin,
@@ -33,14 +33,28 @@ import { renderMathInElement } from 'mathlive';
 
 export var ref
 
+var timeoutID
+var [autoSaveState, setAutoSaveState] = ['cloud', 'Alterações salvas']
+const autoSave = () => {
+    if (autoSaveState[0] === 'cloud') setAutoSaveState(['cloud-upload', 'Armezenando suas alterações...'])    
+    clearTimeout(timeoutID)
+    timeoutID = setTimeout(() => {        
+        localStorage.setItem('editorAutoSavedContent', ref.current?.getMarkdown());
+        setAutoSaveState(['cloud', 'Alterações salvas'])
+    }, 3000);
+    
+}
+
 function Editor() {
+    [autoSaveState, setAutoSaveState] = useState(['cloud', 'Alterações salvas'])
     ref = useRef(null);      
     return (
         <div id='editor'>
             <MDXEditor
+                markdown={localStorage.getItem('editorAutoSavedContent')}
+                onChange={autoSave}
                 ref={ref}
                 className={`${isLight ? '' : 'dark-theme dark-editor'}`}
-                markdown={''}
                 plugins={[
                     //Plugins
                     markdownShortcutPlugin(),
@@ -79,7 +93,12 @@ function Editor() {
                     })
                 ]}
             />
+            <div className='mt-1 d-flex align-items-center' style={{color: 'var(--secondary-font)'}}>
+                <i class={`fa-solid fa-xs fa-${autoSaveState[0]} me-1`}></i>
+                <span style={{fontSize: '12px'}}>{autoSaveState[1]}</span>
+            </div>
         </div>
+        
     )
 }
 
