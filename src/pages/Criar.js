@@ -1,11 +1,11 @@
 import React, { useRef, useState, useEffect } from 'react'
 import Header from '../components/header';
 import './criar.css'
-import { isLight } from '../App';
-import { Editor } from '@tinymce/tinymce-react';
 import { supersection, section } from '../components/topicInfoSon';
+import InsertMathLive from '../components/editor/InsertMathLive';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import Editor from '../components/editor/editor';
 
 function Criar() {
     const location = useLocation()
@@ -22,10 +22,6 @@ function Criar() {
             console.log(editorRef.current.getContent());
         }
     };
-    const [editorKey, setEditorKey] = useState(0);
-    useEffect(() => {
-        setEditorKey(prevKey => prevKey + 1);
-    }, [isLight]);
     return (
         <>
             <Helmet>
@@ -68,46 +64,7 @@ function Criar() {
                     <input type='text' className='topic-title-input' name='inTopicTitle' id='inTopicTitle' />
                 </div>
                 <label className={`mb-2 label-top`}>Corpo:</label>
-                {
-                    <Editor
-                        key={editorKey}
-                        apiKey='fj80sqetd8mxsjp2pseqiuomat4y6sp4yaq3f5jscu6bkss0'
-                        onInit={(evt, editor) => editorRef.current = editor}
-                        init={{
-                            //Verifica se o tema é light ou dark e aplica a skin de acordo
-                            ...(isLight ?
-                                {}
-                                :
-                                {
-                                    skin: 'oxide-dark',
-                                    content_css: 'dark'
-                                }),
-                            placeholder: 'Escreva aqui seu tópico!',
-                            height: 500,
-                            branding: false,
-                            mobile: {
-                                menubar: true
-                            },
-                            language: 'pt_BR',
-                            promotion: false,
-                            htmlAllowedTags: ['.*'],
-                            htmlAllowedAttrs: ['.*'],
-                            extended_valid_elements: '*[.*]',
-                            menubar: true,
-                            plugins: [
-                                'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
-                                'anchor', 'searchreplace', 'visualblocks', 'fullscreen',
-                                'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount', 'codesample'
-                            ],
-                            toolbar: 'undo redo | blocks | ' +
-                                'bold italic forecolor | alignleft aligncenter ' +
-                                'alignright alignjustify | bullist numlist outdent indent | ' +
-                                'removeformat | fullscreen | help',
-                            content_style: 'body { font-family: sans-serif; font-size:14px }'
-
-                        }}
-                    />
-                }
+                <Editor />
                 <button id='post-button' className='mt-4 mb-5 post-button m-0 btn btn-primary'>Criar tópico</button>
             </main>
         </>

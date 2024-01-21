@@ -1,10 +1,11 @@
 import React, { useRef, useState, useEffect } from 'react'
 import Header from '../components/header';
 import './criar.css'
-import { isLight } from '../App';
 import { supersection, section } from '../components/topicInfoSon';
+import InsertMathLive from '../components/editor/InsertMathLive';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import Editor from '../components/editor/editor';
 
 function CriarStack() {
     const location = useLocation()
@@ -64,7 +65,7 @@ function CriarStack() {
                     <input type='text' className='topic-title-input' name='inTopicTitle' id='inTopicTitle' />
                 </div>
                 <label className={`mb-2 label-top`}>Corpo:</label>
-                
+                <Editor />
                 <button id='post-button' className='mt-4 mb-5 post-button m-0 btn btn-primary'>Criar tópico</button>
             </main>
         </>

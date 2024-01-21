@@ -25,7 +25,7 @@ summary{
     padding: 0;
 }
 
-summary::marker, li::marker{
+.section summary::marker, .section li::marker{
     content: '';
 
 }

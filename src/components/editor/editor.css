@@ -1,0 +1,44 @@
+.mdxeditor{
+    min-height: 200px;
+    border: 1px solid var(--secondary-bg);
+    border-radius: 3px;
+    background-color: var(--highlight-bg);
+}
+
+.mdxeditor blockquote{
+    padding-left: 20px;
+    border-left: 3px solid var(--secondary-bg);
+}
+
+.mdxeditor *{
+    transition: none;
+    transition: background-color 0.1s linear;
+}
+
+._popupContainer_11eqz_1170 * {
+    transition: none;
+}
+
+._toolbarRoot_11eqz_145{
+    background-color: var(--highlight-bg) !important; 
+    border-radius: 3px 3px 0px 0px !important;
+    border-bottom: 1px solid var(--secondary-bg);
+    
+}
+
+math-field{
+    color: var(--font);
+    font-size: 1.2rem;
+    background-color: var(--highlight-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    --contains-highlight-background-color: var(--secondary-bg);
+}
+
+math-field:focus{
+    outline: 1px solid #0d65ff;
+}
+
+._multiFieldForm_11eqz_1144, ._dialogContent_11eqz_556, ._linkDialogPopoverContent_11eqz_554{
+    background-color: var(--highlight-bg);
+}
