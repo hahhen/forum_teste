@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import {
     MDXEditor,
     linkPlugin,
@@ -29,7 +29,6 @@ import '@mdxeditor/editor/style.css'
 import './editor.css'
 import { isLight } from '../../App';
 import InsertMathLive from './InsertMathLive';
-import { renderMathInElement } from 'mathlive';
 
 export var ref
 
@@ -38,9 +37,9 @@ var [autoSaveState, setAutoSaveState] = ['cloud', 'Alterações salvas']
 function AutoSaveState() {
     [autoSaveState, setAutoSaveState] = useState(['cloud', 'Alterações salvas'])
     return (
-        <div className='mt-1 d-flex align-items-center' style={{color: 'var(--secondary-font)'}}>
-                <i class={`fa-solid fa-xs fa-${autoSaveState[0]} me-1`}></i>
-                <span style={{fontSize: '12px'}}>{autoSaveState[1]}</span>
+        <div className='d-flex ps-1 pe-1 align-items-baseline' style={{color: 'var(--secondary-font)'}}>
+                <i class={`fa-solid fa-2xs fa-${autoSaveState[0]} me-1`}></i>
+                <span style={{fontSize: '10px'}}>{autoSaveState[1]}</span>
         </div>
     )
 }

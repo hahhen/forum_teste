@@ -1,8 +1,13 @@
-.mdxeditor{
-    min-height: 400px;
+#editor{
     border: 1px solid #d3d3d3;
     border-radius: 3px;
+}
+
+.mdxeditor{
+    border-bottom: 1px solid #d3d3d3;
+    min-height: 400px;
     background-color: var(--highlight-bg);
+    border-radius: 3px 3px 0px 0px;
 }
 
 .mdxeditor blockquote{
@@ -23,7 +28,6 @@
     background-color: var(--highlight-bg) !important; 
     border-radius: 3px 3px 0px 0px !important;
     border-bottom: 1px solid #d3d3d3;
-    
 }
 
 math-field{

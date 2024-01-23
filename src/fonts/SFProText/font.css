@@ -1,144 +1,54 @@
 @font-face {
     font-family: 'SFProText';
-    src: url('SFProText-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'SFProText';
     src: url('SFProText-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
-}
 
+}
 @font-face {
     font-family: 'SFProText';
     src: url('SFProText-RegularItalic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
-    font-display: swap;
-}
 
+}
 @font-face {
     font-family: 'SFProText';
     src: url('SFProText-Semibold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'SFProText';
-    src: url('SFProText-SemiboldItalic.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
 }
-
 @font-face {
     font-family: 'SFProText';
     src: url('SFProText-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'SFProText';
-    src: url('SFProText-ThinItalic.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
 }
-
-@font-face {
-    font-family: 'SFProText';
-    src: url('SFProText-Ultralight.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'SFProText';
-    src: url('SFProText-UltralightItalic.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'SFProText';
-    src: url('SFProText-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'SFProText';
-    src: url('SFProText-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
-
 @font-face {
     font-family: 'SFProText';
     src: url('SFProText-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-    font-display: swap;
 }
-
 @font-face {
     font-family: 'SFProText';
     src: url('SFProText-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
-    font-display: swap;
 }
-
-@font-face {
-    font-family: 'SFProText';
-    src: url('SFProText-Heavy.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'SFProText';
-    src: url('SFProText-HeavyItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
-
 @font-face {
     font-family: 'SFProText';
     src: url('SFProText-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'SFProText';
-    src: url('SFProText-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
 }
-
 @font-face {
     font-family: 'SFProText';
     src: url('SFProText-LightItalic.woff') format('woff');
     font-weight: 300;
     font-style: italic;
-    font-display: swap;
 }
 
