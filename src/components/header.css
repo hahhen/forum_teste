@@ -7,7 +7,7 @@ header::-webkit-scrollbar {
 }
 
 #navbar-top {
-    background-color: var(--main-red);
+    background-color: rgb(var(--main-red));
 }
 
 #navbarNavDropdown{
@@ -66,13 +66,13 @@ header::-webkit-scrollbar {
     border-radius: 50%;
 }
 
-#searchbar::placeholder {
+.searchbar::placeholder {
     color: #718096;
     font-weight: 400;
     font-size: 14px;
 }
 
-#searchbar {
+.searchbar {
     border-radius: 50px;
     width: 240px;
 }
@@ -116,10 +116,13 @@ header::-webkit-scrollbar {
 
 @media(max-width: 1000px) {
     #navbar-top{
+        background-color: rgba(var(--main-red), 0.9);
         z-index: 2;
         position: fixed;
         width: 100%;
         top: 0;
+        backdrop-filter: blur(2px);
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
     }
     header{
         max-height: 100vh;

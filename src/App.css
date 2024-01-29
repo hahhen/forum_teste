@@ -27,7 +27,7 @@ blockquote{
   --secondary-bg: #d9d9d9;
   --font: #000;
   --secondary-font: #718096;
-  --main-red: #d43939;
+  --main-red: 212, 57, 57;
 }
 
 [data-theme = "dark"]{
