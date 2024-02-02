@@ -11,7 +11,6 @@
 .notifdropdown{
     background-color: var(--highlight-bg);
     color: var(--font);
-    margin-top: 11px !important;
-    width: 70vw;
+    width: 86vw;
     max-width: 450px;
-}   
+}  

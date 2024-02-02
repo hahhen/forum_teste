@@ -7,7 +7,7 @@ header::-webkit-scrollbar {
 }
 
 #navbar-top {
-    background-color: rgb(var(--main-red));
+    background-color: var(--main-red);
 }
 
 #navbarNavDropdown{
@@ -92,10 +92,6 @@ header::-webkit-scrollbar {
     background-color: var(--secondary-bg);
 }
 
-.item-aparter.dark {
-    background-color: var(--font);
-}
-
 #navbar-top.dark {
     background-color: #232342;
 }
@@ -116,7 +112,6 @@ header::-webkit-scrollbar {
 
 @media(max-width: 1000px) {
     #navbar-top{
-        background-color: rgba(var(--main-red), 0.9);
         z-index: 2;
         position: fixed;
         width: 100%;

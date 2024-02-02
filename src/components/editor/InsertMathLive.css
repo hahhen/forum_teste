@@ -11,13 +11,13 @@
   animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-[data-theme = "dark"]{
+[data-theme="dark"] {
   .DialogOverlay {
     background-color: var(--black-a5);
   }
 }
 
-.DialogClose{
+.DialogClose {
   all: unset;
 }
 
@@ -36,7 +36,9 @@
   padding: 25px;
   animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 51;
+  overflow-y: auto;
 }
+
 .DialogContent:focus {
   outline: none;
 }
@@ -66,24 +68,30 @@
   font-weight: 500;
   height: 35px;
 }
+
 .Button.violet {
   background-color: white;
   color: var(--violet-11);
   box-shadow: 0 2px 10px var(--black-a7);
 }
+
 .Button.violet:hover {
   background-color: var(--mauve-3);
 }
+
 .Button.violet:focus {
   box-shadow: 0 0 0 2px black;
 }
+
 .Button.blue {
   background-color: var(--blue-4);
   color: var(--blue-11);
 }
+
 .Button.blue:hover {
   background-color: var(--blue-5);
 }
+
 .Button.blue:focus {
   box-shadow: 0 0 0 2px var(--blue-7);
 }
@@ -101,18 +109,27 @@
   top: 10px;
   right: 10px;
 }
-.IconButton:hover {
-  background-color: var(--blue-4);
-}
-.IconButton:focus {
-  box-shadow: 0 0 0 2px var(--blue-7);
+
+.IconButtonIn {
+  all: unset;
+  font-family: inherit;
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-11);
 }
 
-.Fieldset {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin-bottom: 15px;
+.IconButton:hover,
+.IconButtonIn:hover {
+  background-color: var(--blue-4);
+}
+
+.IconButton:focus,
+.IconButtonIn:focus {
+  box-shadow: 0 0 0 2px var(--blue-7);
 }
 
 .Label {
@@ -122,14 +139,158 @@
   text-align: right;
 }
 
-.DialogContent math-field{
+.DialogContent math-field {
   width: 100%;
 }
+
+.Repository {
+  background-color: white;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 10px;
+  box-shadow: 0 2px 10px var(--black-a7);
+}
+
+.CollapsibleRoot {
+  width: 100%;
+}
+
+.Text {
+  color: var(--secondary-font);
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.ScrollAreaRoot {
+  width: 100%;
+  height: 225px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: inherit;
+  --scrollbar-size: 10px;
+}
+
+.ScrollAreaViewport {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  display: flex;
+}
+
+.ScrollAreaScrollbar {
+  display: flex;
+  /* ensures no selection */
+  user-select: none;
+  /* disable browser handling of all panning and zooming gestures on touch devices */
+  touch-action: none;
+  padding: 2px;
+  background: var(--background);
+  transition: background 160ms ease-out;
+}
+
+
+.ScrollAreaScrollbar[data-orientation='vertical'] {
+  width: var(--scrollbar-size);
+}
+
+.ScrollAreaScrollbar[data-orientation='horizontal'] {
+  flex-direction: column;
+  height: var(--scrollbar-size);
+}
+
+.ScrollAreaThumb {
+  flex: 1;
+  background: var(--secondary-bg);
+  border-radius: var(--scrollbar-size);
+  position: relative;
+}
+
+/* increase target size for touch devices https://www.w3.org/WAI/WCAG21/Understanding/target-size.html */
+.ScrollAreaThumb::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.ScrollAreaCorner {
+  background: var(--secondary-bg);
+}
+
+.mathlive-cell {
+  display: flex;
+  flex-flow: column;
+  width: 110px;
+  height: 144px;
+  font-size: 13px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--secondary-bg);
+  background-color: var(--background);
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.mathlive-cell .mathlive-icon{
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+
+.shortcut {
+  display: flex;
+  color: var(--font);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  font-family: var(--ui-font-family);
+  font-variant-ligatures: none;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.mathlive-cell .label {
+  padding-top: 0.8em;
+  padding-bottom: 0.4em;
+  /* opacity: 0.7; */
+  color: var(--secondary-font);
+  text-align: center;
+}
+
+kbd {
+  text-align: center;
+  line-height: 0.9em;
+  min-width: 25px;
+  height: 25px;
+  color: var(--font);
+  background: var(--background);
+  border: var(--secondary-bg) 1px solid;
+  border-radius: 4px;
+  font-size: .9em;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 5px;
+  font-weight: 600;
+}
+
+#mathlive-suggestion-popover {
+  z-index: 99;
+}
+
 
 @keyframes overlayShow {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -140,6 +301,7 @@
     opacity: 0;
     transform: translate(-50%, -48%) scale(0.96);
   }
+
   to {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);

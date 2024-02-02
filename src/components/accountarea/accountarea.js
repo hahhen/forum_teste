@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useMsal } from "@azure/msal-react";
-import { loginRequest } from '../auth/authConfig';
+import { loginRequest } from '../../auth/authConfig';
 import { useIsAuthenticated } from "@azure/msal-react";
-import { callMsGraph, callMsGraphPhoto } from "../auth/graph";
+import { callMsGraph, callMsGraphPhoto } from "../../auth/graph";
 import AccountBtn from "./accountBtn";
 import { Link } from 'react-router-dom';
 import NotificationButton from "./notificationbutton";

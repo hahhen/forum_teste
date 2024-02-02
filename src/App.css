@@ -3,12 +3,10 @@
 
 *{
   font-family: 'SFProText', sans-serif;
-  transition: 0.1s linear;
-}
-
-body{
-  transition: none;
   transition: background-color 0.1s linear;
+  /* PARA FAZER: Antes estava setado para todas as transições. 
+  Estava quebrando alguns elementos como o editor e coisas do Radix, 
+  favor colocar individualmente as transições nos elementos que precisam. */
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -27,7 +25,7 @@ blockquote{
   --secondary-bg: #d9d9d9;
   --font: #000;
   --secondary-font: #718096;
-  --main-red: 212, 57, 57;
+  --main-red: rgba(212, 57, 57, 0.9)
 }
 
 [data-theme = "dark"]{
@@ -36,7 +34,7 @@ blockquote{
   --secondary-bg: #2b2b2b;
   --font: #eee;
   --secondary-font: #ccc;
-  --main-red: #131313;
+  --main-red: rgba(21, 21, 21, 0.9);
 }
 
 body{
