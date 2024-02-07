@@ -9,19 +9,12 @@ span{
     font-weight: 200;
 }
 
-#footer-cps{
-    background: url("../../public/bg-footer-ed-azul-base.png") right center no-repeat fixed #004854;
-}
-
 footer a{
-    color: #fff;
+    color: var(--secondary-font);
     font-weight: 300;
     text-decoration: none;
 }
 footer{
-    color: #fff;
-}
-
-.bottom-footer{
-    background: #005c6d;
+    color: var(--secondary-font);
+    font-size: 10px;
 }

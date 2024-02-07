@@ -11,14 +11,14 @@
     font-weight: 300;
 }
 
-.item-title{
-    font-weight: 300;
-    margin-bottom: 0 !important;
+.topic-title{
+    font-size: 1.05rem;
+    margin-bottom: 5px;
 }
 
 .topic-info{
     color: var(--secondary-font);
-    font-size: 13px;
+    font-size: 10px;
     display: flex;
     align-items: center;
 }
@@ -50,12 +50,11 @@
 
 .flair{
     color: #fff;
-    padding: 2px 18px 2px 18px;
+    padding: 1px 16px 1px 16px;
     border-radius: 10px;
-    margin: 0px 3px 0px 3px;
-    font-size: 10px;
+    margin: 0px 6px 0px 0px;
+    font-size: 0.5rem;
     user-select: none;
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
 }
 
 /* >> Flairs <<*/

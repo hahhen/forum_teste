@@ -22,20 +22,20 @@ function Home() {
             <nav>
                 <div class="mb-3 ms-0 me-0 nav d-flex justify-content-between" id="nav-tab" role="tablist">
                     <button onClick={() => changeTab(1)} class="p-0 mt-0 nav-link active" id="nav-sections-tab" data-bs-toggle="tab" role="tab" aria-controls="nav-home" aria-selected="true">
-                        <h4 className='tab-title'>
+                        <h5 className='tab-title'>
                             Seções
-                        </h4>
+                        </h5>
                     </button>
                     <button onClick={() => changeTab(2)} class="p-0 mt-0 nav-link" id="nav-relevant-tab" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">
-                        <h4 className='tab-title'>
+                        <h5 className='tab-title'>
                             Relevantes
-                        </h4>
+                        </h5>
                     </button>
                     <MediaQuery maxWidth={1000}>
                         <button onClick={() => changeTab(3)} class="p-0 mt-0 nav-link" id="nav-recent-tab" data-bs-toggle="tab" type="button" role="tab" aria-selected="false">
-                            <h4 className='tab-title'>
+                            <h5 className='tab-title'>
                                 Recentes
-                            </h4>
+                            </h5>
                         </button>
                     </MediaQuery>
                 </div>

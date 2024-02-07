@@ -4,6 +4,9 @@ import Sections from './sectionsmap';
 import RecentFeed from '../components/recentfeed';
 import MediaQuery from 'react-responsive';
 import { isRetract } from '../App';
+import './layout.css';
+import Footer from './footer';
+import * as Separator from '@radix-ui/react-separator'
 
 function Layout({children}) {
     return (
@@ -18,7 +21,11 @@ function Layout({children}) {
                                 <div id='feed' className={`pt-3 ${isMobile ? `feed ${isRetract ? 'col-6' : 'col-8'}` : `feed col-12`}`}>
                                     {children}
                                 </div>
-                                {isMobile ? <RecentFeed /> : ''}
+                                {isMobile ? <div id='right-main' className='pt-3 col-3'>
+                                    <RecentFeed />
+                                    <Separator.Root className="SeparatorRoot" style={{ margin: '1rem 0' }} />
+                                    <Footer />
+                                </div> : ''}
                             </>
                         )}
                     </MediaQuery>

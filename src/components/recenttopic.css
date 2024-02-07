@@ -16,7 +16,7 @@
 .recent-topic-info{
     display: flex;
     color: var(--secondary-font);
-    font-size: 10px;
+    font-size: 9px;
     align-items: center;
 }
 
@@ -46,4 +46,8 @@
 
 .recent-topic-author-name{
     font-weight: 400;
+}
+
+.recent-topic-title{
+    font-size: 13px;
 }

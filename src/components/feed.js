@@ -11,7 +11,7 @@ function Feed({ section1, s }) {
     <>
       <div className='mb-5'>
         <div className='d-flex align-items-center mb-2'>
-          <h4 className={`m-0 feed-title`}>{section[section1 - 1].sectionname}</h4>
+          <h5 className={`m-0 feed-title`}>{section[section1 - 1].sectionname}</h5>
           {s ?
             <Link to="/Criar" state={{from: section1}} id='post-button' className='post-button ms-3 btn btn-primary'>Criar tópico</Link>
             : ''}

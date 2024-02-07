@@ -13,11 +13,13 @@ function Topic({ info }) {
         <div className={`topic-info`}>
           <span title={info.time} className="topic-runtime">{dayjs(info.time).fromNow()}</span>
           <span className={`topic-info-aparter`}></span>
-          <div>
+          <div className='d-flex flex-wrap'>
             <span className="topic-author">Postado por</span><span className="topic-author-name">{user[info.author - 1].name}</span>
-            {flairHolder.map((flairH) =>
-              flairH.usercod === info.author ? <span className={`flair flair-${flair[flairH.flaircod - 1].name}`}>{flair[flairH.flaircod - 1].name}</span> : null
-            )}
+            <div>
+              {flairHolder.map((flairH) =>
+                flairH.usercod === info.author ? <span className={`flair me-1 flair-${flair[flairH.flaircod - 1].name}`}>{flair[flairH.flaircod - 1].name}</span> : null
+              )}
+            </div>
           </div>
           <span className={`topic-info-aparter`}></span>
           <span className={`privacy-${info.privacy}`}></span>

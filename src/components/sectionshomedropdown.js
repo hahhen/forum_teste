@@ -7,10 +7,10 @@ import RecentFeed from './recentfeed'
 function Section() {
     return (
         <>
-            <div className={`section-wrapper mb-5`}>
-                <h4 className={`section-top-title`}>
+            <div className={`section-wrapper mb-4`}>
+                <h5 className={`section-top-title`}>
                     Matérias
-                </h4>
+                </h5>
                 <details className={`pb-1 section`}>
                     <summary className={`section-title mb-3`}>Matemática e Ciências da Natureza</summary>
                     <ul className='m-0 section-list'>
@@ -20,8 +20,8 @@ function Section() {
                                     <div className={`mb-3 section-1`}>
                                         <Link to={`/secao/${info.slug}`} className={`subsection-title`} >{info.sectionname}</Link>
                                         <RecentFeed section={info.sectioncod} />
-                                    </div>
-                                </li>
+                                    </div>                                    
+                                </li>                                
                                 : null
                         )}
                     </ul>
@@ -44,10 +44,10 @@ function Section() {
                     </ul>
                 </details>
             </div>
-            <div className={`section-wrapper mb-5 `}>
-                <h4 className={`section-top-title`}>
+            <div className={`section-wrapper mb-4 `}>
+                <h5 className={`section-top-title`}>
                     Cursos
-                </h4>
+                </h5>
                 <details className={`pb-1 section `}>
                     <summary className={`section-title mb-3`}>Etec</summary>
                     <ul className='m-0 section-list'>
@@ -80,10 +80,10 @@ function Section() {
                     </ul>
                 </details>
             </div>
-            <div className={`section-wrapper mb-5 `}>
-            <h4 className={`section-top-title`}>
+            <div className={`section-wrapper mb-4 `}>
+            <h5 className={`section-top-title`}>
                 Diversos
-            </h4>
+            </h5>
             {supersection.slice(5, supersection.length).map((sinfo) =>
                 <details className={`pb-1 section `}>
                     <summary className={`section-title mb-3`}>{sinfo.ssectionname}</summary>
