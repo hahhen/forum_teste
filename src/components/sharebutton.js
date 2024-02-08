@@ -57,7 +57,7 @@ function ShareButton({ description, gtitle, creator }) {
                   </Popover.Trigger>
                   <Popover.Portal>
                     <Popover.Content side='top' className="TooltipContent" sideOffset={5}>
-                      Copiado para a área de transeferência
+                      Copiado para a área de transferência
                       <Popover.Arrow className="TooltipArrow" />
                     </Popover.Content>
                   </Popover.Portal>
