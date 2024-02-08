@@ -78,7 +78,7 @@ function Editor() {
                 className={`${isLight ? '' : 'dark-theme dark-editor'}`}
                 plugins={[
                     //Plugins
-                    markdownShortcutPlugin(),
+                    
                     headingsPlugin(),
                     quotePlugin(),
                     listsPlugin(),
@@ -90,6 +90,7 @@ function Editor() {
                     thematicBreakPlugin(),
                     codeBlockPlugin({ defaultCodeBlockLanguage: 'js' }),
                     codeMirrorPlugin({ codeBlockLanguages: { js: 'JavaScript', css: 'CSS' } }),
+                    markdownShortcutPlugin(),
                     //Toolbar
                     toolbarPlugin({
                         toolbarContents: () => (
