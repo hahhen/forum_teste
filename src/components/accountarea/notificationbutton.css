@@ -1,16 +1,16 @@
-.notifbutton{
+.notifbutton {
     width: 40px;
     height: 40px;
     background-color: transparent;
 }
 
-.notifbutton:hover{
+.notifbutton:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.notifdropdown{
+.notifdropdown {
     background-color: var(--highlight-bg);
     color: var(--font);
     width: 86vw;
     max-width: 450px;
-}  
+}

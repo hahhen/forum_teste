@@ -20,9 +20,10 @@ import {
     imagePlugin,
     InsertImage,
     linkDialogPlugin,
-    CreateLink,
+    ConditionalContents,
     ListsToggle,
     InsertThematicBreak,
+    ChangeCodeMirrorLanguage
 }
     from '@mdxeditor/editor';
 import '@mdxeditor/editor/style.css'
@@ -78,7 +79,6 @@ function Editor() {
                 className={`${isLight ? '' : 'dark-theme dark-editor'}`}
                 plugins={[
                     //Plugins
-                    
                     headingsPlugin(),
                     quotePlugin(),
                     listsPlugin(),
@@ -88,8 +88,8 @@ function Editor() {
                     linkPlugin(),
                     linkDialogPlugin(),
                     thematicBreakPlugin(),
-                    codeBlockPlugin({ defaultCodeBlockLanguage: 'js' }),
-                    codeMirrorPlugin({ codeBlockLanguages: { js: 'JavaScript', css: 'CSS' } }),
+                    codeBlockPlugin({ defaultCodeBlockLanguage: 'js'}),
+                    codeMirrorPlugin({ codeBlockLanguages: { js: 'JavaScript', html: 'HTML', css: 'CSS'}, theme: isLight ? 'light' : 'dark'}),
                     markdownShortcutPlugin(),
                     //Toolbar
                     toolbarPlugin({
@@ -109,6 +109,11 @@ function Editor() {
                                 <Separator />
                                 <InsertCodeBlock />
                                 <InsertMathLive />
+                                <ConditionalContents
+                                    options={[
+                                        { when: (editor) => editor?.editorType === 'codeblock', contents: () => <><Separator /><ChangeCodeMirrorLanguage /></> },
+                                    ]}
+                                />
                             </>
                         )
                     })

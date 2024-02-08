@@ -1,3 +1,4 @@
 a.interactionbutton{
-    color: #000;
+    color: var(--font);
 }
+

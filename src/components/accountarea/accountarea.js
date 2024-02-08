@@ -20,7 +20,6 @@ function AccountArea() {
         })
             .then((response) => {
                 callMsGraph(response.accessToken).then(response => setGraphData(response));
-                console.log(graphData)
                 callMsGraphPhoto(response.accessToken).then(response => response.blob())
                     .then(blob => {
                         const url = URL.createObjectURL(blob);
@@ -44,7 +43,7 @@ function AccountArea() {
     return (
         <>
             {
-                isAuthenticated && graphData && picurl ?
+                isAuthenticated ?
                     <>
                         <NotificationButton />
                         <AccountBtn instance={instance} graphData={graphData} picurl={picurl} />

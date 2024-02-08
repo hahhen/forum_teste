@@ -3,6 +3,10 @@
     border-radius: 3px;
 }
 
+.cm-line, .cm-line * {
+    font-family: var(--font-mono);
+}
+
 .mdxeditor{
     border-bottom: 1px solid #d3d3d3;
     min-height: 400px;

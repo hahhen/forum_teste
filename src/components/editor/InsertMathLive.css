@@ -12,7 +12,7 @@
 }
 
 .TooltipContent {
-  z-index: 2;
+  z-index: 51;
   position: relative;
   border-radius: 0.375rem;
   padding: 0.25rem 0.5rem;
@@ -21,6 +21,9 @@
   color: var(--slate-1);
 }
 
+.TooltipArrow {
+  fill: var(--slate-11);
+}
 
 [data-theme="dark"] {
   .DialogOverlay {
@@ -29,6 +32,9 @@
   .TooltipContent{    
     background-color: #b0b4ba;
     color: #111113;
+  }
+  .TooltipArrow {
+    fill: #b0b4ba;
   }
 }
 
