@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import './accountBtn.css';
 import * as Popover from '@radix-ui/react-popover';
-import {PersonIcon, GearIcon, ExitIcon} from '@radix-ui/react-icons';
+import {PersonIcon, GearIcon, ExitIcon, Pencil2Icon} from '@radix-ui/react-icons';
 import * as Separator from '@radix-ui/react-separator';
 
 function AccountBtn({ instance, picurl, graphData }) {
@@ -32,6 +32,7 @@ function AccountBtn({ instance, picurl, graphData }) {
                                 <span style={{ color: `var(--secondary-font)` }}><small>{graphData.mail}</small></span>
                             </div>
                             <Separator.Root className="SeparatorRoot" style={{ margin: '15px 0' }} />
+                            <Link to={"/criar"} className="mb-1 rounded d-flex align-items-center dropdown-item"><Pencil2Icon className="me-2"/>Criar novo tópico</Link>
                             <Link to={"/perfil"} className="mb-1 rounded d-flex align-items-center dropdown-item"><PersonIcon className="me-2"/>Meu perfil</Link>
                             <Link to={"/configuracoes"} className="mb-1 d-flex align-items-center rounded dropdown-item" href="#"><GearIcon className="me-2"/>Configurações</Link>
                             <button className="d-flex align-items-center rounded dropdown-item" onClick={handleLogout}><ExitIcon className="me-2"/>Sair</button>           
