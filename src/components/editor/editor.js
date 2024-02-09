@@ -69,7 +69,6 @@ const autoSave = () => {
 
 function Editor() {
     ref = useRef(null);
-    console.log('rendered')
     return (
         <div id='editor'>
             <MDXEditor
