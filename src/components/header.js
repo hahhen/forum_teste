@@ -4,14 +4,15 @@ import { Link } from 'react-router-dom';
 import { isLight, setLight } from '../App'
 import AccountArea from './accountarea/accountarea';
 import Sections from './sectionsmap';
+import {HamburgerMenuIcon} from '@radix-ui/react-icons'
 
 function Header() {
     return (
         <header>
             <nav id="navbar-top" className={`navbar navbar-expand-lg pt-3 pb-3 `}>
                 <div className='container justify-content-between'>
-                    <button class="navbar-dark navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span id='burger-icon' class="navbar-toggler-icon"></span>
+                    <button class="navbar-dark p-0 shadow-none navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <HamburgerMenuIcon width={20} height={20} className='navbar-toggle-icon' />
                     </button>
                     <Link to={'/'} id='logo-area' className="navbar-brand d-flex align-items-center me-0">
                         <img id='logo-img' src='/logo-cps.png' alt="CPS" width="80" className="me-4 d-inline-block align-text-top" />
@@ -23,7 +24,7 @@ function Header() {
                 </div>
             </nav>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <div className='pt-5 d-flex flex-column align-items-center'>
+                <div className='pt-3 d-flex flex-column align-items-center'>
                     <div id='sidebar-top' className='mt-5 pt-2 d-flex justify-content-between' style={{width: '90%'}}>
                         <div className="navbar-section-item d-flex">
                             <div className="input-group">

@@ -2,6 +2,11 @@
     text-decoration: none !important;
 }
 
+.pfp{
+    height: 3rem;
+    width: 3rem;
+}
+
 #btn-login {
     text-decoration: none;
 }

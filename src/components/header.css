@@ -1,5 +1,5 @@
-header{
-    z-index: 3;    
+header {
+    z-index: 3;
 }
 
 header::-webkit-scrollbar {
@@ -10,17 +10,16 @@ header::-webkit-scrollbar {
     background-color: var(--main-red);
 }
 
-#navbarNavDropdown{
+#navbarNavDropdown {
     width: 100%;
     background-color: var(--background);
 }
 
-.navbar-toggler{
+.navbar-toggler {
     border: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-#burger-icon{
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.navbar-toggle-icon {
     color: #fff !important;
 }
 
@@ -77,7 +76,7 @@ header::-webkit-scrollbar {
     width: 240px;
 }
 
-#searchbar:focus{   
+#searchbar:focus {
     width: 100%;
     top: 0;
     right: 0;
@@ -105,45 +104,59 @@ header::-webkit-scrollbar {
     color: #ffffff;
 }
 
+.navbar-toggler {
+    background: none;
+    width: 2rem;
+    height: 2rem;
+}
+
 .button {
     width: 50px;
     height: 100%;
 }
 
+.navbar-toggler {
+    width: 35px !important;
+    height: 35px !important;
+    transition: background-color 0.1s;
+}
+
+.navbar-toggler[aria-expanded="true"], .navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 @media(max-width: 1000px) {
-    #navbar-top{
+    #navbar-top {
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
         z-index: 2;
         position: fixed;
         width: 100%;
         top: 0;
         backdrop-filter: blur(2px);
-        box-shadow: 0 0 20px rgba(0,0,0,0.4);
     }
-    header{
+    header {
         max-height: 100vh;
         overflow-y: scroll;
         top: 0;
-        width: 100% ;
+        width: 100%;
         position: fixed;
     }
-    #main{
-        margin-top: 100px !important;
+    #main {
+        margin-top: 50px !important;
     }
     #navbar-bottom {
         display: none;
     }
-}
-
-@media(max-width: 400px){
-    #navbar-top{
-        padding: 0 !important;
+    .pfp {
+        width: 2rem !important;
+        height: 2rem !important;
     }
-
-    #logo-area{
-        justify-content: center;
-        flex-direction: column;
+    #logo-img {
+        width: 50px;
+        margin: 0 10px 0 0 !important
     }
-    #logo-img{
-        margin: 0 !important;
+    #header-title {
+        font-size: 16px;
     }
 }

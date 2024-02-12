@@ -10,8 +10,8 @@ function NotificationButton() {
         <Popover.Root>
             <div className="notificationbutton-wrapper">
                 <Popover.Trigger asChild>
-                    <button className='notifbutton p-0 border-0 rounded-circle'>
-                        <i style={{ color: `#fff` }} className="fa-lg fa-regular fa-bell"></i>
+                    <button className='notifbutton d-flex align-items-center justify-content-center p-0 border-0 rounded-circle'>
+                        <i style={{ color: `#fff` }} className="fa-regular fa-solid fa-bell"></i>
                     </button>
                 </Popover.Trigger>
                 <Popover.Portal>

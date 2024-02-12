@@ -19,19 +19,17 @@ function AccountBtn({ instance, picurl, graphData }) {
                 <Popover.Trigger asChild>
                     <button className="accountbutton pt-1 pb-1 border-0 rounded d-flex align-items-center">
                         {picurl ?
-                            <img alt="Foto de perfil" src={`${picurl}`} width={50} height={50} className="pfp me-2 rounded-circle"
+                            <img alt="Foto de perfil" src={`${picurl}`} className="pfp me-2 rounded-circle"
                                 style={{
                                     backgroundSize: 'cover'
                                 }}
                             /> :
                             <ContentLoader
                                 speed={1}
-                                width={50}
-                                height={50}
                                 viewBox="0 0 50 50"
                                 backgroundColor="var(--secondary-bg)"
                                 foregroundColor="var(--background)"
-                                className="me-2"
+                                className="me-2 pfp"
                             >
                                 <circle cx="25" cy="25" r="25" />
                             </ContentLoader>

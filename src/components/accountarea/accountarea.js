@@ -28,11 +28,11 @@ function AccountArea() {
 
             });
     }
+
     const isAuthenticated = useIsAuthenticated()
+
     const handleLogin = () => {
-        instance.loginRedirect(loginRequest).catch(e => {
-            console.log(e);
-        });
+        instance.loginRedirect(loginRequest)
     }
 
     useEffect(() => {
