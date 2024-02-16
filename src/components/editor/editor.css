@@ -50,3 +50,17 @@ math-field:focus{
 ._multiFieldForm_11eqz_1144, ._dialogContent_11eqz_556, ._linkDialogPopoverContent_11eqz_554{
     background-color: var(--highlight-bg);
 }
+
+.fullscreen_editor{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.fullscreen_editor .mdxeditor{
+    height: calc(100vw - 19px);
+    width: 100vw;
+}

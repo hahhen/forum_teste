@@ -30,6 +30,7 @@ import '@mdxeditor/editor/style.css'
 import './editor.css'
 import { isLight } from '../../App';
 import InsertMathLive from './InsertMathLive';
+import EnterFullScreen from './EnterFullScreen';
 
 export var ref
 
@@ -64,11 +65,11 @@ const autoSave = () => {
         localStorage.setItem('editorAutoSavedContent', ref.current?.getMarkdown());
         setAutoSaveState(['cloud', 'Alterações salvas'])
     }, 3000);
-
 }
 
 function Editor() {
     ref = useRef(null);
+
     return (
         <div id='editor'>
             <MDXEditor
@@ -87,8 +88,8 @@ function Editor() {
                     linkPlugin(),
                     linkDialogPlugin(),
                     thematicBreakPlugin(),
-                    codeBlockPlugin({ defaultCodeBlockLanguage: 'js'}),
-                    codeMirrorPlugin({ codeBlockLanguages: { js: 'JavaScript', html: 'HTML', css: 'CSS'}, theme: isLight ? 'light' : 'dark'}),
+                    codeBlockPlugin({ defaultCodeBlockLanguage: 'js' }),
+                    codeMirrorPlugin({ codeBlockLanguages: { js: 'JavaScript', html: 'HTML', css: 'CSS' }, theme: isLight ? 'light' : 'dark' }),
                     markdownShortcutPlugin(),
                     //Toolbar
                     toolbarPlugin({
@@ -108,6 +109,8 @@ function Editor() {
                                 <Separator />
                                 <InsertCodeBlock />
                                 <InsertMathLive />
+                                <Separator />
+                                <EnterFullScreen />                                
                                 <ConditionalContents
                                     options={[
                                         { when: (editor) => editor?.editorType === 'codeblock', contents: () => <><Separator /><ChangeCodeMirrorLanguage /></> },
