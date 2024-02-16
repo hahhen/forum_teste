@@ -1,8 +1,7 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React from 'react'
 import Header from '../components/header';
 import './criar.css'
 import { supersection, section } from '../components/topicInfoSon';
-import InsertMathLive from '../components/editor/InsertMathLive';
 import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Editor from '../components/editor/editor';
