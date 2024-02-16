@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './InsertMathLive.css'
+import Editor from './editor'
 
 const EnterFullScreen = () => {
     const handleFullscreen = () => {
@@ -12,7 +13,9 @@ const EnterFullScreen = () => {
     }
 
     const [isFullScreen, setFullScreen] = useState(false)
-    isFullScreen ? document.getElementById('editor').className = 'fullscreen_editor' : document.getElementById('editor').className = ''
+    useEffect(() => {
+        isFullScreen ? document.getElementById('editor').className = 'fullscreen_editor' : document.getElementById('editor').className = ''
+    }, [isFullScreen])
     return (
         <span className='_tooltipTrigger_11eqz_630'>
             <button type="button" onClick={handleFullscreen} className="_toolbarButton_11eqz_218" data-toolbar-item="true" tabindex="0" data-orientation="horizontal" data-radix-collection-item="">
