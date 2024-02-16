@@ -52,8 +52,7 @@ math-field:focus{
 }
 
 .fullscreen_editor{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -61,6 +60,7 @@ math-field:focus{
 }
 
 .fullscreen_editor .mdxeditor{
-    height: calc(100vw - 19px);
-    width: 100vw;
+    height: calc(100vh - 17px);
+    width:  100%;
+    overflow-y: auto;
 }
