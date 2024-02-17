@@ -61,7 +61,7 @@ math-field:focus{
 }
 
 .fullscreen_editor .mdxeditor{
-    height: calc(100vh - 17px);
+    height: calc(100% - 17px);
     width:  100%;
     overflow-y: auto;
 }
