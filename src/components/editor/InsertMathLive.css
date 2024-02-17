@@ -27,7 +27,7 @@
 
 [data-theme="dark"] {
   .DialogOverlay {
-    background-color: var(--black-a5);
+    background-color: var(--black-a6);
   }
   .TooltipContent{    
     background-color: #b0b4ba;
