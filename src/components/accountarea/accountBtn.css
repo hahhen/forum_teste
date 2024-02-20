@@ -73,6 +73,36 @@
     width: 1px;
 }
 
+.AvatarRoot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    user-select: none;
+    border-radius: 100%; 
+  }
+  
+  .AvatarImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+  
+  .AvatarFallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    color: var(--main-red);
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 500;
+    border-radius: inherit;
+  }
+
 @keyframes slideUpAndFade {
     from {
         opacity: 0;

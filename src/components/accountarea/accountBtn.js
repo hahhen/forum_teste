@@ -5,6 +5,7 @@ import * as Popover from '@radix-ui/react-popover';
 import { PersonIcon, GearIcon, ExitIcon, Pencil2Icon } from '@radix-ui/react-icons';
 import * as Separator from '@radix-ui/react-separator';
 import ContentLoader from "react-content-loader"
+import * as Avatar from "@radix-ui/react-avatar"
 
 function AccountBtn({ instance, picurl, graphData }) {
     const handleLogout = () => {
@@ -18,12 +19,23 @@ function AccountBtn({ instance, picurl, graphData }) {
             <div className="accountpopoverwrapper">
                 <Popover.Trigger asChild>
                     <button className="accountbutton pt-1 pb-1 border-0 rounded d-flex align-items-center">
-                        {picurl ?
-                            <img alt="Foto de perfil" src={`${picurl}`} className="pfp me-2 rounded-circle"
-                                style={{
-                                    backgroundSize: 'cover'
-                                }}
-                            /> :
+                        {picurl && graphData ?
+                            // <img alt="Foto de perfil" src={`${picurl}`} className="pfp me-2 rounded-circle"
+                            //     style={{
+                            //         backgroundSize: 'cover'
+                            //     }}
+                            // /> 
+                            <Avatar.Root className="AvatarRoot me-2 pfp">
+                                <Avatar.Image
+                                    className="AvatarImage"
+                                    src={picurl}
+                                    alt="Foto de Perfil"
+                                />
+                                <Avatar.Fallback className="AvatarFallback" delayMs={600}>
+                                    {graphData.givenName.charAt(0) + graphData.surname.charAt(0) }
+                                </Avatar.Fallback>
+                            </Avatar.Root>
+                            :
                             <ContentLoader
                                 speed={1}
                                 viewBox="0 0 50 50"
@@ -39,7 +51,6 @@ function AccountBtn({ instance, picurl, graphData }) {
                 </Popover.Trigger>
                 <Popover.Portal>
                     <Popover.Content align="end" className="PopoverContent" sideOffset={5}>
-
                         {graphData ?
                             <div className='notificationbutton-dropdown-header d-flex flex-column'>
                                 <h5 className="mb-1" style={{ fontWeight: 600, color: 'var(--font)' }}>{graphData.displayName}</h5>
